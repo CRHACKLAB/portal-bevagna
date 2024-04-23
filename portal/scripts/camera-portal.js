@@ -2,10 +2,12 @@
 
 AFRAME.registerComponent('camera-sky', {
     init: function () {
+        var portalEntity = this.el
         var sceneEl = this.el.sceneEl;
 
         // Check if getUserMedia is supported by the browser
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            
             navigator.mediaDevices.getUserMedia({ video: true })
                 .then(function (stream) {
                     var videoEl = document.createElement('video');
@@ -18,7 +20,7 @@ AFRAME.registerComponent('camera-sky', {
                     texture.magFilter = THREE.LinearFilter;
                     texture.format = THREE.RGBFormat;
 
-                    sceneEl.object3D.traverse(function (node) {
+                    portalEntity.object3D.traverse(function (node) {
                         if (node.isMesh && node.material.map) {
                             node.material.map = texture;
                             node.material.needsUpdate = true;
