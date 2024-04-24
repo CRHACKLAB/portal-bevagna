@@ -38,7 +38,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.607934319813625, 42.932798183356965],
+        coordinates: [12.607940, 42.932720],
       }, 
       properties: {
         phoneFormatted: "",

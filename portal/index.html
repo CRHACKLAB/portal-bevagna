@@ -1,128 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portal</title>
-        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-image-portal@latest"></script>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=0.5, user-scalable=0">
+    <title>Portal - Bevagna</title>
+    <link rel="stylesheet" href="./assets/css/main.css" media="screen"> <!--Always add "media" for accessibility reasons. We are styling for a screen. Different user agents in the best case would waste precious resources analyzing this file for nothing and in the worst case scenario might be confused and make mistakes.-->  
+    <!--mapbox-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link
+        href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+        rel="stylesheet"
+    />
+</head>
 
-        <!-- This script is to access the camera device -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/ar.js/aframe/build/aframe-ar.js"></script> -->
-
-        <!-- This script is to use the webcam inside the portal -->
-        <!-- <script src="scripts/camera-portal.js"></script> -->
+<body>
+    <div class="container">
+        <div id="info-card-layer" class="layer info-card" hidden>
+            <button type="button" id="hide-info-card" class="hide-button" onclick="hideInfoCard()"><abbr title="Hides the info card and shows the map again">X</abbr></button>
+            <!--It's better to add the "type" attribute, because otherwise browsers might try to send data from a form anyway.-->
+            <div id="card-container">
+                <button type="button" id="show-ARViewer" class="show-button"><abbr title="Shows the camera video stream and the overlay with the slide-based narrative">Explore</abbr></button> <!-- showArview's parameter mimics what has to happen when we'll use MapBox. MapBox reads point of interest's data from a JSON and uses them as parameters both for the Info Card and the AR Viewer. In this case it passes the appropriate spritemap to the AR Viewer.-->
+                <p id="card-title"></p>
+                <p id="card-description"></p>
+            </div>
         
-    </head>
-
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene>
-            <a-assets>
-                <a-asset-item id="portal" src="/assets/glb/piazzabevagna-portal.glb"></a-asset-item>
-                <a-asset-item id="mercato-portal" src="/assets/glb/tavern-portal.glb"></a-asset-item>
-                <img id="sanPietro" src="./assets/img/gaite/sanPietro.png">
-                <img id="sanGiorgio" src="./assets/img/gaite/sanGiorgio.jpeg">
-                <img id="sanGiovanni" src="./assets/img/gaite/sanGiovanni.png">
-                <img id="santaMaria" src="./assets/img/gaite/santaMaria.png">
-                <img id="mercatoGaite" src="./assets/img/gaite/gaite.jpeg">
-            </a-assets>
-
+        </div>
+        <div id="sidebar" class="layer sidebar">
+            <div id="listings" class="listings"></div>
+        </div>
             
-            <!-- the sky is set before everything so the entity doesn't have the white sphere surface -->
-            <a-sky color="tangerine"></a-sky>
-
-            <!-- to access the camera device use this -->
-            <!-- <a-plane embedded arjs="sourceType: webcam;" scale="0 0 0"></a-plane> -->
-            
-            <a-camera position="0 1.6 1">
-                <a-cursor></a-cursor>
-            </a-camera>
-                
-            <!-- everything after the entity is affected by autoReparent: true -->
-            <!-- Add camera-sky to image-portal to let che camera works inside the portal -->
-            <a-entity image-portal="src: #portal; autoReparent: true" position="0 1.6 -5"></a-entity>
-                
-            <!-- Piano della sfera -->
-            <!-- <a-plane height="1.6" width="1.6" rotation="-90 0 0" color="DarkGoldenRod" position="0 -1 -5"></a-plane> -->
-                
-            <!-- <a-entity light="type: hemisphere; color: #000; intensity: 2.5" position="0 1 -4"></a-entity> -->
-
-            <!-- Gaite, posizionate in base al logo del Mercato delle Gaite -->
-
-            <!-- San Pietro -->
-            <a-entity 
-                geometry="primitive: plane"
-                height="1" 
-                width="1" 
-                position="-2 2.6 -6" 
-                material="src: #sanPietro" 
-                rotation="20 50 0"
-                scale="1 1 1"
-                animation__mouseenter="property: scale; to: 2.5 2.5 2.5; startEvents: mouseenter; dur: 500"
-                animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 500"
-                >
-            </a-entity>
-            
-            <!-- San Giorgio -->
-            <a-entity 
-                geometry="primitive: plane"
-                height="1" 
-                width="1" 
-                position="2 2.6 -6" 
-                material="src: #sanGiorgio" 
-                rotation="20 -50 0"
-                scale="1 1 1"
-                animation__mouseenter="property: scale; to: 2.5 2.5 2.5; startEvents: mouseenter; dur: 500"
-                animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 500"
-                >
-            </a-entity>
-        
-            <!-- San Giovanni -->
-            <a-entity 
-                geometry="primitive: plane"
-                material="src: #sanGiovanni" 
-                height="1" 
-                width="1" 
-                position="-2 0.6 -6"
-                rotation="-20 50 0"
-                scale="1 1 1"
-                animation__mouseenter="property: scale; to: 2.5 2.5 2.5; startEvents: mouseenter; dur: 500"
-                animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 500"
-                >
-            </a-entity>
-
-            <!-- Santa Maria -->
-            <a-entity 
-                geometry="primitive: plane"
-                material="src: #santaMaria" 
-                height="1" 
-                width="1" 
-                position="2 0.6 -6" 
-                rotation="-20 -50 0"
-                scale="1 1 1"
-                animation__mouseenter="property: scale; to: 2.5 2.5 2.5; startEvents: mouseenter; dur: 500"
-                animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 500"
-                >
-            </a-entity>
-
-            <!-- Gaite Centrale -->
-
-            <!-- <a-entity image-portal="src: #mercato-portal; autoReparent: false" position="0 1.6 -9"></a-entity> -->
-
-            <a-entity
-                geometry="primitive: plane"
-                height="1" 
-                width="1"
-                position="0 1.6 -7" 
-                material="src: #mercatoGaite"
-                scale="1 1 1"
-                animation__mouseenter="property: scale; to: 2.5 2.5 2.5; startEvents: mouseenter; dur: 500"
-                animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 500"
-                rotation="0 0 0"
-                >
-            </a-entity>
-        </a-scene>
-
-    </body>
+        <div id="map" class="layer map">
+            <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()"><abbr title="Shows the sidebar">&#9776;</abbr></button>
+        </div>
+        <div id="arviewer-layer" class="arviewer" hidden>
+            <video id='video'
+                autoplay playsinline>
+                Sorry, video element not supported in your browser
+            </video>
+            <!--EDIT20230531A-->
+            <picture id="story-container">
+                <source id="story-webp" srcset="" type="image/webp">
+                <img id="story" src="">
+            </picture>
+            <!-- END EDIT20230531A -->
+            <div id="left-frame" class="frame">
+                <button type="button" id="back2map" class="show-button sidebarbtn" onclick="back2Map()"><abbr title="Back to city map">&#11013;</abbr></button>
+            </div> 
+            <div id="right-frame" class="frame"></div>
+            <button type="button" id="hide-ar-viewer" class="hide-button" onclick="hideARViewer()"><abbr title="Closes the AR Viewer and goes back to map">X</abbr></button>     
+        </div>
+    </div>
+    <div id="error"></div>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/map-bevagna-it.js"></script>
+</body>
 </html>
+
+
