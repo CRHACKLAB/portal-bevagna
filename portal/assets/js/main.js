@@ -13,6 +13,7 @@ console.log(storyWebp);
 const videoElem = document.getElementById('video');
 const errorElem = document.getElementById('error');
 const ARviewbtn = document.getElementById('show-ARViewer');
+const portal = document.getElementById('portal');
 
 // PLACEHOLDERS FOR CARD CONTENT - DEVELOPMENT ONLY
 const dummyTitle = "Piazza della Repubblica"
@@ -25,24 +26,31 @@ const constraints = {
     video: true
 }
 
-const hideInfoCard = () => {
-    console.log("Hide info card");
-    infoCard.setAttribute("hidden", "hidden");
+const hidePortal = () => {
+    console.log("Hide portal");
+    portal.setAttribute("hidden");
     sidebar.removeAttribute("hidden");
     mapContainer.removeAttribute("hidden");
 };
 
-const showInfoCard = (title, description,spritemap) => {
-    console.log("Show info card");
-    //MODIFY WITH DATA FROM MAPBOX
-    cardTitle.innerText = title;
-    cardDescription.innerText = description;
-    //------
-    infoCard.removeAttribute("hidden");
+const showPortal = () => {
+    console.log("Show portal");
+    portal.removeAttribute("hidden");
     sidebar.setAttribute("hidden", "hidden");
     mapContainer.setAttribute("hidden", "hidden");
-    ARviewbtn.addEventListener("click",showARViewer(spritemap));
 };
+
+// const showInfoCard = (title, description,spritemap) => {
+//     console.log("Show info card");
+//     //MODIFY WITH DATA FROM MAPBOX
+//     cardTitle.innerText = title;
+//     cardDescription.innerText = description;
+//     //------
+//     infoCard.removeAttribute("hidden");
+//     sidebar.setAttribute("hidden", "hidden");
+//     mapContainer.setAttribute("hidden", "hidden");
+//     ARviewbtn.addEventListener("click",showARViewer(spritemap));
+// };
 
 const hideSidebar = () => {
     console.log("Hide sidebar");

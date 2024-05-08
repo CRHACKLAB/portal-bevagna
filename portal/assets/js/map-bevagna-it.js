@@ -123,7 +123,8 @@ function addMarkers() {
       flyToStore(marker);
       /* Close all other popups and display popup for clicked store */
       makeHighlight(marker);
-      showInfoCard(marker.properties.address,marker.properties.description,marker.properties.spritemap);
+      showPortal(marker);
+      // showInfoCard(marker.properties.address,marker.properties.description,marker.properties.spritemap);
       /* Highlight listing in sidebar */
       e.stopPropagation();
       
