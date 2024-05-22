@@ -17,10 +17,10 @@ mapboxgl.accessToken =
  */
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/light-v11",
+  style: "mapbox://styles/mapbox/outdoors-v12",
   center: [12.608060, 42.932704],
-  zoom: 16,
-  scrollZoom: false,
+  zoom: 15.8,
+  scrollZoom: true,
 });
 
 //compass
@@ -50,13 +50,56 @@ var stores = {
         postalCode: "06031",
         state: "",
         description:
-          "palla",
+          "Piazza principale",
         /* EDIT20230531A*/
         spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
         /* EDIT20230531A*/
       },
     },
- 
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.606165063628701, 42.93096847344314],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Chiesa Sant'Agostino",
+        city: "bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description:
+          "Chiesa Sant'Agostino",
+        /* EDIT20230531A*/
+        spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
+        /* EDIT20230531A*/
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.60798777653682, 42.932574690823685],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Portale Gaita Santa Maria",
+        city: "bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description:
+          "Piazza principale",
+        /* EDIT20230531A*/
+        spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
+        /* EDIT20230531A*/
+      },
+    },
   ],
 };
 /**

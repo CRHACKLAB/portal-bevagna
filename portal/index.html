@@ -17,7 +17,7 @@
 
 <body style="margin: 0; overflow: hidden">
     
-    <a-scene renderer="colorManagement: true" device-orientation-permission-ui="enabled: true" vr-mode-ui="enabled: false">
+    <a-scene inspector renderer="colorManagement: true" device-orientation-permission-ui="enabled: true" vr-mode-ui="enabled: false">
         <a-assets>
             <a-asset-item id="portal" src="./assets/glb/tavern360.glb"></a-asset-item>
             <img id="sanPietro" src="./assets/img/gaite/sanPietro.png">
@@ -39,9 +39,16 @@
         </a-camera> -->
 
         <!-- camera con twoway-motion -->
-        <a-camera twoway-motion="nonMobileLoad: false; speed: 15; threshold: -15" position="0 0 6">
-            <a-cursor></a-cursor>
-        </a-camera>
+        <a-entity id="cameraRig" 
+            position="0 0 10"
+            animation="property: position; to: 0 0 6; dur: 5000"
+            >
+            <a-camera position="0 0 0"
+                animation__1=""
+                >
+                <a-cursor></a-cursor>
+            </a-camera>
+        </a-entity>
 
         <!-- camera rig -->
         <!-- <a-entity id="rig"
