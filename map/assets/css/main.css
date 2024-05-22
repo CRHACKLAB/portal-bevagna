@@ -75,7 +75,7 @@ body {
   background-color: #FFEED2;
   /* opacity: var(--opacity); DEVELOPMENT ONLY*/
   z-index: 8;
-  width: 20vw;
+  width: 100vw;
 }
 .heading {
   border-bottom: 1px solid #eee;

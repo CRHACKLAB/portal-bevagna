@@ -10,16 +10,19 @@ if (!("remove" in Element.prototype)) {
   };
 }
 
+
 mapboxgl.accessToken =
 "pk.eyJ1IjoiZG9jLWRpdmFnbyIsImEiOiJja2NnbXU0ancwdGx1MnhtMm1pdzV5cWd4In0.NXt0RiFp4HjZ_iy55WADkg";
+
+mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283dWg2c3hqIn0.7JK3k4zD9eU0OM9iurp0Xg";
 /**
  * Add the map to the page
  */
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/outdoors-v12",
-  center: [12.608060, 42.932704],
-  zoom: 15.8,
+  style: "mapbox://styles/gabtrip/clwhy2he900po01r07pot5f7d",
+  center: [12.608985817479997, 42.933247599970436],   
+  zoom: 16.4,
   scrollZoom: true,
 });
 
@@ -74,7 +77,7 @@ var stores = {
         description:
           "Chiesa Sant'Agostino",
         /* EDIT20230531A*/
-        spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
+        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
         /* EDIT20230531A*/
       },
     },
