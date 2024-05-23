@@ -1,5 +1,8 @@
 /* CUSTOM PROPERTIES */
-
+@font-face {
+  font-family: Consolas, monaco, monospace;
+  src: url();
+}
 
 :root {
   /* Remember: put here only the variables that have a global scope. Otherwise it is better to insert them in the specific closure where they have to act upon. */
@@ -72,20 +75,21 @@ body {
   /* border: 2px solid blue; DEVELOPMENT ONLY */
   border-right: 1px solid rgba(0, 0, 0, 0.25);
   /* background-color: #fff; 20240114*/
-  background-color: #FFEED2;
+  background-color: #F5A04C;
   /* opacity: var(--opacity); DEVELOPMENT ONLY*/
   z-index: 8;
   width: 100vw;
 }
 .heading {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #F5A04C;
   min-height: 40px;
   line-height: 40px;
   padding-top: 10px;
   /* background-color: #fff; 20240114*/
-  background-color: #FFEED2; /*20240114*/
+  background-color: #F5A04C; /*20240114*/
   color: #32679A; /*20240114*/
   margin: 0;
+  
 }
 
 .map {
@@ -343,9 +347,8 @@ z-index: 4
 
 .listings .item {
   display: block;
-  border-bottom: 1px solid #eee;
   padding: 10px;
-  background-color: #FFEED2; /*20240114*/
+  background-color: #F5A04C; /*20240114*/
 }
 
 .listings .item:last-child {
@@ -359,7 +362,7 @@ z-index: 4
   font-weight: 700;
   text-decoration: none; /*20240114*/
   color: white; /*20240114*/
-  background-color: #32679A; /*20240114*/
+  background-color: #29B8CE; /*20240114*/
   padding: 10px; /*20240114*/
 }
 
@@ -370,7 +373,7 @@ z-index: 4
 .listings .item.active .title,
 .listings .item .title:hover {
   /*background-color: #8cc63f;*/
-  background-color: #F17364;
+  background-color: #EF7875;
 }
 
 .listings .item.active {
@@ -392,8 +395,26 @@ z-index: 4
   background: #00853e;
   border-radius: 0;
 }
-.marker {
+.marker-default {
   border: none;
+  cursor: pointer;
+  height: 56px;
+  width: 56px;
+  background-image: url("../img/markers/marker.png");
+  background-size: cover;
+}
+
+.marker-infopoint {
+  border: 2px solid rebeccapurple;
+  cursor: pointer;
+  height: 56px;
+  width: 56px;
+  background-image: url("../img/markers/hlmarker.png");
+  background-size: cover;
+}
+
+.marker-food {
+  border: 5px dotted cornflowerblue;
   cursor: pointer;
   height: 56px;
   width: 56px;

@@ -11,20 +11,22 @@ if (!("remove" in Element.prototype)) {
 }
 
 
-mapboxgl.accessToken =
-"pk.eyJ1IjoiZG9jLWRpdmFnbyIsImEiOiJja2NnbXU0ancwdGx1MnhtMm1pdzV5cWd4In0.NXt0RiFp4HjZ_iy55WADkg";
+// mapboxgl.accessToken = "pk.eyJ1IjoiZG9jLWRpdmFnbyIsImEiOiJja2NnbXU0ancwdGx1MnhtMm1pdzV5cWd4In0.NXt0RiFp4HjZ_iy55WADkg"; // token generico
 
-mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283dWg2c3hqIn0.7JK3k4zD9eU0OM9iurp0Xg";
+mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283dWg2c3hqIn0.7JK3k4zD9eU0OM9iurp0Xg"; // token stile personalizzato
 /**
  * Add the map to the page
  */
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/gabtrip/clwhy2he900po01r07pot5f7d",
+  style: "mapbox://styles/gabtrip/clwhy2he900po01r07pot5f7d", // stile personalizzato 
+  // style: "mapbox://styles/mapbox/streets-v12", // stile generico
   center: [12.608985817479997, 42.933247599970436],   
   zoom: 16.4,
   scrollZoom: true,
 });
+
+
 
 //compass
 const nav = new mapboxgl.NavigationControl({
@@ -36,7 +38,6 @@ map.on("load", function (e) {
 var stores = {
   type: "FeatureCollection",
   features: [
-    // silvestro
     {
       type: "Feature",
       geometry: {
@@ -47,15 +48,15 @@ var stores = {
         phoneFormatted: "",
         phone: "",
         address: "Piazza Filippo Silvestri",
-        city: "bevagna",
+        city: "Bevagna",
         country: "Italy",
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description:
-          "Piazza principale",
+        description: "Piazza principale",
+        markerType: "default",
         /* EDIT20230531A*/
-        spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
+        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
         /* EDIT20230531A*/
       },
     },
@@ -69,13 +70,13 @@ var stores = {
         phoneFormatted: "",
         phone: "",
         address: "Chiesa Sant'Agostino",
-        city: "bevagna",
+        city: "Bevagna",
         country: "Italy",
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description:
-          "Chiesa Sant'Agostino",
+        description: "Chiesa Sant'Agostino",
+        markerType: "food",
         /* EDIT20230531A*/
         // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
         /* EDIT20230531A*/
@@ -91,15 +92,15 @@ var stores = {
         phoneFormatted: "",
         phone: "",
         address: "Portale Gaita Santa Maria",
-        city: "bevagna",
+        city: "Bevagna",
         country: "Italy",
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description:
-          "Piazza principale",
+        description: "Gaita Santa Maria",
+        markerType: "infopoint",
         /* EDIT20230531A*/
-        spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
+        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
         /* EDIT20230531A*/
       },
     },
@@ -146,10 +147,17 @@ function addMarkers() {
     /* Create a div element for the marker. */
     var el = document.createElement("div");
     /* Assign a unique `id` to the marker. */
+    console.log(el.id);
     el.id = "marker-" + marker.properties.id;
     /* Assign the `marker` class to each marker for styling. */
-    el.className = "marker";
+    // el.className = "marker";
 
+    // to have different marker styles for each service
+    if (marker.properties.markerType) {
+      el.className = "marker-" + marker.properties.markerType;
+    } else {
+      el.className = "marker-default"; // Fallback class
+    }
     /**
      * Create a marker using the div element
      * defined above and add it to the map.
@@ -187,7 +195,6 @@ function buildLocationList(data) {
      * which will be used several times below.
      **/
     var prop = store.properties;
-
     /* Add a new listing section to the sidebar. */
     var listings = document.getElementById("listings");
     var listing = listings.appendChild(document.createElement("div"));
@@ -234,8 +241,9 @@ function buildLocationList(data) {
 function flyToStore(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    zoom: 17,
+    zoom: 20,
   });
+  sidebar.setAttribute("hidden", "hidden");
 }
 
 
@@ -243,6 +251,7 @@ function makeHighlight(currentFeature) {
   var marker = document.getElementById(
     "marker-" + currentFeature.properties.id
   );
+  console.log(marker.style.filter);
   marker.style.filter = "hue-rotate(145deg)";
 }
 
