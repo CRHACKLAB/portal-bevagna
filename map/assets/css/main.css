@@ -355,7 +355,7 @@ z-index: 4
   border-bottom: none;
 }
 
-.listings .item .title {
+.listings .item-default .title {
   display: block;
   /*color: #00853e;*/
   font-size: calc(var(--font-size) * 1.5); /*20240114*/
@@ -363,6 +363,28 @@ z-index: 4
   text-decoration: none; /*20240114*/
   color: white; /*20240114*/
   background-color: #29B8CE; /*20240114*/
+  padding: 10px; /*20240114*/
+}
+
+.listings .item-food .title {
+  display: block;
+  /*color: #00853e;*/
+  font-size: calc(var(--font-size) * 1.5); /*20240114*/
+  font-weight: 700;
+  text-decoration: none; /*20240114*/
+  color: white; /*20240114*/
+  background-color: #404040; /*20240114*/
+  padding: 10px; /*20240114*/
+}
+
+.listings .item-infopoint .title {
+  display: block;
+  /*color: #00853e;*/
+  font-size: calc(var(--font-size) * 1.5); /*20240114*/
+  font-weight: 700;
+  text-decoration: none; /*20240114*/
+  color: white; /*20240114*/
+  background-color: #00853e; /*20240114*/
   padding: 10px; /*20240114*/
 }
 
@@ -398,8 +420,8 @@ z-index: 4
 .marker-default {
   border: none;
   cursor: pointer;
-  height: 56px;
-  width: 56px;
+  height: 48px;
+  width: 48px;
   background-image: url("../img/markers/marker.png");
   background-size: cover;
 }
@@ -407,8 +429,8 @@ z-index: 4
 .marker-infopoint {
   border: 2px solid rebeccapurple;
   cursor: pointer;
-  height: 56px;
-  width: 56px;
+  height: 48px;
+  width: 48px;
   background-image: url("../img/markers/hlmarker.png");
   background-size: cover;
 }
@@ -416,8 +438,8 @@ z-index: 4
 .marker-food {
   border: 5px dotted cornflowerblue;
   cursor: pointer;
-  height: 56px;
-  width: 56px;
+  height: 48px;
+  width: 48px;
   background-image: url("../img/markers/marker.png");
   background-size: cover;
 }

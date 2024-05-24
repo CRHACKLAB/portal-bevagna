@@ -104,6 +104,28 @@ var stores = {
         /* EDIT20230531A*/
       },
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609716965561148, 42.93479371348007], 
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Punto a caso",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Punto a caso",
+        markerType: "food",
+        /* EDIT20230531A*/
+        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
+        /* EDIT20230531A*/
+      },
+    },
   ],
 };
 /**
@@ -115,9 +137,23 @@ stores.features.forEach(function (store, i) {
   store.properties.id = i;
 });
 
+// GPS
+var geolocateControl = new mapboxgl.GeolocateControl({
+  positionOptions: {
+      enableHighAccuracy: true
+  },
+  trackUserLocation: true,
+  showUserLocation: true
+});
+
+console.log(geolocateControl.getPosition)
+map.addControl(geolocateControl);
+
+
+
 /**
  * Wait until the map loads to make changes to the map.
- */
+*/
 map.on("load", function (e) {
   /**
    * This is where your '.addLayer()' used to be, instead
@@ -147,7 +183,6 @@ function addMarkers() {
     /* Create a div element for the marker. */
     var el = document.createElement("div");
     /* Assign a unique `id` to the marker. */
-    console.log(el.id);
     el.id = "marker-" + marker.properties.id;
     /* Assign the `marker` class to each marker for styling. */
     // el.className = "marker";
@@ -200,8 +235,14 @@ function buildLocationList(data) {
     var listing = listings.appendChild(document.createElement("div"));
     /* Assign a unique `id` to the listing. */
     listing.id = "listing-" + prop.id;
+
     /* Assign the `item` class to each listing for styling. */
-    listing.className = "item";
+    if (prop.markerType) {
+      listing.className = "item item-" + prop.markerType;
+    } else {
+      listing.className = "item item-default"; // Fallback class
+    }
+    
 
     /* Add the link to the individual listing created above. */
     var link = listing.appendChild(document.createElement("a"));
