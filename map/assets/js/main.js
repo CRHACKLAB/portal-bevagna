@@ -6,6 +6,7 @@ const ARViewer = document.getElementById("arviewer-layer");
 const cardTitle = document.getElementById("card-title");
 const cardDescription = document.getElementById("card-description");
 const story = document.getElementById("story");
+const backButton = document.getElementById('back-to-index');
 /* EDIT20230531A*/
 const storyWebp = document.getElementById("story-webp");
 console.log(storyWebp);
@@ -41,7 +42,6 @@ const showInfoCard = (title, description,spritemap) => {
     infoCard.removeAttribute("hidden");
     sidebar.setAttribute("hidden", "hidden");
     mapContainer.setAttribute("hidden", "hidden");
-    ARviewbtn.addEventListener("click",showARViewer(spritemap));
 };
 
 const hideSidebar = () => {
@@ -55,7 +55,7 @@ const showSidebar = () => {
 };
 
 const back2Index = () => {
-    console.log("Show sidebar");
+    console.log("Back to index");
     window.location.href = "index.html"
 };
 

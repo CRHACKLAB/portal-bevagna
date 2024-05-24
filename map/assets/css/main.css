@@ -232,9 +232,9 @@ font-size: 30px;
 #card-container {
   position: absolute;
   border: 1px solid black;
-  left: calc(50vw - 30rem);
-  top: 15%;
-  width: 60rem;
+  left: calc(50vw - 9em);
+  top: 5%;
+  width: 18em;
 }
 
 #card-title {
@@ -244,13 +244,11 @@ font-size: 30px;
 }
 
 #card-description {
-  position: relative;
   font-size: var(--font-size);
   font-family: var(--font-family);
   line-height: 150%;
-  left: 7rem;
-  width: 46rem;
-  text-align: left;
+  margin: 0 5px;
+  text-align: justify;
 }
 
 

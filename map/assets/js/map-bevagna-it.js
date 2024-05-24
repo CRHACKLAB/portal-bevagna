@@ -19,10 +19,10 @@ mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283d
  */
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/gabtrip/clwhy2he900po01r07pot5f7d", // stile personalizzato 
+  style: "mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
   center: [12.608985817479997, 42.933247599970436],   
-  zoom: 16.4,
+  zoom: 15.4,
   scrollZoom: true,
 });
 
@@ -53,7 +53,9 @@ var stores = {
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description: "Piazza principale",
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu tristique turpis. Suspendisse nec sem nisl. Maecenas non aliquam magna. Nulla auctor massa sapien, et efficitur sapien placerat in. Donec nisi mauris, feugiat eu ipsum malesuada, interdum convallis urna. Morbi porta quis erat id viverra. Integer elit velit, egestas vel orci a, mattis elementum purus. Sed lacus lorem, congue non nisl sit amet, bibendum pretium arcu.
+
+        Praesent non elementum dolor. Nam laoreet nisl arcu, nec sagittis ipsum faucibus id. Proin arcu mi, finibus non vehicula ut, faucibus vel lorem. Morbi maximus dignissim tellus maximus rutrum. Duis eu leo a purus porttitor tristique. Quisque condimentum facilisis dui, eget porttitor mi pharetra nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id massa ac magna aliquet gravida vel a nunc. Morbi ornare leo in dui tempor tincidunt. Sed mauris urna, commodo sed ligula sit amet, efficitur posuere est.`,
         markerType: "default",
         /* EDIT20230531A*/
         // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
@@ -97,7 +99,7 @@ var stores = {
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description: "Gaita Santa Maria",
+        description: "Verso la Gaita Santa Maria",
         markerType: "infopoint",
         /* EDIT20230531A*/
         // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
@@ -119,7 +121,7 @@ var stores = {
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description: "Punto a caso",
+        description: "Questo è un punto a caso sulla mappa",
         markerType: "food",
         /* EDIT20230531A*/
         // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
@@ -146,7 +148,6 @@ var geolocateControl = new mapboxgl.GeolocateControl({
   showUserLocation: true
 });
 
-console.log(geolocateControl.getPosition)
 map.addControl(geolocateControl);
 
 
@@ -311,14 +312,7 @@ function checkinbounds(currentFeature) {
   // called every time a new user position is determined
   function checkUserPostion(position) {
     const { latitude, longitude } = position.coords;
-
-    const isUserInBbx = bounds.contains([longitude, latitude]);
-
-    if (isUserInBbx) {
-      return true;
-    } else {
-      return false;
-    }
+    return bounds.contains([longitude, latitude]);
   }
 
   navigator.geolocation.watchPosition(checkUserPostion);
