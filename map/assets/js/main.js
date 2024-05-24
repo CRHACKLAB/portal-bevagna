@@ -7,13 +7,7 @@ const cardTitle = document.getElementById("card-title");
 const cardDescription = document.getElementById("card-description");
 const story = document.getElementById("story");
 const backButton = document.getElementById('back-to-index');
-/* EDIT20230531A*/
-const storyWebp = document.getElementById("story-webp");
-console.log(storyWebp);
-/* END EDIT20230531A*/
-const videoElem = document.getElementById('video');
-const errorElem = document.getElementById('error');
-const ARviewbtn = document.getElementById('show-ARViewer');
+
 
 // PLACEHOLDERS FOR CARD CONTENT - DEVELOPMENT ONLY
 const dummyTitle = "Piazza della Repubblica"

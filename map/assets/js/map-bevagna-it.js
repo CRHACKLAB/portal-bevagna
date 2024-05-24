@@ -306,7 +306,7 @@ function checkinbounds(currentFeature) {
     currentFeature.geometry.coordinates[0] - 0.001,
     currentFeature.geometry.coordinates[1] - 0.001
   );
-
+  console.log('bound1 = ' + bound1, 'bound2 = ' + bound2);
   const bounds = new mapboxgl.LngLatBounds(bound1, bound2);
 
   // called every time a new user position is determined
@@ -314,6 +314,7 @@ function checkinbounds(currentFeature) {
     const { latitude, longitude } = position.coords;
     return bounds.contains([longitude, latitude]);
   }
-
+console.log(bounds);
   navigator.geolocation.watchPosition(checkUserPostion);
 }
+
