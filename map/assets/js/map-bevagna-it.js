@@ -38,96 +38,282 @@ map.on("load", function (e) {
 var stores = {
   type: "FeatureCollection",
   features: [
+    // ENTRANCE POINT
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.607934319813625, 42.932798183356965],
+        coordinates: [12.608935189233497, 42.931891328001676],
       }, 
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Piazza Filippo Silvestri",
+        address: "Ingresso Porta Todi",
         city: "Bevagna",
         country: "Italy",
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu tristique turpis. Suspendisse nec sem nisl. Maecenas non aliquam magna. Nulla auctor massa sapien, et efficitur sapien placerat in. Donec nisi mauris, feugiat eu ipsum malesuada, interdum convallis urna. Morbi porta quis erat id viverra. Integer elit velit, egestas vel orci a, mattis elementum purus. Sed lacus lorem, congue non nisl sit amet, bibendum pretium arcu.
-
-        Praesent non elementum dolor. Nam laoreet nisl arcu, nec sagittis ipsum faucibus id. Proin arcu mi, finibus non vehicula ut, faucibus vel lorem. Morbi maximus dignissim tellus maximus rutrum. Duis eu leo a purus porttitor tristique. Quisque condimentum facilisis dui, eget porttitor mi pharetra nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id massa ac magna aliquet gravida vel a nunc. Morbi ornare leo in dui tempor tincidunt. Sed mauris urna, commodo sed ligula sit amet, efficitur posuere est.`,
-        markerType: "default",
-        /* EDIT20230531A*/
-        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
-        /* EDIT20230531A*/
+        description: ``,
+        markerType: "entrance",
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.606165063628701, 42.93096847344314],
+        coordinates: [12.609511886234214, 42.935485935049634],
       }, 
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Chiesa Sant'Agostino",
+        address: "Ingresso Porta Cannara",
         city: "Bevagna",
         country: "Italy",
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description: "Chiesa Sant'Agostino",
-        markerType: "food",
-        /* EDIT20230531A*/
-        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
-        /* EDIT20230531A*/
+        description: ``,
+        markerType: "entrance",
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.60798777653682, 42.932574690823685],
+        coordinates: [12.606836665994416, 42.934022587832004],
       }, 
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Portale Gaita Santa Maria",
+        address: "Ingresso Porta Guelfa",
         city: "Bevagna",
         country: "Italy",
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description: "Verso la Gaita Santa Maria",
+        description: ``,
+        markerType: "entrance",
+      },
+    },
+    // END ENTRANCE POINT
+    // INFOPOINT
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608634941494632, 42.933316743102765],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Infopoint SHU 2024",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Trova le informazioni che stai cercando",
         markerType: "infopoint",
-        /* EDIT20230531A*/
-        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
-        /* EDIT20230531A*/
+      },
+    },
+    // END INFOPOINT
+    // EVENTS
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608862693550554, 42.932282840220076],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Robot Arena",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Arena combattimento robot",
+        markerType: "events",
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609716965561148, 42.93479371348007], 
+        coordinates: [12.60900419418926, 42.93122243304382],
       }, 
       properties: {
         phoneFormatted: "",
         phone: "",
-        address: "Punto a caso",
+        address: "Cinema all'aperto",
         city: "Bevagna",
         country: "Italy",
         crossStreet: "",
         postalCode: "06031",
         state: "",
-        description: "Questo è un punto a caso sulla mappa",
-        markerType: "food",
-        /* EDIT20230531A*/
-        // spritemap: imageDir + "bevagna-san-silvestro" + langSuffix,
-        /* EDIT20230531A*/
+        description: "Cinema gonfiabile all'aperto",
+        markerType: "events",
       },
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608837897235594, 42.931322588694094],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Sala conferenze",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Sala conferenze all'ex mulino",
+        markerType: "events",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608361092650744, 42.93274432080763],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Teatro Torti",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Sede di evento di apertura e chiusura(?)",
+        markerType: "events",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608778352733976, 42.93285330938033],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Sala capitolare",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Sala capitolare sede di vari eventi",
+        markerType: "events",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609313195494678, 42.933741281193385],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Auditorium Santa Maria Laurentia",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Auditorium",
+        markerType: "events",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609303712454063, 42.9337398926071],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Laboratorio Stop Motion",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Laboratorio Stop Motion",
+        markerType: "events",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609703896780115, 42.93478548924887],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Stazione Pilotaggio Droni",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Prova a far volare un drone",
+        markerType: "events",
+      },
+    },
+    //END EVENTS
+    // BUS
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609108692711839, 42.93571481343088],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Punto raccolta navetta",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Qua verrete lasciati e ripresi dalle navette",
+        markerType: "bus",
+      },
+    },
+    // END BUS
+    // AREA FOOD
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608473536273573, 42.93295581877788],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Mensa SHU Young + Staff",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "I partecipanti a SHU Young e lo Staff Egina sono invitati a mangiare in questo luogo",
+        markerType: "food",
+      },
+    },
+    // FINE AREA FOOD
   ],
 };
 /**
