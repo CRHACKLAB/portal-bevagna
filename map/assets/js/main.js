@@ -82,28 +82,3 @@ const showARViewer = (spritemap) => {
     infoCard.setAttribute("hidden", "hidden");
     
 }
-
-
-function openCamera() {
-    //Ask the User for the access of the device camera and microphone
-    navigator.mediaDevices.getUserMedia({video: {
-        audio: false,
-        facingMode: 'environment'
-    }},constraints)
-    .then(mediaStream => {
-        /* The received mediaStream contains both the
-        video and audio media data*/
-        
-        /*Add the mediaStream directly to the source of the video element using the srcObject attribute*/
-        videoElem.srcObject = mediaStream;
-        
-    }).catch(err => {
-        // handling the error if any
-        errorElem.innerHTML = err;
-        errorElem.style.display = "block";
-    });
-    
-}
-function closeCamera(){
-    videoElem.srcObject = null;
-}

@@ -182,9 +182,50 @@ body {
   color: white;
 }
 
+/* FILTER */
+#filter-dropdown {
+  position: absolute;
+  top: 6.5vh;
+  right: 7.6vw;
+  /* background-color: #00853e; 20240114 */
+  background-color: #32679A;
+  color: white;
+  font-size: calc(var(--font-size) * 1.5); 
+  padding: 0.2px;
+}
 
+#filter-btn {
+  border: none;
+  position: absolute;
+  top: 6.5vh;
+  right: 1vmin;
+  /* background-color: #00853e; 20240114 */
+  background-color: #32679A;
+  color: white;
+  font-size: calc(var(--font-size) * 1.6);
+}
 
+/* LANGUAGE BUTTONS */
 
+.english-button {
+  position: absolute;
+  top: 6.2vh;
+  left: 15vw;
+  background: none;
+  border: none;
+  color: white;
+  font-size: calc(var(--font-size) * 1.8); /* 20240114 */
+}
+
+.italian-button {
+  position: absolute;
+  top: 6.2vh;
+  left: 1.5vw;
+  background: none;
+  border: none;
+  color: white;
+  font-size: calc(var(--font-size) * 1.8); /* 20240114 */
+}
 
 /* --------------------------- */
 /*     Info card elements      */
@@ -299,6 +340,7 @@ body {
 }
 
 .listings {
+  padding-top: 50px;
   height: 100%;
   bottom: 30%;
   overflow: auto;
@@ -379,7 +421,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #29B8CE;
+  background-color: #4918CE;
   padding: 10px;
   min-height: 150px;
 }
@@ -390,7 +432,40 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #FDC41F;
+  background-color: #df4432;
+  padding: 10px;
+  min-height: 150px;
+}
+
+.listings .item-parking .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #99dd99;
+  padding: 10px;
+  min-height: 150px;
+}
+
+.listings .item-portals .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #9455ef;
+  padding: 10px;
+  min-height: 150px;
+}
+
+.listings .item-crafts .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #cd22cd;
   padding: 10px;
   min-height: 150px;
 }
@@ -399,11 +474,11 @@ body {
   font-weight: 400;
 }
 
-.listings .item.active .title,
+/*.listings .item.active .title,
 .listings .item .title:hover {
-  /*background-color: #8cc63f;*/
+  background-color: #8cc63f;
   background-color: #EF7875;
-}
+}*/
 
 .listings .item.active {
   background-color: #f8f8f8;
@@ -452,7 +527,7 @@ body {
 }
 
 .marker-tourism {
-  filter: hue-rotate(-125deg); /* DEV only */
+  filter: hue-rotate(-85deg); /* DEV only */
   border: none;
   cursor: pointer;
   height: 25px;
@@ -490,6 +565,37 @@ body {
   background-image: url("../img/markers/marker.png");
   background-size: cover;
 }
+
+.marker-parking {
+  filter: hue-rotate(200deg); /* DEV only */
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  background-image: url("../img/markers/marker.png");
+  background-size: cover;
+}
+
+.marker-portals {
+  filter: hue-rotate(70deg); /* DEV only */
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  background-image: url("../img/markers/marker.png");
+  background-size: cover;
+}
+
+.marker-crafts {
+  filter: hue-rotate(-270deg); /* DEV only */
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  background-image: url("../img/markers/marker.png");
+  background-size: cover;
+}
+
 
 /* ---------------- */
 /*       error      */

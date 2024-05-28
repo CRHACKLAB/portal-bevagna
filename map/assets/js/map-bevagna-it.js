@@ -22,7 +22,7 @@ var map = new mapboxgl.Map({
   style: "mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
   center: [12.608985817479997, 42.933247599970436],   
-  zoom: 15.4,
+  zoom: 15.8,
   scrollZoom: true,
 });
 
@@ -38,6 +38,65 @@ map.on("load", function (e) {
 var stores = {
   type: "FeatureCollection",
   features: [
+    // PARCHEGGI
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609238261447722, 42.93548362345141],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Parcheggio Piazza Masci Mindolfo",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Parcheggio a pagamento",
+        markerType: "parking",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.606431742030377, 42.93451733301161],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Parcheggio Piazzale dell' Accoglienza",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Parcheggio a pagamento",
+        markerType: "parking",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609730858967609, 42.93153631439249],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Parcheggio Centro",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Parcheggio a pagamento",
+        markerType: "parking",
+      },
+    },
+    // FINE PARCHEGGI
     // ENTRANCE POINT
     {
       type: "Feature",
@@ -118,7 +177,68 @@ var stores = {
       },
     },
     // END INFOPOINT
-    // EVENTS
+    // BUS
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609108692711839, 42.93571481343088],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Punto raccolta navetta",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Qua verrete lasciati e ripresi dalle navette",
+        markerType: "bus",
+      },
+    },
+    // END BUS
+    // SHU MAIN EVENTS
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607299828666415, 42.932544953101086],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Sede Social Hackademy Umbria",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Sede evento principale",
+        markerType: "default",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609109781873885, 42.93308063784067],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "SHU YoungMakers",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Sede evento giovani",
+        markerType: "default",
+      },
+    },
+    // END SHU MAIN EVENTS
+    // COLLATERAL EVENTS
     {
       type: "Feature",
       geometry: {
@@ -180,7 +300,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608361092650744, 42.93274432080763],
+        coordinates: [12.608320282219381, 42.93266661870295],
       }, 
       properties: {
         phoneFormatted: "",
@@ -271,28 +391,7 @@ var stores = {
         markerType: "events",
       },
     },
-    //END EVENTS
-    // BUS
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.609108692711839, 42.93571481343088],
-      }, 
-      properties: {
-        phoneFormatted: "",
-        phone: "",
-        address: "Punto raccolta navetta",
-        city: "Bevagna",
-        country: "Italy",
-        crossStreet: "",
-        postalCode: "06031",
-        state: "",
-        description: "Qua verrete lasciati e ripresi dalle navette",
-        markerType: "bus",
-      },
-    },
-    // END BUS
+    //END COLLATERAL EVENTS
     // AREA FOOD
     {
       type: "Feature",
@@ -314,6 +413,202 @@ var stores = {
       },
     },
     // FINE AREA FOOD
+    // PORTALS GAITE
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608231387105889, 42.932829261692824],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Portale Mercato delle Gaite",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "portals",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608045948399779, 42.9328888254322],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Portale Gaita San Giovanni",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "portals",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608180148251774, 42.932735250662574],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Portale Gaita San Giorgio",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "portals",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607844084756854, 42.93267580226183],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Portale Gaita San Pietro",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "portals",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.60797151822976, 42.932599840332955],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Portale Gaita Santa Maria",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "portals",
+      },
+    },
+    // END PORTALS GAITE
+    // MESTIERI GAITE
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.610776563411152, 42.934996177151284],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Mestiere Gaita San Giovanni",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "crafts",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607107126589524, 42.93244475232125],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Mestiere Gaita San Giorgio",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "crafts",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609526419514012, 42.93342634588887],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Mestiere Gaita San Pietro",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "crafts",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.60748257632491, 42.93164125523298],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Mestiere Gaita Santa Maria",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "",
+        markerType: "crafts",
+      },
+    },
+    // END MESTIERI GAITE
+    // MONUMENTS
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607804872878202, 42.93274584330837],
+      }, 
+      properties: {
+        phoneFormatted: "",
+        phone: "",
+        address: "Chiesa San Michele Arcangelo",
+        city: "Bevagna",
+        country: "Italy",
+        crossStreet: "",
+        postalCode: "06031",
+        state: "",
+        description: "Chiesa principale di Bevagna",
+        markerType: "tourism",
+      },
+    },
+    // END MONUMENTS
   ],
 };
 /**
@@ -415,9 +710,9 @@ function buildLocationList(data) {
     /**
      * Create a shortcut for `store.properties`,
      * which will be used several times below.
-     **/
+    **/
     var prop = store.properties;
-    /* Add a new listing section to the sidebar. */
+   /* Add a new listing section to the sidebar. */
     var listings = document.getElementById("listings");
     var listing = listings.appendChild(document.createElement("div"));
     /* Assign a unique `id` to the listing. */
@@ -502,5 +797,21 @@ function checkinbounds(currentFeature) {
   }
 console.log(bounds);
   navigator.geolocation.watchPosition(checkUserPostion);
+}
+
+// FILTER
+
+function filter() {
+  const selectedType = document.getElementById('filter-dropdown').value;
+
+  const filteredListings = stores.features.filter(store => 
+      selectedType === 'all' || store.properties.markerType === selectedType
+  );
+
+  console.log(filteredListings);
+
+  var listings = document.getElementById("listings");
+  listings.innerHTML = ''; // Clear existing listings 
+  buildLocationList({ type: 'FeatureCollection', features: filteredListings });
 }
 

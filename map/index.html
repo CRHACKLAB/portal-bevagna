@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     
-    <meta name="viewport" content="initial-scale=1"> <!--The browser's viewport is the area of the window in which web content can be seen. This is often not the same size as the rendered page. With this settings "viewport" helps mitigate the rendering issues with small screens (mobile).-->
+    <meta name="viewport" content="initial-scale=1">
     
     <title>Mappa Bevagna</title>
     <link rel="stylesheet" href="./assets/css/normalize.css" media="screen">
@@ -21,7 +21,6 @@
         <div id="info-card-layer" class="layer info-card" hidden>
             <button type="button" id="back-to-index" class="back-button sidebarbtn" onclick="back2Index()"><div title="Back to index page">&#11013;</div></button>
             <div id="card-container">
-                <!-- <button type="button" id="show-ARViewer" class="show-button"><div title="Shows the camera video stream and the overlay with the slide-based narrative">Explore</div></button> showArview's parameter mimics what has to happen when we'll use MapBox. MapBox reads point of interest's data from a JSON and uses them as parameters both for the Info Card and the AR Viewer. In this case it passes the appropriate spritemap to the AR Viewer. -->
                 <p id="card-title"></p>
                 <p id="card-description"></p>
             </div>
@@ -31,12 +30,31 @@
             <div class='heading'>
                 SHU2024 - Bevagna
             </div>
+            (<div>
+                <button type="button" id="english-btn" class="english-button sidebarbtn" onclick="english()"><div title="Filter the search">&#x1f1ec;&#x1f1e7;</div></button>
+                <button type="button" id="italian-btn" class="italian-button sidebarbtn" onclick="italian()"><div title="Filter the search">&#x1f1ee;&#x1f1f9;</div></button>
+                <select id="filter-dropdown" onclick="filter()">
+                    <option value="all">Tutte le categorie</option>
+                    <option value="default">Eventi SHU2024</option>
+                    <option value="infopoint">Infopoint</option>
+                    <option value="events">Eventi</option>
+                    <option value="entrance">Ingressi a Bevagna</option>
+                    <option value="food">Dove mangiare</option>
+                    <option value="tourism">Punti d'interesse</option>
+                    <option value="bus">Punto navetta</option>
+                    <option value="parking">Parcheggi</option>
+                    <option value="portals">Portali Gaite</option>
+                    <option value="crafts">Mestieri medievali</option>
+                </select>
+                <button type="button" id="filter-btn" class="filter-button sidebarbtn" onclick="filter()"><div title="Filter the search">&#8981;</div></button>
+            </div>
+            
             <div id="listings" class="listings"></div>
             <button type="button" id="hide-sidebar" class="hide-button sidebarbtn" onclick="hideSidebar()"><div title="Hides the sidebar">&#10006;</div></button>
         </div>
         <div id="map" class="layer map">
             <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()"><div title="Shows the sidebar">&#9776;</div></button>
-        </div>
+        </div>)
         <!-- <div id="arviewer-layer" class="arviewer" hidden>
             <video id='video'
             autoplay playsinline>
