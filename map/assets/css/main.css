@@ -162,7 +162,7 @@ body {
   top: 1vmin;
   left: 1vmin;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .show-button:hover {
@@ -336,7 +336,7 @@ body {
 }
 
 .mapboxgl-popup-close-button{
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .listings {
@@ -481,7 +481,7 @@ body {
 }*/
 
 .listings .item.active {
-  background-color: #f8f8f8;
+  border-color: #f8f8f8;
 }
 
 ::-webkit-scrollbar {
@@ -502,47 +502,47 @@ body {
 .marker-default {
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/markers/marker.png");
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/markers/Senza\ titolo-1.png");
   background-size: cover;
 }
 
 .marker-infopoint {
-  border: 2px solid rebeccapurple;
+  border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/markers/hlmarker.png");
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/markers/info\ point.png");
   background-size: cover;
 }
 
 .marker-food {
-  border: 5px dotted cornflowerblue;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/markers/marker.png");
-  background-size: cover;
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/markers/Prova\ Food.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .marker-tourism {
   filter: hue-rotate(-85deg); /* DEV only */
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   background-image: url("../img/markers/marker.png");
   background-size: cover;
 }
 
 .marker-entrance {
-  filter: hue-rotate(125deg); /* DEV only */
+  /*filter: hue-rotate( 25deg);*/ /* DEV only */
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/markers/marker.png");
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/markers/esempio2.png");
   background-size: cover;
 }
 
@@ -550,8 +550,8 @@ body {
   filter: hue-rotate(-80deg); /* DEV only */
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   background-image: url("../img/markers/marker.png");
   background-size: cover;
 }
@@ -560,29 +560,29 @@ body {
   filter: hue-rotate(-200deg); /* DEV only */
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   background-image: url("../img/markers/marker.png");
   background-size: cover;
 }
 
 .marker-parking {
-  filter: hue-rotate(200deg); /* DEV only */
+  /*filter: hue-rotate(-150deg);*/ /* DEV only */
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/markers/marker.png");
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/markers/parkingmod.png");
   background-size: cover;
 }
 
 .marker-portals {
-  filter: hue-rotate(70deg); /* DEV only */
+  /*filter: hue-rotate(70deg);*/ /* DEV only */
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/markers/marker.png");
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/markers/altro\ esempio.png");
   background-size: cover;
 }
 
@@ -590,8 +590,8 @@ body {
   filter: hue-rotate(-270deg); /* DEV only */
   border: none;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   background-image: url("../img/markers/marker.png");
   background-size: cover;
 }

@@ -21,7 +21,7 @@ var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
-  center: [12.608985817479997, 42.933247599970436],   
+  center: [12.608885817479997, 42.933247599970436],   
   zoom: 15.8,
   scrollZoom: true,
 });
@@ -815,3 +815,51 @@ function filter() {
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
 }
 
+//TRANSLATIONS 
+
+const translations = {
+  en: {
+      heading: "SHU2024 - Bevagna",
+      filterOptions: [
+          "All Categories", "SHU2024 Events", "Info Point", "Events", "Entrance to Bevagna",
+          "Where to Eat", "Points of Interest", "Shuttle Point", "Parking", "Gaite Portals", "Medieval Crafts"
+      ],
+      filterBtnTitle: "Filter the search",
+      hideSidebarTitle: "Hides the sidebar"
+  },
+  it: {
+      heading: "SHU2024 - Bevagna",
+      filterOptions: [
+          "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Ingressi a Bevagna",
+          "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali"
+      ],
+      filterBtnTitle: "Filtra la ricerca",
+      hideSidebarTitle: "Nasconde la barra laterale"
+  }
+};
+
+function translate(language) {
+  console.log(document.getElementById('heading'));
+  document.getElementById('heading').textContent = translations[language].heading;
+
+  const filterDropdown = document.getElementById('filter-dropdown');
+  filterDropdown.innerHTML = '';
+  translations[language].filterOptions.forEach(optionText => {
+      const option = document.createElement('option');
+      option.textContent = optionText;
+      filterDropdown.appendChild(option);
+  });
+
+  document.getElementById('filter-btn').firstElementChild.title = translations[language].filterBtnTitle;
+  document.getElementById('hide-sidebar').firstElementChild.title = translations[language].hideSidebarTitle;
+}
+console.log(translations.en.filterOptions[0]);
+function english() {
+  console.log('click english');
+  translate('en');
+}
+
+function italian() {
+  console.log('click italian');
+  translate('it');
+}
