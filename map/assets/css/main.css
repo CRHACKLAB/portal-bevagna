@@ -39,17 +39,10 @@ body {
 
 .container {
   position: relative;
-  /*position: absolute;
-  top: 0px;
-  left: auto;*/
   width:  100vw;
-  /* EDIT20230531B*/
-  /* height: 100vh; */
   min-height: 100%;
-  /* EDIT20230531B*/
   margin: 0px;
   padding: 0px;
-  /*background-color: aqua; DEVELOPMENT ONLY*/
 }
 
 .layer {
@@ -68,24 +61,39 @@ body {
 }
 
 .sidebar {
-  /* border: 2px solid blue; DEVELOPMENT ONLY */
   border-right: 1px solid rgba(0, 0, 0, 0.25);
-  /* background-color: #fff; 20240114*/
-  background-color: #F5A04C;
-  /* opacity: var(--opacity); DEVELOPMENT ONLY*/
+  background-color: #E9E4E3;
   z-index: 8;
   width: 100vw;
 }
 .heading {
-  border-bottom: 1px solid #F5A04C;
+  border-bottom: 1px solid #E9E4E3;
   min-height: 40px;
   line-height: 40px;
   padding-top: 10px;
-  /* background-color: #fff; 20240114*/
-  background-color: #F5A04C; 
+  background-color: #E9E4E3; 
   color: #32679A; 
   margin: 0;
-  
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.logo-img {
+  margin-top: 1vh;
+  height: 90px;
+}
+
+#logo-text {
+  margin-top: 1vh;
+  font-size: calc(var(--font-size) * 1.5);
+  max-width: 300px;
+  white-space: normal;
 }
 
 .map {
@@ -100,8 +108,6 @@ body {
 #splashimage {
   width: 100%;
 }
-
-
 
 /* ----------------- */
 /*    UI ELEMENTS    */
@@ -185,46 +191,44 @@ body {
 /* FILTER */
 #filter-dropdown {
   position: absolute;
-  top: 6.5vh;
+  top: 13vh;
   right: 7.6vw;
-  /* background-color: #00853e; 20240114 */
   background-color: #32679A;
   color: white;
-  font-size: calc(var(--font-size) * 1.5); 
+  font-size: calc(var(--font-size) * 1.4); 
   padding: 0.2px;
 }
 
 #filter-btn {
   border: none;
   position: absolute;
-  top: 6.5vh;
+  top: 13vh;
   right: 1vmin;
-  /* background-color: #00853e; 20240114 */
   background-color: #32679A;
   color: white;
-  font-size: calc(var(--font-size) * 1.6);
+  font-size: calc(var(--font-size) * 1.5);
 }
 
 /* LANGUAGE BUTTONS */
 
 .english-button {
   position: absolute;
-  top: 6.2vh;
-  left: 15vw;
+  top: 13vh;
+  left: 22.5vw;
   background: none;
   border: none;
   color: white;
-  font-size: calc(var(--font-size) * 1.8); /* 20240114 */
+  font-size: calc(var(--font-size) * 1.2); /* 20240114 */
 }
 
 .italian-button {
   position: absolute;
-  top: 6.2vh;
-  left: 1.5vw;
+  top: 13vh;
+  left: 8.5vw;
   background: none;
   border: none;
   color: white;
-  font-size: calc(var(--font-size) * 1.8); /* 20240114 */
+  font-size: calc(var(--font-size) * 1.2); /* 20240114 */
 }
 
 /* --------------------------- */
@@ -253,73 +257,6 @@ body {
   text-align: justify;
 }
 
-
-/* ------------------------- */
-/*     AR Viewer elements    */
-/* ------------------------- */
-
-#video {
-  position: fixed;
-  margin-left: 0;
-  /*margin-top: calc(50vh - 360px);*/
-  margin-top: calc(50vh - (var(--camera-screen-height) / 2));
-  /*
-  left: calc(50vw - 480px);
-  width: 960px;
-  height: 720px;
-  */
-  left: calc(50vw - (var(--camera-screen-width) / 2));
-  width: var(--camera-screen-width);
-  height: var(--camera-screen-height);   
-  padding: 0px;
-  /* EDIT20230531A*/
-  z-index: 2
-  /* END EDIT20230531A*/
-}
-
-#story-container {
-  position: absolute;
-  /*left: calc(50vw - 480px);*/
-  left: calc(50vw - (var(--camera-screen-width)/2));
-  margin-left: 0;
-  /*margin-top: calc(50vh - 360px);*/
-  margin-top: calc(50vh - (var(--camera-screen-height)/2));
-  /* border: 2px solid orange; */
-  height: var(--camera-screen-height);
-  z-index: 4
-}
-
-
-#story, #story-webp {
-  max-height: 100%;
-  padding: 0px;
-  height: 100vh;
-  /* EDIT20230531A*/
-  /*z-index: 4*/
-  /* END EDIT20230531A*/
-  /* margin-top: calc(var(--camera-screen-height)*0.05); */
-}
-
-.frame {
-  position: fixed;
-  top: 0px;
-  height: 100vh;
-  /*width: calc(50vw - 480px);*/
-  width: calc(50vw - (var(--camera-screen-width)/2));
-  background-color: white;
-  /* EDIT20230531A*/
-  z-index: 6
-  /* END EDIT20230531A*/
-}
-
-#left-frame {
-  left: 0px;
-}
-
-#right-frame {
-  /*left: calc(50vw + 480px);*/
-  left: calc(50vw + (var(--camera-screen-width)/2));
-}
 
 /* ---------------- */
 /* Listing x pop-up */
@@ -353,7 +290,7 @@ body {
 .listings .item {
   display: block;
   padding: 10px;
-  background-color: #F5A04C; 
+  background-color: #E9E4E3; 
 }
 
 .listings .item:last-child {
@@ -369,6 +306,7 @@ body {
   background-color: #29B8CE; 
   padding: 10px; 
   min-height: 150px;
+  
 }
 
 .listings .item-food .title {
@@ -527,7 +465,7 @@ body {
 }
 
 .marker-tourism {
-  filter: hue-rotate(-85deg); /* DEV only */
+  filter: hue-rotate(-155deg); /* DEV only */
   border: none;
   cursor: pointer;
   height: 40px;

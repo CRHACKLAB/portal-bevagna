@@ -6,6 +6,7 @@
     <meta name="viewport" content="initial-scale=1">
     
     <title>Mappa Bevagna</title>
+    <link rel="shortcut icon" href="./assets/img/ProvaLogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/normalize.css" media="screen">
     <link rel="stylesheet" href="./assets/css/main.css" media="screen"> 
     <!--mapbox-->
@@ -28,36 +29,35 @@
         </div>
         <div id="sidebar" class="layer sidebar" hidden>
             <div class='heading'>
-                SHU2024 - Bevagna
-            </div>
-            <div>
-                <button type="button" id="english-btn" class="english-button sidebarbtn" onclick="english()"><div title="Filter the search">&#x1f1ec;&#x1f1e7;</div></button>
+                <div class="logo">
+                    <img class="logo-img" src="./assets/img/ProvaLogo.svg" alt="Logo del progetto">
+                    <span id="logo-text"></span>
+                </div>
                 <button type="button" id="italian-btn" class="italian-button sidebarbtn" onclick="italian()"><div title="Filter the search">&#x1f1ee;&#x1f1f9;</div></button>
-                <select id="filter-dropdown" onclick="filter()">
-                    <option value="all">Tutte le categorie</option>
-                    <option value="default">Eventi SHU2024</option>
-                    <option value="infopoint">Infopoint</option>
-                    <option value="events">Eventi</option>
-                    <option value="entrance">Ingressi a Bevagna</option>
-                    <option value="food">Dove mangiare</option>
-                    <option value="tourism">Punti d'interesse</option>
-                    <option value="bus">Punto navetta</option>
-                    <option value="parking">Parcheggi</option>
-                    <option value="portals">Portali Gaite</option>
-                    <option value="crafts">Mestieri medievali</option>
+                <button type="button" id="english-btn" class="english-button sidebarbtn" onclick="english()"><div title="Filter the search">&#x1f1ec;&#x1f1e7;</div></button>
+                <select id="filter-dropdown">
+                    <option id="all" value="all"></option>
+                    <option id="default" value="default"></option>
+                    <option id="infopoint" value="infopoint"></option>
+                    <option id="events" value="events"></option>
+                    <option id="entrance" value="entrance"></option>
+                    <option id="food" value="food"></option>
+                    <option id="tourism" value="tourism"></option>
+                    <option id="bus" value="bus"></option>
+                    <option id="parking" value="parking"></option>
+                    <option id="portals" value="portals"></option>
+                    <option id="crafts" value="crafts"></option>
                 </select>
-                <button type="button" id="filter-btn" class="filter-button sidebarbtn" onclick="filter()"><div title="translations.en.filterBtnTitle">&#8981;</div></button>
+                <button type="button" id="filter-btn" class="Activate filter" onclick="filter()">&#8981;</button>
             </div>
-            
             <div id="listings" class="listings"></div>
-            <button type="button" id="hide-sidebar" class="hide-button sidebarbtn" onclick="hideSidebar()"><div title="Hides the sidebar">&#10006;</div></button>
+            <button type="button" id="hide-sidebar" class="hide-button sidebarbtn" onclick="hideSidebar()">&#10006;</button>
         </div>
         <div id="map" class="layer map">
-            <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()"><div title="Shows the sidebar">&#9776;</div></button>
+            <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()">&#9776;</button>
         </div>
     </div>
 </div>
-<div id="error"></div>
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/map-bevagna-it.js"></script>
 </body>
