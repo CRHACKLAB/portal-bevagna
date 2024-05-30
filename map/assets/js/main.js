@@ -110,14 +110,12 @@ function translate(language) {
 
 function english() {
     translate('en');
-    language = 'en';
-    console.log(language);
+    language = 'en';;
 }
 
 function italian() {
     translate('it');
-    language = 'it';
-    console.log(language);
+    language = 'it';;
 }
 
 if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {

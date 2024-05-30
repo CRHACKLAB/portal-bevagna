@@ -24,8 +24,6 @@ var map = new mapboxgl.Map({
   scrollZoom: true,
 });
 
-
-
 //compass
 const nav = new mapboxgl.NavigationControl({
   showCompass: true,
@@ -523,7 +521,7 @@ var stores = {
       },
     },
     // END MESTIERI GAITE
-    // MONUMENTS
+    // POINT OF INTEREST
     {
       type: "Feature",
       geometry: {
@@ -532,10 +530,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Collegiata di San Michele Arcangelo",
+        address_en: "Collegiate of San Michele Arcangelo",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Chiesa principale di Bevagna",
+        description_en: "Main church in Bevagna",
         markerType: "tourism",
       },
     },
@@ -547,10 +547,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Chiesa di San Silvestro",
+        address_en: "Church of San Silvestro",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Chiesa di Bevagna",
+        description_en: "Church in Bevagna",
         markerType: "tourism",
       },
     },
@@ -562,10 +564,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Chiesa di Santa Maria Filiorum Comitis",
+        address_en: "Church of Santa Maria Filiorum Comitis",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Edificata da Rainaldo I conte di Antignano, la chiesetta, oggi sconsacrata, è la più antica tra quelle conservate: se ne hanno notizie fin dal 1198.",
+        description_en: "Built by Rainaldo I count of Antignano, the little church, now deconsecrated, is the oldest among those preserved: there are news of it since 1198.",
         markerType: "tourism",
       },
     },
@@ -577,10 +581,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Chiesa dei Santi Domenico e Giacomo",
+        address_en: "Church of Saints Domenico and Giacomo",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Edificata da Rainaldo I conte di Antignano, la chiesetta, oggi sconsacrata, è la più antica tra quelle conservate: se ne hanno notizie fin dal 1198.",
+        description_it: "Sorse su un antico oratorio dedicato a San Giorgio, donato dal Comune al Beato Giacomo Bianconi nel 1291. In segno di riconoscimento per il ruolo fondamentale da lui svolto nella ricostruzione del paese, seguita all’assedio delle truppe imperiali di Federico II, egli ottenne di poter collocare il convento in posizione centrale: nella piazza accanto al palazzo dei Consoli.",
+        description_en: "It was built on an ancient oratory dedicated to St. George, donated by the Municipality to Blessed Giacomo Bianconi in 1291. As a sign of recognition for the fundamental role he played in the reconstruction of the town, after the siege of the imperial troops of Frederick II, he obtained to place the convent in a central position: in the square next to the Palazzo dei Consoli.",
         markerType: "tourism",
       },
     },
@@ -592,10 +598,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Chiesa di San Francesco",
+        address_en: "Church of San Francesco",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Edificata alla fine del XIII secolo sull’antico oratorio dedicato a San Giovanni Battista, sorge sul luogo più alto della città, dove sicuramente era un tempio romano. La facciata, a capanna, è adorna di un elegante portale polistilo a tutto sesto, con capitelli foliati in marmo.\n\n L’interno, ad una sola navata, è stato completamente rinnovato nel XVIII secolo; vi si ammirano dipinti di Dono Doni e Ascensidonio Spacca. Da una piccola porta a destra si accede a una cappella interna con affreschi risalenti al XVI secolo.",
+        description_en: "Built at the end of the 13th century on the ancient church dedicated to Saint John the Baptist, it stands on the highest place in the city, where it was certainly a Roman temple. The gabled façade is adorned with an elegant rounded polystyle portal, with foliated capitals in marble.\n\n The interior, with a single nave, was completely renovated in the 18th century; you can admire paintings by Dono Doni and Ascensidonio Spacca. A small door on the right leads to an inner chapel with frescoes dating back to the 16th century. Next to the altar, in a chapel, there is a stone on which San Francesco placed his feet when he preached to the birds in Pian d’Arca. The second chapel on the right, perhaps a work by Galeazzo Alessi, preserves a beautiful 15th century tabernacle; the small dome is adorned with glazed earthenware attributed to Santi Buglioni.",
         markerType: "tourism",
       },
     },
@@ -607,6 +615,7 @@ var stores = {
       }, 
       properties: {
         address_it: "Piazza Filippo Silvestri",
+        address_en: "Filippo Silvestri square",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -623,6 +632,7 @@ var stores = {
       }, 
       properties: {
         address_it: "Palazzo dei consoli - Teatro Francesco Torti",
+        address_en: "Palazzo dei consoli - Theatre Francesco Torti",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -639,10 +649,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Accolta (Lavatoio Pubblico)",
+        address_en: "The Accolta",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Realizzato in un invaso in cui confluiscono le acque del fiume Clitunno che fuoriescono formando una cascata.\n\n A pochi metri dalla cascata il fiume Clitunno confluisce nel Teverone, prendendo il nome Timia.",
+        description_en: "Bevagna is surrounded by rivers: The Clitunno, which pours into the Teverone taking the name of Timia. The Clitunno, just before pouring in Teverone creates the Accolta, the old wash house, and a nice waterfall which is admired by many tourists.",
         markerType: "tourism",
       },
     },
@@ -654,10 +666,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Domus Romana",
+        address_en: "Domus Romana",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Nel cortile dietro casa Silvestri esiste, alcuni metri più in basso del piano attuale della strada (ex via Flaminia) una domus, unico complesso romano di forma rettangolare rimasto integro abbastanza da suscitare meraviglia per la raffinatezza e ricchezza dell’ambiente, che dovrebbe entrare nei circuiti turistici per divulgare e far apprezzare la storia di questi luoghi. Sono visibili i resti di tre locali antichi intercomunicanti.\n\n Anche se non si può stabilire con certezza se pubblico o privato, l’edificio è del I secolo d. C. ed impressiona per le strutture di reticolato a pietre bianche, rosa e grigie con semicolonne di mattoni e per il pavimento di mosaico a piccole tessere bianche e nere adorno di meandro e con fascia ad onde intorno, che è l’elemento di maggior spicco. Scendendo per una scaletta tre metri sotto, si arriva in un altro ambiente, forse più antico, con pavimento a mosaico bianco a grandi tessere e opus spicatum.",
+        description_en: "In the courtyard behind the Silvestri house, a few meters lower than the current level of the street (ex Via Flaminia) there is a domus, the only Roman complex of rectangular shape intact enough to arouse wonder for its refinement and richness in its refinement and richness in its refinement of the refinement and richness in the fineness of the fineness of the finery of the finery of the fineness of the fineness of the fineness of the fineness of the fineness of the fineness of the road (ex Via Flaminia) tourist ciorcadi to spread agus i bhfad appreciate the history of these places. The remains of three ancient intercommunicating rooms are visible.\n\nEven if it cannot be established with certainty whether public or private, the building dates back to the 1st century AD. C. and impresses with the lattice structures of white stones, gray agus pinks with brick semi-columns and the agus mosaic floor with small white and black tiles adorned with wave-like meándro agus éadain around, which is the most striking element. An going down a ladder three meters below, má tá tú ag teacht go dtí an comhthimpeallach another, perhaps older, with agus white mosaic floor agus large tiles agus opus spicatum.",
         markerType: "tourism",
       },
     },
@@ -669,10 +683,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Teatro romano",
+        address_en: "Roman Theatre",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Le abitazioni, costruite sopra i resti romani, seguono le curvature di un teatro di grandi dimensioni che si appoggiava sul pendio dell’altura e si affacciava sulla via Flaminia.\n\nAll’interno di case private sono visibili i cospicui e significativi resti di due ambulacri che fungevano da sostegno alla cavea. In un tratto dell’ambulacro è stato ricavato l’originale ristorante “Redibis”.",
+        description_it: "Le abitazioni, costruite sopra i resti romani, seguono le curvature di un teatro di grandi dimensioni che si appoggiava sul pendio dell’altura e si affacciava sulla via Flaminia.",
+        description_en: "The houses, built above the Roman remains, follow the curvatures of a large theater that leaned on the slope of the hill and overlooked the Via Flaminia.",
         markerType: "tourism",
       },
     },
@@ -684,10 +700,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Edificio delle Terme",
+        address_en: "Bath building",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Del complesso termale rimane il frigidarium, formato da nicchie decorate a mosaico a tessere bianche e nere. I recenti restauri hanno messo in evidenza tracce del calidarium. Il bel mosaico, del II sec. d. C., di pregevole e raffinata fattura, si ispira al mondo marino.",
+        description_en: "The frigidarium remains of the thermal complex, formed by mosaic-decorated niches with black and white tesserae. Recent restorations have revealed traces of the calidarium. The beautiful mosaic, from the 2nd century A.C., of exquisite and refined workmanship, is inspired by the marine world.",
         markerType: "tourism",
       },
     },
@@ -699,10 +717,12 @@ var stores = {
       }, 
       properties: {
         address_it: "Tempio",
+        address_en: "Temple",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Il tempio era originariamente orientato verso il Foro, il fianco e la facciata posteriore, tuttora conservati, presentano un rivestimento in opus mixtum e decorazioni con semicolonne e paraste. Risale al II sec. d. C. In epoca medievale è stato trasformato nella chiesa della Madonna della Neve.\n\n Oggi è parte della Residenza d’Epoca, Orto degli Angeli.",
+        description_en: "The temple was originally oriented towards the Forum, the side and the rear façade, still preserved, have a covering in opus mixtum and decorations with half-columns and pilasters. It dates back to the 2nd century A.D. In medieval times it was transformed into the church of the Madonna della Neve.\n\n Today it is part of the Residenza d’Epoca Orto degli Angeli.",
         markerType: "tourism",
       },
     },
@@ -714,14 +734,16 @@ var stores = {
       }, 
       properties: {
         address_it: "Chiesa di Sant'Agostino",
+        address_en: "Church of Sant'Agostino",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Fu fondata, insieme all’originario convento degli agostiniani, nel 1316 nei pressi della più antica chiesa di San Pietro.\n\n Nella tribuna e lungo le pareti vi sono frammenti di affreschi votivi del XIV secolo su più strati. Un recente restauro, reso possibile da Don Aldo Giovannelli, ha riportato alla luce una serie di absidiole, decorate nel corso del XVI secolo destinate agli altari e con soggetti dedicati alla Vergine.",
+        description_en: "It was founded together with the original Augustinian convent, in 1316 near the oldest church of San Pietro.\n\n In the tribune and along the walls there are fragments of votive frescoes from the 14th century on several layers. A recent restoration, made possible by Don Aldo Giovannelli, brought to light a series of apses, decorated during the 16th century for the altars and with subjects dedicated to the Virgin.",
         markerType: "tourism",
       },
     },
-    // END MONUMENTS
+    // END POINT OF INTEREST
   ],
 };
 
@@ -845,12 +867,13 @@ function buildLocationList(data) {
     link.href = "#";
     link.className = "title";
     link.id = "link-" + prop.id;
-    if (language ==="it") {
+  
+    if (language == "it") {
       link.innerHTML = prop.address_it;
     } else {
       link.innerHTML = prop.address_en;
     }
-
+        
     /**
      * Listen to the element and when it is clicked, do four things:
      * 1. Update the `currentFeature` to the store associated with the clicked link
@@ -931,6 +954,4 @@ function filter() {
   listings.innerHTML = ''; // Clear existing listings 
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
 }
-
-
 
