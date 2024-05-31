@@ -81,7 +81,47 @@ function translate(language) {
     document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
     document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
     document.getElementById('crafts').innerHTML = translations[language].filterOptions[10];
-
+    
+    const listingsContainer = document.getElementById('listings');
+    listingsContainer.innerHTML = '';
+    
+    stores.features.forEach(store => {
+        var prop = store.properties;
+        var listings = document.getElementById("listings");
+        var listing = listings.appendChild(document.createElement("div"));
+        listing.id = "listing-" + prop.id;
+        if (prop.markerType) {
+            listing.className = "item item-" + prop.markerType;
+        } else {
+            listing.className = "item item-default"; 
+        }
+        
+        var link = listing.appendChild(document.createElement("a"));
+        link.href = "#";
+        link.className = "title";
+        link.id = "link-" + prop.id;
+        console.log(link);
+        if (language === 'it') {
+            link.innerText = prop.address_it;
+        } else {
+            link.innerText = prop.address_en;
+        }
+        
+        link.addEventListener("click", function (e) {
+            for (var i = 0; i < stores.features.length; i++) {
+                if (this.id === "link-" + stores.features[i].properties.id) {
+                    var clickedListing = stores.features[i];
+                    flyToStore(clickedListing);
+                    makeHighlight(clickedListing);
+                }
+            }
+            var activeItem = document.getElementsByClassName("active");
+            if (activeItem[0]) {
+                activeItem[0].classList.remove("active");
+            }
+            this.parentNode.classList.add("active");
+        });
+    });
 }
 
 function english() {

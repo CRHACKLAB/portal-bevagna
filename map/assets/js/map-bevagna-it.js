@@ -466,7 +466,7 @@ var stores = {
       }, 
       properties: {
         address_it: "Mestiere Gaita San Giovanni",
-        address_en: "Mestiere Gaita San Giovanni",
+        address_en: "Gaita San Giovanni Craft",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -483,7 +483,7 @@ var stores = {
       }, 
       properties: {
         address_it: "Mestiere Gaita San Giorgio",
-        address_en: "Gaita San Giorgio",
+        address_en: "Gaita San Giorgio Craft",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -500,7 +500,7 @@ var stores = {
       }, 
       properties: {
         address_it: "Mestiere Gaita San Pietro",
-        address_en: "Gaita San Pietro",
+        address_en: "Gaita San Pietro Craft",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -517,7 +517,7 @@ var stores = {
       }, 
       properties: {
         address_it: "Mestiere Gaita Santa Maria",
-        address_en: "Gaita Santa Maria",
+        address_en: "Gaita Santa Maria Craft",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
