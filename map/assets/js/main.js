@@ -49,27 +49,23 @@ const back2Index = () => {
 };
 
 const back2Map = () => {
-    //history.back();
-    location.reload();
+    history.back();
 }
 
 // TRANSLATIONS
 const translations = {
     en: {
-        heading: "Map of SHU2024 Bevagna",
         filterOptions: [
-            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Point", "Parking", "Gaite Portals", "Medieval Crafts"
+            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts"
         ]
     },
     it: {
-        heading: "Mappa di SHU2024 Bevagna",
         filterOptions: [
             "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali"
         ]
     }
 };
 function translate(language) {
-    document.getElementById('logo-text').innerHTML = translations[language].heading;
     document.getElementById('all').innerHTML = translations[language].filterOptions[0];
     document.getElementById('default').innerHTML = translations[language].filterOptions[1];
     document.getElementById('infopoint').innerHTML = translations[language].filterOptions[2];

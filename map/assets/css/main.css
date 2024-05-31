@@ -78,10 +78,11 @@ body {
 
 .logo {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .logo-img {
@@ -89,11 +90,9 @@ body {
   height: 90px;
 }
 
-#logo-text {
+.logo-shu {
   margin-top: 1vh;
-  font-size: calc(var(--font-size) * 1.5);
-  max-width: 300px;
-  white-space: normal;
+  height: 90px;
 }
 
 .map {
@@ -118,7 +117,6 @@ body {
   position: absolute;
   top: 1vmin;
   right: 1vmin;
-  /* background-color: #00853e; 20240114 */
   background-color: #32679A;
   color: white;
   font-size: calc(var(--font-size) * 1.8); /* 20240114 */
@@ -129,10 +127,6 @@ body {
   color: white;
 }
 
-/* #hide-ar-viewer {
-  position: fixed;
-} */
-
 /* BACK BUTTONS */
 .back-button {
   position: absolute;
@@ -140,8 +134,7 @@ body {
   left: 1vmin;
   background-color: #32679A;
   color: white;
-  font-size: calc(var(--font-size) * 1.8); 
-  
+  font-size: calc(var(--font-size) * 1.8);
 }
 
 .back-button:hover {
@@ -149,6 +142,9 @@ body {
   color: white;
 }
 
+.fa-solid {
+  padding: 0;
+}
 
 /* SHOW BUTTONS */
 .show-button {
@@ -188,7 +184,6 @@ body {
 
 /* FILTER */
 #filter-dropdown {
-  position: absolute;
   top: 13vh;
   right: 7.6vw;
   background-color: #32679A;
@@ -199,7 +194,6 @@ body {
 
 #filter-btn {
   border: none;
-  position: absolute;
   top: 13vh;
   right: 1vmin;
   background-color: #32679A;
@@ -215,14 +209,12 @@ body {
 }
 
 .italian-button > img {
-  position: absolute;
   top: 14vh;
   left: 10.5vw;
   width: 24px;
   height: 17px;
 }
 .english-button > img {
-  position: absolute;
   top: 14vh;
   left: 25vw;
   width: 24px;
@@ -255,27 +247,12 @@ body {
   text-align: justify;
 }
 
-
 /* ---------------- */
 /* Listing x pop-up */
 /* ---------------- */
 
-.center{
-  margin-top: 10px;
-  background-color: #404040;
-  color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 15px;
-  align-self: center;
-}
-
-.mapboxgl-popup-close-button{
-  font-size: 40px;
-}
-
 .listings {
-  padding-top: 50px;
+  margin: 2px;
   height: 100%;
   bottom: 30%;
   overflow: auto;
@@ -283,16 +260,7 @@ body {
   text-align: center;  
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.listings .item {
-  display: block;
-  padding: 10px;
-  background-color: #E9E4E3; 
-}
-
-.listings .item:last-child {
-  border-bottom: none;
+  gap: 5px;
 }
 
 .listings .item-default .title {
@@ -346,7 +314,7 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  background-color: #29b8ce; 
+  background-color: #EF7875; 
   padding: 10px; 
   min-height: 150px;
   border-radius: 25px;
@@ -445,12 +413,61 @@ body {
   justify-content: center;
 }
 
-.listings .item .title small {
-  font-weight: 400;
-}
+@media only screen and (max-width: 400px) {
 
-.listings .item.active {
-  border-color: #f8f8f8;
+  #filter-dropdown {
+    font-size: calc(var(--font-size) * 1);
+  }
+
+  .item {
+    font-size: calc(var(--font-size) * 1);
+  }
+
+  .listings {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .listings .item-default .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-food .title {
+    font-size: calc(var(--font-size));
+    justify-content: center;
+  }
+  
+  .listings .item-infopoint .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-tourism .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-entrance .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-events .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-bus .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-parking .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-portals .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-crafts .title {
+    font-size: calc(var(--font-size));
+  }
+
 }
 
 ::-webkit-scrollbar {
@@ -500,7 +517,7 @@ body {
   cursor: pointer;
   height: 49px;
   width: 35px;
-  background-image: url("../img/markers/monumenti.png");
+  background-image: url("../img/markers/04_icona\ fontana.png");
   background-size: cover;
 }
 
