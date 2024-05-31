@@ -53,31 +53,6 @@ const back2Map = () => {
     location.reload();
 }
 
-const hideARViewer = () => {
-    console.log("Hide AR Viewer");
-    sidebar.removeAttribute("hidden");
-    mapContainer.removeAttribute("hidden");
-    ARViewer.setAttribute("hidden", "hidden");
-    video.setAttribute("hidden", "hidden");
-    closeCamera();
-    // Must also stop the camera
-};
-
-const showARViewer = (spritemap) => {
-    console.log("Show AR Viewer");
-    story.setAttribute("src", `./assets/img/sprites/${spritemap}.png`);
-    /* EDIT20230531A*/
-    storyWebp.setAttribute("srcset", `./assets/img/sprites/${spritemap}.webp`);
-    /* END EDIT20230531A*/
-    //ARViewer.setAttribute("width", "70vw"); /*EDITED: REMOVE */
-    openCamera()
-    
-    ARViewer.removeAttribute("hidden");
-    video.removeAttribute("hidden");
-    infoCard.setAttribute("hidden", "hidden");
-    
-}
-
 // TRANSLATIONS
 const translations = {
     en: {
@@ -106,6 +81,7 @@ function translate(language) {
     document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
     document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
     document.getElementById('crafts').innerHTML = translations[language].filterOptions[10];
+
 }
 
 function english() {

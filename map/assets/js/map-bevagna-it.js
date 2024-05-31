@@ -34,106 +34,42 @@ map.on("load", function (e) {
 var stores = {
   type: "FeatureCollection",
   features: [
-    // PARCHEGGI
+    // SHU MAIN EVENTS
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609238261447722, 42.93548362345141],
+        coordinates: [12.607299828666415, 42.932544953101086],
       }, 
       properties: {
-        address_it: "Parcheggio Piazzale Masci Mindolfo",
-        address_en: "Piazzale Masci Mindolfo Parking",
+        address_it: "Sede Social Hackademy Umbria",
+        address_en: "Social Hackademy Umbria Main Event",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Parcheggio a pagamento",
-        markerType: "parking",
+        description_it: "Sede evento principale",
+        description_en: "Main event place",
+        markerType: "default",
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.606431742030377, 42.93451733301161],
+        coordinates: [12.609109781873885, 42.93308063784067],
       }, 
       properties: {
-        address_it: "Parcheggio Piazzale dell' Accoglienza",
-        address_en: "Piazzale dell' Accoglienza Parking",
+        address_it: "SHU YoungMakers",
+        address_en: "SHU YoungMakers",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Parcheggio a pagamento",
-        markerType: "parking",
+        description_it: "Sede evento giovani",
+        description_en: "Young makers event place",
+        markerType: "default",
       },
     },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.609730858967609, 42.93153631439249],
-      }, 
-      properties: {
-        address_it: "Parcheggio Centro",
-        address_en: "Central Parking",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Parcheggio a pagamento",
-        markerType: "parking",
-      },
-    },
-    // FINE PARCHEGGI
-    // ENTRANCE POINT
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608935189233497, 42.931891328001676],
-      }, 
-      properties: {
-        address_it: "Ingresso Porta Todi",
-        address_en: "Porta Todi Entrance",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: ``,
-        markerType: "entrance",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.609511886234214, 42.935485935049634],
-      }, 
-      properties: {
-        address_it: "Ingresso Porta Cannara",
-        address_en: "Porta Cannara Entrance",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: ``,
-        markerType: "entrance",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.606836665994416, 42.934022587832004],
-      }, 
-      properties: {
-        address_it: "Ingresso Porta Guelfa",
-        address_en: "Porta Guelfa Entrance",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: ``,
-        markerType: "entrance",
-      },
-    },
-    // END ENTRANCE POINT
+    // END SHU MAIN EVENTS
     // INFOPOINT
     {
       type: "Feature",
@@ -172,42 +108,112 @@ var stores = {
       },
     },
     // END BUS
-    // SHU MAIN EVENTS
+    // PARCHEGGI
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.607299828666415, 42.932544953101086],
+        coordinates: [12.609238261447722, 42.93548362345141],
       }, 
       properties: {
-        address_it: "Sede Social Hackademy Umbria",
-        address_en: "Social Hackademy Umbria Main Event",
+        address_it: "Parcheggio Piazzale Masci Mindolfo",
+        address_en: "Piazzale Masci Mindolfo Parking",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Sede evento principale",
-        description_en: "Main event place",
-        markerType: "default",
+        description_it: "Parcheggio a pagamento",
+        description_en: "Toll Parking",
+        markerType: "parking",
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609109781873885, 42.93308063784067],
+        coordinates: [12.606431742030377, 42.93451733301161],
       }, 
       properties: {
-        address_it: "SHU YoungMakers",
-        address_en: "SHU YoungMakers",
+        address_it: "Parcheggio Piazzale dell' Accoglienza",
+        address_en: "Piazzale dell' Accoglienza Parking",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Sede evento giovani",
-        description_en: "Young makers event place",
-        markerType: "default",
+        description_it: "Parcheggio a pagamento",
+        description_en: "Toll Parking",
+        markerType: "parking",
       },
     },
-    // END SHU MAIN EVENTS
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609730858967609, 42.93153631439249],
+      }, 
+      properties: {
+        address_it: "Parcheggio Centro",
+        address_en: "Central Parking",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Parcheggio a pagamento",
+        description_en: "Toll Parking",
+        markerType: "parking",
+      },
+    },
+    // FINE PARCHEGGI
+    // ENTRANCE POINT
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608935189233497, 42.931891328001676],
+      }, 
+      properties: {
+        address_it: "Ingresso Porta Todi",
+        address_en: "Porta Todi Entrance",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: ``,
+        description_en: "",
+        markerType: "entrance",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609511886234214, 42.935485935049634],
+      }, 
+      properties: {
+        address_it: "Ingresso Porta Cannara",
+        address_en: "Porta Cannara Entrance",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: ``,
+        description_en: "",
+        markerType: "entrance",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.606836665994416, 42.934022587832004],
+      }, 
+      properties: {
+        address_it: "Ingresso Porta Guelfa",
+        address_en: "Porta Guelfa Entrance",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: ``,
+        description_en: "",
+        markerType: "entrance",
+      },
+    },
+    // END ENTRANCE POINT
     // COLLATERAL EVENTS
     {
       type: "Feature",
@@ -767,8 +773,6 @@ var geolocateControl = new mapboxgl.GeolocateControl({
 
 map.addControl(geolocateControl);
 
-
-
 /**
  * Wait until the map loads to make changes to the map.
 */
@@ -835,6 +839,21 @@ function addMarkers() {
       e.stopPropagation();
       
     });
+  });
+}
+
+// This functionis to translate the listings
+
+function updateAddresses(data) {
+  var listings = document.getElementById("listings").children;
+  Array.from(listings).forEach(function (listing, i) {
+      var prop = data.features[i].properties;
+      var link = listing.querySelector("a.title");
+      if (language == "it") {
+          link.innerHTML = prop.address_it;
+      } else {
+          link.innerHTML = prop.address_en;
+      }
   });
 }
 
@@ -954,4 +973,3 @@ function filter() {
   listings.innerHTML = ''; // Clear existing listings 
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
 }
-

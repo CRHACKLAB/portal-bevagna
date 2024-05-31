@@ -303,10 +303,13 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  background-color: #29B8CE; 
+  background-color: #60B565; 
   padding: 10px; 
   min-height: 150px;
-  
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-food .title {
@@ -315,9 +318,13 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  background-color: #404040; 
+  background-color: #d4a323; 
   padding: 10px; 
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-infopoint .title {
@@ -326,9 +333,14 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  background-color: #00853e; 
+  background-color: #420ebb; 
+  filter: hue-rotate(-35deg);
   padding: 10px; 
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-tourism .title {
@@ -337,9 +349,13 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  background-color: #FDC41F; 
+  background-color: #EF7875; 
   padding: 10px; 
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-entrance .title {
@@ -348,9 +364,13 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #EF7875;
+  background-color: #df4432;
   padding: 10px;
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-events .title {
@@ -359,9 +379,14 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #4918CE;
+  background-color: #60B565;
+  filter: hue-rotate(-15deg);
   padding: 10px;
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-bus .title {
@@ -370,9 +395,13 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #df4432;
+  background-color: #F5A04C;
   padding: 10px;
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-parking .title {
@@ -381,9 +410,13 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #99dd99;
+  background-color: #420ebb;
   padding: 10px;
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-portals .title {
@@ -395,6 +428,10 @@ body {
   background-color: #9455ef;
   padding: 10px;
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item-crafts .title {
@@ -406,6 +443,10 @@ body {
   background-color: #cd22cd;
   padding: 10px;
   min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listings .item .title small {
@@ -440,67 +481,64 @@ body {
 .marker-default {
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/Senza\ titolo-1.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/pc\ da\ inviare.png");
   background-size: cover;
 }
 
 .marker-infopoint {
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/info\ point.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/info\ point\ bianco\ 2.png");
   background-size: cover;
 }
 
 .marker-food {
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/Prova\ Food.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/Cibo.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .marker-tourism {
-  filter: hue-rotate(-155deg); /* DEV only */
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/marker.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/04_icona\ fontana.png");
   background-size: cover;
 }
 
 .marker-entrance {
-  /*filter: hue-rotate( 25deg);*/ /* DEV only */
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/esempio2.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/Porte.png");
   background-size: cover;
 }
 
 .marker-events {
-  filter: hue-rotate(-80deg); /* DEV only */
+  filter: hue-rotate(-15deg);
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/marker.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/puzzle\ da\ inviare.png");
   background-size: cover;
 }
 
 .marker-bus {
-  filter: hue-rotate(-200deg); /* DEV only */
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/marker.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/02_bus\ stop.png");
   background-size: cover;
 }
 
@@ -508,29 +546,27 @@ body {
   /*filter: hue-rotate(-150deg);*/ /* DEV only */
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/parkingmod.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/utlima\ icona\ posizione.png");
   background-size: cover;
 }
 
 .marker-portals {
-  /*filter: hue-rotate(70deg);*/ /* DEV only */
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/altro\ esempio.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/Portali\ 2.png");
   background-size: cover;
 }
 
 .marker-crafts {
-  filter: hue-rotate(-270deg); /* DEV only */
   border: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-image: url("../img/markers/marker.png");
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/01_mestieri\ seta.png");
   background-size: cover;
 }
 
