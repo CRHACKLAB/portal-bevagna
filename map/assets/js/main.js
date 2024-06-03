@@ -2,11 +2,11 @@ console.log("main.js uploaded");
 const infoCard = document.getElementById("info-card-layer");
 const sidebar = document.getElementById("sidebar");
 const mapContainer = document.getElementById("map");
-const ARViewer = document.getElementById("arviewer-layer");
 const cardTitle = document.getElementById("card-title");
 const cardDescription = document.getElementById("card-description");
 const story = document.getElementById("story");
 const backButton = document.getElementById('back-to-index');
+const portal = document.getElementById('portals');
 
 const hideInfoCard = () => {
     console.log("Hide info card");
@@ -15,15 +15,32 @@ const hideInfoCard = () => {
     mapContainer.removeAttribute("hidden");
 };
 
-const showInfoCard = (title_it, title_en, description_it, description_en) => {
-    console.log("Show info card");
-    console.log(language);
+const showInfoCard = (title_it, title_en, description_it, description_en, portal_img, markerType, site) => {
+
+    // shows the card depending on the language
     if (language == 'it') {
         cardTitle.innerText = title_it;
         cardDescription.innerText = description_it;
     } else {
         cardTitle.innerText = title_en;
         cardDescription.innerText = description_en;
+    }
+
+    // TODO shows the image for the portal
+    // if (markerType == "portals") {
+    //     var img = document.createElement("img");
+    //     img.src = portal_img;
+    //     img.alt = "collegamento al portale";
+
+    //     cardDescription.appendChild(img);
+    // }
+
+    // shows the link for the portal
+    if (markerType == "portals" || markerType == "crafts") {
+        var link = document.createElement("a");
+        link.href = site;
+        link.innerText = "\n\nLink";
+        cardDescription.appendChild(link);
     }
     //MODIFY WITH DATA FROM MAPBOX
     
@@ -44,15 +61,18 @@ const showSidebar = () => {
 };
 
 const back2Index = () => {
-    console.log("Back to index");
-    window.location.href = "index.html"
+    if (language == "it") {
+        console.log(language);
+        window.location.href = "index.html"
+        language = "it";
+    } else {
+        console.log(language);
+        window.location.href = "index.html"
+        language = "en";
+    }
 };
 
-const back2Map = () => {
-    history.back();
-}
-
-// TRANSLATIONS
+// TRANSLATION FUNCTIONS
 const translations = {
     en: {
         filterOptions: [
@@ -93,10 +113,13 @@ function translate(language) {
         }
         
         var link = listing.appendChild(document.createElement("a"));
-        link.href = "#";
+        if (prop.id === "crafts"){
+            link.href = prop.site
+        } else {
+            link.href = "#";
+        }
         link.className = "title";
         link.id = "link-" + prop.id;
-        console.log(link);
         if (language === 'it') {
             link.innerText = prop.address_it;
         } else {

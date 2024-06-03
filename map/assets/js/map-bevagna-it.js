@@ -304,7 +304,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609313195494678, 42.933741281193385],
+        coordinates: [12.609281263701092, 42.9337578681626],
       }, 
       properties: {
         address_it: "Auditorium Santa Maria Laurentia",
@@ -321,7 +321,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609303712454063, 42.9337398926071],
+        coordinates: [12.60936152376661, 42.93370034347897],
       }, 
       properties: {
         address_it: "Laboratorio Stop Motion",
@@ -384,9 +384,11 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "",
-        description_en: "",
+        description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
+        description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
         markerType: "portals",
+        img: "./assets/img/Portal-TOCC-Untitled_project.svg",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
     {
@@ -834,7 +836,7 @@ function addMarkers() {
       flyToStore(marker);
       /* Close all other popups and display popup for clicked store */
       makeHighlight(marker);
-      showInfoCard(marker.properties.address_it, marker.properties.address_en, marker.properties.description_it, marker.properties.description_en);
+      showInfoCard(marker.properties.address_it, marker.properties.address_en, marker.properties.description_it, marker.properties.description_en, marker.properties.img, marker.properties.markerType, marker.properties.site);
       /* Highlight listing in sidebar */
       e.stopPropagation();
       
@@ -883,6 +885,7 @@ function buildLocationList(data) {
 
     /* Add the link to the individual listing created above. */
     var link = listing.appendChild(document.createElement("a"));
+    
     link.href = "#";
     link.className = "title";
     link.id = "link-" + prop.id;
@@ -935,27 +938,6 @@ function makeHighlight(currentFeature) {
     "marker-" + currentFeature.properties.id
   );
 
-}
-
-function checkinbounds(currentFeature) {
-  const bound1 = new mapboxgl.LngLat(
-    currentFeature.geometry.coordinates[0] + 0.001,
-    currentFeature.geometry.coordinates[1] + 0.001
-  );
-  const bound2 = new mapboxgl.LngLat(
-    currentFeature.geometry.coordinates[0] - 0.001,
-    currentFeature.geometry.coordinates[1] - 0.001
-  );
-  console.log('bound1 = ' + bound1, 'bound2 = ' + bound2);
-  const bounds = new mapboxgl.LngLatBounds(bound1, bound2);
-
-  // called every time a new user position is determined
-  function checkUserPostion(position) {
-    const { latitude, longitude } = position.coords;
-    return bounds.contains([longitude, latitude]);
-  }
-console.log(bounds);
-  navigator.geolocation.watchPosition(checkUserPostion);
 }
 
 // FILTER
