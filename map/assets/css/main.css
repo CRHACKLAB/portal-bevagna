@@ -1,5 +1,6 @@
 /* CUSTOM PROPERTIES */
 
+
 :root {
   /* Remember: put here only the variables that have a global scope. Otherwise it is better to insert them in the specific closure where they have to act upon. */
   --font-size: 1.1rem;
@@ -224,8 +225,10 @@ body {
 /* --------------------------- */
 
 #card-container {
+  
   position: absolute;
-  border: 1px solid black;
+  border: 6px double ;
+  border-radius: 25px;
   left: calc(50vw - 9em);
   top: 5%;
   width: 18em;
@@ -235,14 +238,24 @@ body {
   font-size: calc(var(--font-size) * 2);
   font-weight: 600;
   font-family: var(--font-family);
+  
 }
 
 #card-description {
   font-size: var(--font-size);
   font-family: var(--font-family);
   line-height: 150%;
-  margin: 0 5px;
+  margin: 0 4px 15px;
   text-align: justify;
+}
+
+.img-background {
+  margin-top: 30px;
+  width: 97%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* ---------------- */
@@ -312,7 +325,7 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  background-color: #EF7875; 
+  background-color: #29B8CE; 
   padding: 10px; 
   min-height: 150px;
   border-radius: 25px;
@@ -372,7 +385,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #420ebb;
+  background-color: #1f089f;
   padding: 10px;
   min-height: 150px;
   border-radius: 25px;
@@ -497,7 +510,7 @@ body {
   cursor: pointer;
   height: 49px;
   width: 35px;
-  background-image: url("../img/markers/info\ point\ bianco\ 2.png");
+  background-image: url("../img/markers/Infopoint.png");
   background-size: cover;
 }
 
@@ -515,7 +528,7 @@ body {
   cursor: pointer;
   height: 49px;
   width: 35px;
-  background-image: url("../img/markers/04_icona\ fontana.png");
+  background-image: url("../img/markers/monumenti.png");
   background-size: cover;
 }
 
@@ -534,7 +547,7 @@ body {
   cursor: pointer;
   height: 49px;
   width: 35px;
-  background-image: url("../img/markers/puzzle\ da\ inviare.png");
+  background-image: url("../img/markers/Eventi.png");
   background-size: cover;
 }
 
@@ -553,7 +566,7 @@ body {
   cursor: pointer;
   height: 49px;
   width: 35px;
-  background-image: url("../img/markers/utlima\ icona\ posizione.png");
+  background-image: url("../img/markers/Parcheggio.png");
   background-size: cover;
 }
 
@@ -571,7 +584,7 @@ body {
   cursor: pointer;
   height: 49px;
   width: 35px;
-  background-image: url("../img/markers/01_mestieri\ seta.png");
+  background-image: url("../img/markers/01_mestieri\ candela\ \(1\).png");
   background-size: cover;
 }
 

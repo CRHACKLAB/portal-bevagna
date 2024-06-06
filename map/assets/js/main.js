@@ -8,6 +8,7 @@ const story = document.getElementById("story");
 const backButton = document.getElementById('back-to-index');
 const portal = document.getElementById('portals');
 
+
 const hideInfoCard = () => {
     console.log("Hide info card");
     infoCard.setAttribute("hidden", "hidden");
@@ -26,14 +27,15 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
         cardDescription.innerText = description_en;
     }
 
-    // TODO shows the image for the portal
-    // if (markerType == "portals") {
-    //     var img = document.createElement("img");
-    //     img.src = portal_img;
-    //     img.alt = "collegamento al portale";
+    // shows the image for the portal
+    if (portal_img) {
+        var img = document.createElement("img");
+        img.src = portal_img;
+        img.alt = "collegamento al portale";
+        img.classList = "img-background";
 
-    //     cardDescription.appendChild(img);
-    // }
+        cardTitle.append(img);
+    }
 
     // shows the link for the portal
     if (markerType == "portals" || markerType == "crafts") {
@@ -61,18 +63,11 @@ const showSidebar = () => {
 };
 
 const back2Index = () => {
-    if (language == "it") {
-        console.log(language);
-        window.location.href = "index.html"
-        language = "it";
-    } else {
-        console.log(language);
-        window.location.href = "index.html"
-        language = "en";
-    }
+    infoCard.setAttribute("hidden", "hidden");
+    mapContainer.removeAttribute("hidden");
 };
 
-// TRANSLATION FUNCTIONS
+// TRANSLATION FUNCTION
 const translations = {
     en: {
         filterOptions: [
@@ -86,6 +81,7 @@ const translations = {
     }
 };
 function translate(language) {
+
     document.getElementById('all').innerHTML = translations[language].filterOptions[0];
     document.getElementById('default').innerHTML = translations[language].filterOptions[1];
     document.getElementById('infopoint').innerHTML = translations[language].filterOptions[2];
@@ -141,18 +137,23 @@ function translate(language) {
             this.parentNode.classList.add("active");
         });
     });
+
+    // document.getElementById('filter-dropdown').value = selectedType;
+    filter();
+
 }
 
 function english() {
     translate('en');
-    language = 'en';;
+    language = 'en';
 }
 
 function italian() {
     translate('it');
-    language = 'it';;
+    language = 'it';
 }
 
+// Automatically set the language based on the browser language setting
 if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
     language = "it";
     translate('it');

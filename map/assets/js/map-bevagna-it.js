@@ -312,9 +312,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Auditorium",
+        description_it: "La parrocchia fu fondata da un gruppo di 34 famiglie rifugiatesi a Bevagna in seguito alla distruzione, ordinata dal pontefice, dei castelli di Antignano, fedele a Federico II di Svevia.\n\n La chiesa, oggi sconsacrata e usata come Auditorium, conserva un bel portale con un rilievo che raffigura la Madonna che allatta il Bambino.",
         description_en: "Auditorium",
         markerType: "events",
+        img: "./assets/img/card_background/bevagna_santa_maria_laurentia1.jpg",
       },
     },
     {
@@ -387,7 +388,6 @@ var stores = {
         description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
         description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
         markerType: "portals",
-        img: "./assets/img/Portal-TOCC-Untitled_project.svg",
         site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
@@ -545,6 +545,7 @@ var stores = {
         description_it: "Chiesa principale di Bevagna",
         description_en: "Main church in Bevagna",
         markerType: "tourism",
+        img: "./assets/img/card_background/san_michele_arcangelo.jpeg"
       },
     },
     {
@@ -562,6 +563,7 @@ var stores = {
         description_it: "Chiesa di Bevagna",
         description_en: "Church in Bevagna",
         markerType: "tourism",
+        img: "./assets/img/card_background/san_silvestro.png"
       },
     },
     {
@@ -579,13 +581,14 @@ var stores = {
         description_it: "Edificata da Rainaldo I conte di Antignano, la chiesetta, oggi sconsacrata, è la più antica tra quelle conservate: se ne hanno notizie fin dal 1198.",
         description_en: "Built by Rainaldo I count of Antignano, the little church, now deconsecrated, is the oldest among those preserved: there are news of it since 1198.",
         markerType: "tourism",
+        img: "./assets/img/card_background/santa_maria_filiorum.jpeg"
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.610415787761626, 42.93458778655827],
+        coordinates: [12.608365658627687, 42.932903552052515],
       }, 
       properties: {
         address_it: "Chiesa dei Santi Domenico e Giacomo",
@@ -755,6 +758,8 @@ var stores = {
   ],
 };
 
+
+
 /**
  * Assign a unique id to each store. You'll use this `id`
  * later to associate each point on the map with a listing
@@ -774,6 +779,33 @@ var geolocateControl = new mapboxgl.GeolocateControl({
 });
 
 map.addControl(geolocateControl);
+
+// Save geolocation status in localStorage
+function saveGeolocationStatus(isEnabled) {
+  localStorage.setItem('geolocationEnabled', isEnabled);
+}
+
+// Retrieve geolocation status from localStorage
+function getGeolocationStatus() {
+  return localStorage.getItem('geolocationEnabled') === 'true';
+}
+
+// Usage example when activating geolocation
+if (getGeolocationStatus()) {
+  // Code to activate geolocation
+  activateGeolocation();
+}
+
+// Update geolocation status whenever it's toggled
+function activateGeolocation() {
+  saveGeolocationStatus(true);
+  // Code to activate geolocation
+}
+
+function deactivateGeolocation() {
+  saveGeolocationStatus(false);
+  // Code to deactivate geolocation
+}
 
 /**
  * Wait until the map loads to make changes to the map.
@@ -844,7 +876,7 @@ function addMarkers() {
   });
 }
 
-// This functionis to translate the listings
+// This function is to translate the listings
 
 function updateAddresses(data) {
   var listings = document.getElementById("listings").children;
@@ -942,16 +974,15 @@ function makeHighlight(currentFeature) {
 
 // FILTER
 
+let selectedType = 'all';
 function filter() {
-  const selectedType = document.getElementById('filter-dropdown').value;
+  selectedType = document.getElementById('filter-dropdown').value;
 
   const filteredListings = stores.features.filter(store => 
       selectedType === 'all' || store.properties.markerType === selectedType
   );
 
-  console.log(filteredListings);
-
   var listings = document.getElementById("listings");
-  listings.innerHTML = ''; // Clear existing listings 
+  listings.innerHTML = '';
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
 }
