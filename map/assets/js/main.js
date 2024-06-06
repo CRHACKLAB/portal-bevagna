@@ -38,7 +38,7 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
     }
 
     // shows the link for the portal
-    if (markerType == "portals" || markerType == "crafts") {
+    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria") {
         var link = document.createElement("a");
         link.href = site;
         link.innerText = "\n\nLink";

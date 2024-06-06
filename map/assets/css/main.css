@@ -340,7 +340,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #df4432;
+  background-color: #e51ce5;
   padding: 10px;
   min-height: 150px;
   border-radius: 25px;
@@ -409,13 +409,58 @@ body {
   justify-content: center;
 }
 
-.listings .item-crafts .title {
+.listings .item-sanGiovanni .title {
   display: block;
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
   color: white;
-  background-color: #cd22cd;
+  background-color: burlywood;
+  padding: 10px;
+  min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .item-sanGiorgio .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: burlywood;
+  padding: 10px;
+  min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .item-sanPietro .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: burlywood;
+  padding: 10px;
+  min-height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .item-santaMaria .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: burlywood;
   padding: 10px;
   min-height: 150px;
   border-radius: 25px;
@@ -579,12 +624,39 @@ body {
   background-size: cover;
 }
 
-.marker-crafts {
+.marker-sanGiovanni {
   border: none;
   cursor: pointer;
-  height: 49px;
+  height: 41px;
   width: 35px;
-  background-image: url("../img/markers/01_mestieri\ candela\ \(1\).png");
+  background-image: url("../img/markers/SanGiovanni1.png");
+  background-size: cover;
+}
+
+.marker-sanPietro {
+  border: none;
+  cursor: pointer;
+  height: 41px;
+  width: 35px;
+  background-image: url("../img/markers/SanPietro1.png");
+  background-size: cover;
+}
+
+.marker-sanGiorgio {
+  border: none;
+  cursor: pointer;
+  height: 41px;
+  width: 35px;
+  background-image: url("../img/markers/SanGiorgio1.png");
+  background-size: cover;
+}
+
+.marker-santaMaria {
+  border: none;
+  cursor: pointer;
+  height: 41px;
+  width: 35px;
+  background-image: url("../img/markers/SantaMaria1.png");
   background-size: cover;
 }
 
