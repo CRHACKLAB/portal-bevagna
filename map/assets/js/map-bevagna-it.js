@@ -374,6 +374,101 @@ var stores = {
         img: "./assets/img/card_background/Chiostro.jpg",
       },
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.60909766931367, 42.93377717411387],
+      }, 
+      properties: {
+        address_it: "Osteria del Podestà",
+        address_en: "Osteria del Podestà",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Piatti tipici umbri, Specialità di Pesce",
+        description_en: "Typical umbrian dishes",
+        markerType: "food",
+        site: "",
+        img: "",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.60909766931367, 42.93377717411387],
+      }, 
+      properties: {
+        address_it: "Osteria del Podestà",
+        address_en: "Osteria del Podestà",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Piatti tipici umbri, Specialità di Pesce",
+        description_en: "Typical umbrian dishes",
+        markerType: "food",
+        site: "",
+        img: "",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.610021131734227, 42.934401182653865],
+      }, 
+      properties: {
+        address_it: "Le Barbatelle Wine Bar",
+        address_en: "Le Barbatelle Wine Bar",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Wine bar",
+        description_en: "Wine bar",
+        markerType: "food",
+        site: "https://www.lebarbatellewinebar.com/",
+        img: "",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.610451556603063, 42.93569713476225],
+      }, 
+      properties: {
+        address_it: "Le Delizie del Borgo - Bevagna",
+        address_en: "Le Delizie del Borgo - Bevagna",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "food",
+        site: "https://www.deliziedelborgobevagna.it/",
+        img: "",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608954987138244, 42.93323818489366],
+      }, 
+      properties: {
+        address_it: "Il Grottino",
+        address_en: "Il Grottino",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "food",
+        site: "",
+        img: "",
+      },
+    },
     // FINE AREA FOOD
     // PORTALS GAITE
     {
@@ -593,7 +688,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608999172041296, 42.931555085918454],
+        coordinates: [12.608973164004386, 42.93164149051439],
       }, 
       properties: {
         address_it: "Accolta (Lavatoio Pubblico)",
