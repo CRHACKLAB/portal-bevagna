@@ -139,7 +139,7 @@ function translate(language) {
     });
 
     // document.getElementById('filter-dropdown').value = selectedType;
-    filter();
+    // filter();
 
 }
 

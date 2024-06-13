@@ -1076,7 +1076,7 @@ function makeHighlight(currentFeature) {
 
 }
 
-// FILTER
+// FILTER-LISTING
 
 let selectedType = 'all';
 function filter() {
@@ -1085,8 +1085,13 @@ function filter() {
   const filteredListings = stores.features.filter(store => 
       selectedType === 'all' || store.properties.markerType === selectedType
   );
-
+console.log(filteredListings);
   var listings = document.getElementById("listings");
   listings.innerHTML = '';
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
+}
+
+// FILTER-Marker
+function filterMarker() {
+  console.log("filtro")
 }

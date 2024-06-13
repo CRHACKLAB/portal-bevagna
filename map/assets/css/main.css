@@ -169,6 +169,25 @@ body {
   color: white;
 }
 
+.filter-button {
+  position: absolute;
+  top: 1vmin;
+  left: 17vmin;
+  background-color: #32679A;
+  color: white;
+  font-size: calc(var(--font-size) * 1.7);
+}
+
+.filter-button.sidebarbtn{
+  z-index: 7;
+  position: absolute;
+  top: 1vmin;
+  left: 1vmin;
+  border-radius: 10px;
+  font-size: 40px;
+  margin-left: 60px;
+}
+
 #show-info-card {
   top: 20vh;
   left: 50vw;
