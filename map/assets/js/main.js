@@ -38,7 +38,7 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
     }
 
     // shows the link for the portal
-    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria") {
+    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food") {
         var link = document.createElement("a");
         link.href = site;
         link.innerText = "\n\nLink";
@@ -71,12 +71,12 @@ const back2Index = () => {
 const translations = {
     en: {
         filterOptions: [
-            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts"
+            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village"
         ]
     },
     it: {
         filterOptions: [
-            "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali"
+            "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali", "Villaggio Benessere"
         ]
     }
 };
@@ -93,6 +93,7 @@ function translate(language) {
     document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
     document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
     document.getElementById('crafts').innerHTML = translations[language].filterOptions[10];
+    document.getElementById('wellness').innerHTML = translations[language].filterOptions[11];
     
     const listingsContainer = document.getElementById('listings');
     listingsContainer.innerHTML = '';

@@ -90,6 +90,25 @@ var stores = {
       },
     },
     // END INFOPOINT
+    // WELLNESS VILLAGE
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608661861897907, 42.93293444630248],
+      }, 
+      properties: {
+        address_it: "Villaggio benessere",
+        address_en: "Wellness Village",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Scopri le tante attività del Villaggio Benessere",
+        description_en: "Discover all the activities of the Wellness Village",
+        markerType: "wellness",
+      },
+    },
+    // END WELLNESS VILLAGE
     // BUS
     {
       type: "Feature",
@@ -230,23 +249,6 @@ var stores = {
         postalCode: "06031",
         description_it: "Arena combattimento robot",
         description_en: "Robot combat Arena",
-        markerType: "events",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.60900419418926, 42.93122243304382],
-      }, 
-      properties: {
-        address_it: "Cinema all'aperto",
-        address_en: "Open-air Cinema",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Cinema gonfiabile all'aperto",
-        description_en: "Open-air Cinema",
         markerType: "events",
       },
     },
@@ -570,7 +572,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Chiesa principale di Bevagna",
+        description_it: "La Collegiata di San Michele Arcangelo di Bevagna, edificata tra il XII e il XIII secolo, è un magnifico esempio di architettura romanica. La sua imponente facciata, ornata da un elegante rosone e portali scolpiti, introduce a un interno maestoso con una navata centrale spaziosa e cappelle laterali riccamente decorate. Tra le opere d'arte conservate all'interno, spiccano affreschi e dipinti di rilevante valore storico e artistico. La collegiata, dedicata a San Michele Arcangelo, non solo è un importante luogo di culto, ma anche un simbolo della storia e della cultura di Bevagna.",
         description_en: "Main church in Bevagna",
         markerType: "tourism",
         img: "./assets/img/card_background/San_Michele.jpg"
@@ -588,7 +590,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Chiesa di Bevagna",
+        description_it: "La Chiesa di San Silvestro di Bevagna, costruita nel 1195, è un notevole esempio di architettura romanica. La sua facciata austera e gli interni sobri riflettono l'essenzialità e la purezza dello stile romanico. L'edificio presenta una pianta a croce latina e conserva elementi architettonici originali, come le colonne con capitelli decorati e le eleganti arcate. La chiesa, situata nel cuore della città, rappresenta un'importante testimonianza della storia medievale di Bevagna e un luogo di contemplazione e raccoglimento.",
         description_en: "Church in Bevagna",
         markerType: "tourism",
         img: "./assets/img/card_background/San_Silvestro.jpg"
@@ -624,7 +626,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Sorse su un antico oratorio dedicato a San Giorgio, donato dal Comune al Beato Giacomo Bianconi nel 1291. In segno di riconoscimento per il ruolo fondamentale da lui svolto nella ricostruzione del paese, seguita all’assedio delle truppe imperiali di Federico II, egli ottenne di poter collocare il convento in posizione centrale: nella piazza accanto al palazzo dei Consoli.",
+        description_it: "La Chiesa dei Santi Domenico e Giacomo di Bevagna, eretta nel XIV secolo, è un pregevole esempio di architettura gotica umbra. La facciata, semplice e austera, nasconde un interno ricco di dettagli artistici. Gli affreschi che adornano le pareti, realizzati da maestri locali, testimoniano la vivacità culturale e religiosa dell'epoca. La chiesa, dedicata a San Domenico e a San Giacomo, è un luogo di profonda spiritualità e offre ai visitatori uno scorcio autentico della storia e dell'arte medievale di Bevagna.",
         description_en: "It was built on an ancient oratory dedicated to St. George, donated by the Municipality to Blessed Giacomo Bianconi in 1291. As a sign of recognition for the fundamental role he played in the reconstruction of the town, after the siege of the imperial troops of Frederick II, he obtained to place the convent in a central position: in the square next to the Palazzo dei Consoli.",
         markerType: "tourism",
         img: "./assets/img/card_background/San_Domenico.jpg"
@@ -642,7 +644,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Edificata alla fine del XIII secolo sull’antico oratorio dedicato a San Giovanni Battista, sorge sul luogo più alto della città, dove sicuramente era un tempio romano. La facciata, a capanna, è adorna di un elegante portale polistilo a tutto sesto, con capitelli foliati in marmo.\n\n L’interno, ad una sola navata, è stato completamente rinnovato nel XVIII secolo; vi si ammirano dipinti di Dono Doni e Ascensidonio Spacca. Da una piccola porta a destra si accede a una cappella interna con affreschi risalenti al XVI secolo.",
+        description_it: "La Chiesa di San Francesco di Bevagna, edificata nel XIII secolo, è un suggestivo esempio di architettura gotica francescana. Situata nel cuore della città, la chiesa presenta una facciata semplice ma elegante, con un portale finemente decorato. L'interno, caratterizzato da una navata unica, ospita pregevoli affreschi e opere d'arte che raccontano la vita di San Francesco e la storia religiosa della regione. La chiesa, con la sua atmosfera raccolta e spirituale, è un luogo di grande importanza storica e culturale per Bevagna, riflettendo la profonda devozione francescana della comunità locale.",
         description_en: "Built at the end of the 13th century on the ancient church dedicated to Saint John the Baptist, it stands on the highest place in the city, where it was certainly a Roman temple. The gabled façade is adorned with an elegant rounded polystyle portal, with foliated capitals in marble.\n\n The interior, with a single nave, was completely renovated in the 18th century; you can admire paintings by Dono Doni and Ascensidonio Spacca. A small door on the right leads to an inner chapel with frescoes dating back to the 16th century. Next to the altar, in a chapel, there is a stone on which San Francesco placed his feet when he preached to the birds in Pian d’Arca. The second chapel on the right, perhaps a work by Galeazzo Alessi, preserves a beautiful 15th century tabernacle; the small dome is adorned with glazed earthenware attributed to Santi Buglioni.",
         markerType: "tourism",
         img: "./assets/img/card_background/San_Francesco.jpg"
@@ -660,7 +662,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Piazza principale di Bevagna",
+        description_it: "La piazza Filippo Silvestri di Bevagna è una suggestiva piazza nel cuore del centro storico della cittadina umbra. Circondata da antichi edifici in stile medievale e rinascimentale, la piazza è dominata dalla maestosa facciata della Chiesa di San Michele Arcangelo. Al centro della piazza si trova una fontana in stile gotico, decorata con sculture e rilievi che rappresentano scene della vita quotidiana e dei miracoli di San Michele. Intorno alla fontana si trovano panchine in pietra dove è piacevole fermarsi a prendere un po' di fresco e osservare la vita che scorre tranquilla tra le viuzze antiche. Durante l'estate la piazza ospita eventi culturali, concerti e manifestazioni che attirano turisti da ogni parte.",
         description_en: "Main Square in Bevagna",
         markerType: "tourism",
         img: "./assets/img/card_background/Piazza.jpg"
@@ -673,12 +675,12 @@ var stores = {
         coordinates: [12.608272765020507, 42.93271831137097],
       }, 
       properties: {
-        address_it: "Palazzo dei consoli - Teatro Francesco Torti",
-        address_en: "Palazzo dei consoli - Theatre Francesco Torti",
+        address_it: "Teatro Francesco Torti",
+        address_en: "Francesco Torti Theatre",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Teatro principale di Bevagna",
+        description_it: "Il Teatro Francesco Torti di Bevagna è un gioiello architettonico situato nel cuore del centro storico della città. Costruito nel XVIII secolo, il teatro conserva intatta la sua struttura originale, con un elegante proscenio adornato da decorazioni in stile neoclassico e una ricca decorazione interna. La sala, che può ospitare fino a 150 persone, è ideale per spettacoli teatrali, concerti e eventi culturali di vario genere.\n\n Ogni anno, il Teatro Torti ospita una variegata programmazione artistica, che spazia dalla prosa al balletto, dalla musica classica al teatro contemporaneo, offrendo al pubblico esperienze culturali di alta qualità e coinvolgenti.",
         description_en: "Main Theater",
         markerType: "tourism",
         img: "./assets/img/card_background/Teatro_Torti.jpg"
@@ -696,7 +698,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Realizzato in un invaso in cui confluiscono le acque del fiume Clitunno che fuoriescono formando una cascata.\n\n A pochi metri dalla cascata il fiume Clitunno confluisce nel Teverone, prendendo il nome Timia.",
+        description_it: "L'accolta di Bevagna è un antico lavatoio pubblico situato nel centro storico della città. Risalente al XV secolo, quest'edificio è un esempio notevole di architettura medievale e rappresenta un importante punto di incontro per la comunità locale.L'accolta è caratterizzata da una struttura a pianta rettangolare con un portico a colonne che siaffaccia su un grande bacino d'acqua. Questo lavatoio veniva utilizzato dalle donne del paese per lavare i panni e raccogliere acqua pulita per le attività domestiche.\n\n Oggi, l'accolta di Bevagna è diventata un luogo di interesse storico e culturale, visitato da turisti e curiosi che desiderano immergersi nell'atmosfera autentica di questo antico lavatoio. Inoltre, durante il periodo estivo, l'accolta di Bevagna ospita eventi culturali e ricreativi, tra cui concerti, mostre d'arte e spettacoli teatrali, che contribuiscono a valorizzare e promuovere il patrimonio storico e artistico della città.",
         description_en: "Bevagna is surrounded by rivers: The Clitunno, which pours into the Teverone taking the name of Timia. The Clitunno, just before pouring in Teverone creates the Accolta, the old wash house, and a nice waterfall which is admired by many tourists.",
         markerType: "tourism",
         img: "./assets/img/card_background/Lavatoio.jpg"
@@ -766,7 +768,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Il tempio era originariamente orientato verso il Foro, il fianco e la facciata posteriore, tuttora conservati, presentano un rivestimento in opus mixtum e decorazioni con semicolonne e paraste. Risale al II sec. d. C. In epoca medievale è stato trasformato nella chiesa della Madonna della Neve.\n\n Oggi è parte della Residenza d’Epoca, Orto degli Angeli.",
+        description_it: "Risalente all'epoca repubblicana (II sec. a.C.), conserva l'alto podio originariamente rivestito, le pareti complete della cella in blocchetti con ricorsi in mattoni, con semicolonne e lesene rivestite in stucco, simulando una struttura interamente circondata da colonne marmoree. Il tempio si è preservato grazie alla sua trasformazione, in epoca Medioevale, nella ex chiesa della Madonna della Neve.\n\n Oggi è parte della Residenza d’Epoca, Orto degli Angeli.",
         description_en: "The temple was originally oriented towards the Forum, the side and the rear façade, still preserved, have a covering in opus mixtum and decorations with half-columns and pilasters. It dates back to the 2nd century A.D. In medieval times it was transformed into the church of the Madonna della Neve.\n\n Today it is part of the Residenza d’Epoca Orto degli Angeli.",
         markerType: "tourism",
         img: "./assets/img/card_background/Tempio.jpg"
@@ -784,7 +786,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Fu fondata, insieme all’originario convento degli agostiniani, nel 1316 nei pressi della più antica chiesa di San Pietro.\n\n Nella tribuna e lungo le pareti vi sono frammenti di affreschi votivi del XIV secolo su più strati. Un recente restauro, reso possibile da Don Aldo Giovannelli, ha riportato alla luce una serie di absidiole, decorate nel corso del XVI secolo destinate agli altari e con soggetti dedicati alla Vergine.",
+        description_it: "Fu fondata nel 1316, insieme all'originario convento degli agostiniani, nei pressi dell'antica chiesa di San Pietro.\n\nNella tribuna e lungo le pareti si trovano frammenti di affreschi votivi del XIV secolo su più strati. Un recente restauro, realizzato grazie a Don Aldo Giovannelli, ha portato alla luce una serie di absidiole, decorate nel corso del XVI secolo, destinate agli altari e raffiguranti soggetti dedicati alla Vergine.",
         description_en: "It was founded together with the original Augustinian convent, in 1316 near the oldest church of San Pietro.\n\n In the tribune and along the walls there are fragments of votive frescoes from the 14th century on several layers. A recent restoration, made possible by Don Aldo Giovannelli, brought to light a series of apses, decorated during the 16th century for the altars and with subjects dedicated to the Virgin.",
         markerType: "tourism",
         img: "./assets/img/card_background/SantAgostino.jpg"
