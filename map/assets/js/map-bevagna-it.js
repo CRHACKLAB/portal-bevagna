@@ -1095,5 +1095,26 @@ console.log(filteredListings);
 
 // FILTER-Marker
 function filterMarker() {
-  console.log("filtro")
+  const selectedType = document.getElementById('marker-dropdown').value;
+  const features = stores.features;
+  features.forEach(feature => {
+      const markerType = feature.properties.markerType;
+      const markerElement = document.getElementById(`marker-${feature.properties.id}`);
+      
+      
+      if (selectedType === 'all' || markerType === selectedType) {
+          if (markerElement) {
+              markerElement.style.display = 'block';
+          }
+      } else {
+          if (markerElement) {
+              markerElement.style.display = 'none';
+          }
+      }
+  });
+  document.getElementById('marker-dropdown').style.display = 'none';
+}
+
+function showFilter() {
+  document.getElementById('marker-dropdown').style.display = 'inline';
 }

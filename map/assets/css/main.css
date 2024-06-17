@@ -703,6 +703,17 @@ body {
   background-size: cover;
 }
 
+#filter-marker {
+  justify-content: center;
+  align-items: center;
+}
+
+.marker-dropdown {
+  display: none;
+  font-size: large;
+}
+
+
 
 /* ---------------- */
 /*       error      */

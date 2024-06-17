@@ -17,7 +17,7 @@ const hideInfoCard = () => {
 };
 
 const showInfoCard = (title_it, title_en, description_it, description_en, portal_img, markerType, site) => {
-
+    
     // shows the card depending on the language
     if (language == 'it') {
         cardTitle.innerText = title_it;
@@ -26,17 +26,17 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
         cardTitle.innerText = title_en;
         cardDescription.innerText = description_en;
     }
-
+    
     // shows the image for the portal
     if (portal_img) {
         var img = document.createElement("img");
         img.src = portal_img;
         img.alt = "collegamento al portale";
         img.classList = "img-background";
-
+        
         cardTitle.append(img);
     }
-
+    
     // shows the link for the portal
     if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food") {
         var link = document.createElement("a");
@@ -69,19 +69,19 @@ const back2Index = () => {
 
 // TRANSLATION FUNCTION
 const translations = {
-    en: {
-        filterOptions: [
-            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village"
-        ]
-    },
     it: {
         filterOptions: [
             "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali", "Villaggio Benessere"
         ]
+    },
+    en: {
+        filterOptions: [
+            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village"
+        ]
     }
 };
 function translate(language) {
-
+    
     document.getElementById('all').innerHTML = translations[language].filterOptions[0];
     document.getElementById('default').innerHTML = translations[language].filterOptions[1];
     document.getElementById('infopoint').innerHTML = translations[language].filterOptions[2];
@@ -92,8 +92,19 @@ function translate(language) {
     document.getElementById('bus').innerHTML = translations[language].filterOptions[7];
     document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
     document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
-    document.getElementById('crafts').innerHTML = translations[language].filterOptions[10];
     document.getElementById('wellness').innerHTML = translations[language].filterOptions[11];
+    
+    document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
+    document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
+    document.getElementById('marker-infopoint').innerHTML = translations[language].filterOptions[2];
+    document.getElementById('marker-events').innerHTML = translations[language].filterOptions[3];
+    document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[4];
+    document.getElementById('marker-food').innerHTML = translations[language].filterOptions[5];
+    document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[6];
+    document.getElementById('marker-bus').innerHTML = translations[language].filterOptions[7];
+    document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[8];
+    document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[9];
+    document.getElementById('marker-wellness').innerHTML = translations[language].filterOptions[11];
     
     const listingsContainer = document.getElementById('listings');
     listingsContainer.innerHTML = '';
@@ -138,10 +149,10 @@ function translate(language) {
             this.parentNode.classList.add("active");
         });
     });
-
+    
     // document.getElementById('filter-dropdown').value = selectedType;
     // filter();
-
+    
 }
 
 function english() {
@@ -162,3 +173,4 @@ if (navigator.language === "it" || navigator.language == "it-IT" || navigator.la
     language = "en";
     translate('en');
 };
+
