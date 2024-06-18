@@ -71,12 +71,12 @@ const back2Index = () => {
 const translations = {
     it: {
         filterOptions: [
-            "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali", "Villaggio Benessere"
+            "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria"
         ]
     },
     en: {
         filterOptions: [
-            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village"
+            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria"
         ]
     }
 };
@@ -93,6 +93,10 @@ function translate(language) {
     document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
     document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
     document.getElementById('wellness').innerHTML = translations[language].filterOptions[11];
+    document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[12];
+    document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[13];
+    document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[14];
+    document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[15];
     
     document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
     document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
@@ -105,6 +109,10 @@ function translate(language) {
     document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[8];
     document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[9];
     document.getElementById('marker-wellness').innerHTML = translations[language].filterOptions[11];
+    document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[12];
+    document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[13];
+    document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[14];
+    document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[15];
     
     const listingsContainer = document.getElementById('listings');
     listingsContainer.innerHTML = '';
