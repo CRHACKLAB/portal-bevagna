@@ -67,6 +67,7 @@ const back2Index = () => {
     mapContainer.removeAttribute("hidden");
 };
 
+
 // TRANSLATION FUNCTION
 const translations = {
     it: {

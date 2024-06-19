@@ -1060,6 +1060,16 @@ function buildLocationList(data) {
   });
 }
 
+document.getElementById('filter-dropdown').addEventListener('change', handleFilterChange);
+document.getElementById('marker-dropdown').addEventListener('change', handleFilterChange);
+
+function handleFilterChange(event) {
+    const selectedType = event.target.value;
+    document.getElementById('filter-dropdown').value = selectedType;
+    document.getElementById('marker-dropdown').value = selectedType;
+    applyFilters(selectedType);
+}
+
 /**
  * Use Mapbox GL JS's `flyTo` to move the camera smoothly
  * a given center point.
@@ -1071,14 +1081,9 @@ function flyToStore(currentFeature) {
   });
   sidebar.setAttribute("hidden", "hidden");
 
-  //!! TODO - apply filter to markers when applied to listings!!
-  // const selectedType = document.getElementById('filter-dropdown').value;
-  // const filteredListings = stores.features.filter(store => 
-  //   selectedType === 'all' || store.properties.markerType === selectedType
-  // );
-  // console.log(selectedType, filteredListings);
-}
+  applyFilters(selectedType);
 
+}
 
 function makeHighlight(currentFeature) {
   var marker = document.getElementById(
@@ -1087,31 +1092,28 @@ function makeHighlight(currentFeature) {
 
 }
 
-// FILTER-LISTING
+//FILTERS
 
-function filter() {
-  let selectedType = 'all';
-  selectedType = document.getElementById('filter-dropdown').value;
+function applyFilters(selectedType) {
 
   const filteredListings = stores.features.filter(store => 
-      selectedType === 'all' || store.properties.markerType === selectedType
+    (selectedType === 'all' || store.properties.markerType === selectedType)
   );
-console.log(filteredListings);
+
+  updateListings(filteredListings);
+  updateMarkers(filteredListings);
+}
+
+function updateListings(filteredListings) {
   var listings = document.getElementById("listings");
   listings.innerHTML = '';
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
 }
 
-// FILTER-Marker
-function filterMarker() {
-  const selectedType = document.getElementById('marker-dropdown').value;
-  const features = stores.features;
-  features.forEach(feature => {
-      const markerType = feature.properties.markerType;
+function updateMarkers(filteredListings) {
+  stores.features.forEach(feature => {
       const markerElement = document.getElementById(`marker-${feature.properties.id}`);
-      
-      
-      if (selectedType === 'all' || markerType === selectedType) {
+      if (filteredListings.includes(feature)) {
           if (markerElement) {
               markerElement.style.display = 'block';
           }
@@ -1121,8 +1123,12 @@ function filterMarker() {
           }
       }
   });
-  document.getElementById('marker-dropdown').style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const initialType = document.getElementById('filter-dropdown').value;
+  applyFilters(initialType);
+});
 
 function showFilter() {
   document.getElementById('marker-dropdown').style.display = 'inline';

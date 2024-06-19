@@ -39,7 +39,7 @@
                 </div>
                 <button type="button" id="italian-btn" class="italian-button sidebarbtn" onclick="italian()"><img src="./assets/img/flags/italianflag.png" alt="Italian version"></button>
                 <button type="button" id="english-btn" class="english-button sidebarbtn" onclick="english()"><img src="./assets/img/flags/britishflag.png" alt="English version"></button>
-                <select id="filter-dropdown" onchange="filter()">
+                <select id="filter-dropdown" onchange="applyFilters()">
                     <option id="all" value="all"></option>
                     <option id="default" value="default"></option>
                     <option id="infopoint" value="infopoint"></option>
@@ -63,7 +63,7 @@
         <div id="map" class="layer map">
             <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></button>
             <button type="button" id="filter-marker" class="filter-button sidebarbtn" onclick="showFilter()"><i class="fa-solid fa-sliders" ></i>
-                <select id="marker-dropdown" class="marker-dropdown" onchange="filterMarker()">
+                <select id="marker-dropdown" class="marker-dropdown" onchange="applyFilters()">
                     <option id="marker-all" value="all"></option>
                     <option id="marker-default" value="default"></option>
                     <option id="marker-infopoint" value="infopoint"></option>
