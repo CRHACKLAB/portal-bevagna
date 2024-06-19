@@ -19,8 +19,8 @@ var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
-  center: [12.608885817479997, 42.933247599970436],   
-  zoom: 15.8,
+  center: [12.608438888126923, 42.933064240993126],
+  zoom: 15.9,
   scrollZoom: true,
 });
 
@@ -234,6 +234,23 @@ var stores = {
         markerType: "entrance",
       },
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.61153788980332, 42.93485095938446],
+      }, 
+      properties: {
+        address_it: "Ingresso Porta Foligno",
+        address_en: "Porta Foligno Entrance",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: ``,
+        description_en: "",
+        markerType: "entrance",
+      },
+    },
     // END ENTRANCE POINT
     // COLLATERAL EVENTS
     {
@@ -317,7 +334,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "La parrocchia fu fondata da un gruppo di 34 famiglie rifugiatesi a Bevagna in seguito alla distruzione, ordinata dal pontefice, dei castelli di Antignano, fedele a Federico II di Svevia.\n\n La chiesa, oggi sconsacrata e usata come Auditorium, conserva un bel portale con un rilievo che raffigura la Madonna che allatta il Bambino.",
+        description_it: "Auditorium",
         description_en: "Auditorium",
         markerType: "events",
         img: "./assets/img/card_background/Auditorium.jpg",
@@ -353,7 +370,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Prova a far volare un drone",
-        description_en: "Prova a far volare un drone",
+        description_en: "",
         markerType: "events",
       },
     },
@@ -374,8 +391,8 @@ var stores = {
         description_it: "I partecipanti a SHU Young e lo Staff Egina sono invitati a mangiare in questo luogo",
         description_en: "I partecipanti a SHU Young e lo Staff Egina sono invitati a mangiare in questo luogo",
         markerType: "food",
-        img: "./assets/img/card_background/Chiostro.jpg",
         site: "#",
+        img: "./assets/img/card_background/Chiostro.jpg",
       },
     },
     {
@@ -394,26 +411,26 @@ var stores = {
         description_en: "Typical umbrian dishes",
         markerType: "food",
         site: "",
-        img: "",
+        img: "./assets/img/restaurant_logos/04-Osteria del Podestà-01.png",
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.60909766931367, 42.93377717411387],
+        coordinates: [12.60930649464892, 42.934100605624714],
       }, 
       properties: {
-        address_it: "Osteria del Podestà",
-        address_en: "Osteria del Podestà",
+        address_it: "La Casareccia",
+        address_en: "La Casareccia",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Piatti tipici umbri, Specialità di Pesce",
-        description_en: "Typical umbrian dishes",
+        description_it: "Scopri il menù in esclusiva per SHU2024 seguendo il",
+        description_en: "Discover the menu created for SHU2024 following the",
         markerType: "food",
-        site: "",
-        img: "",
+        site: "./assets/img/menus/menuCasareccia-imp.pdf",
+        img: "./assets/img/restaurant_logos/09-la casareccia.png",
       },
     },
     {
@@ -423,8 +440,8 @@ var stores = {
         coordinates: [12.610021131734227, 42.934401182653865],
       }, 
       properties: {
-        address_it: "Le Barbatelle Wine Bar",
-        address_en: "Le Barbatelle Wine Bar",
+        address_it: "Le Barbatelle",
+        address_en: "Le Barbatelle",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -432,7 +449,7 @@ var stores = {
         description_en: "Wine bar",
         markerType: "food",
         site: "https://www.lebarbatellewinebar.com/",
-        img: "",
+        img: "./assets/img/restaurant_logos/05-LE BARBATELLE.png",
       },
     },
     {
@@ -451,7 +468,7 @@ var stores = {
         description_en: "",
         markerType: "food",
         site: "https://www.deliziedelborgobevagna.it/",
-        img: "",
+        img: "./assets/img/restaurant_logos/08-Le Delizie del Borgo-color.png",
       },
     },
     {
@@ -470,7 +487,102 @@ var stores = {
         description_en: "",
         markerType: "food",
         site: "#",
-        img: "",
+        img: "./assets/img/restaurant_logos/07-il_grottino-01.png",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608126798862632, 42.93231904223721],
+      }, 
+      properties: {
+        address_it: "Oltre la pizza",
+        address_en: "Oltre la pizza",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Pizzeria",
+        description_en: "Pizzeria",
+        markerType: "food",
+        site: "#",
+        img: "./assets/img/restaurant_logos/01-oltre la pizza-rifili-01.png",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609101761918721, 42.93370152155276],
+      }, 
+      properties: {
+        address_it: "Gran Caffè Garibaldi",
+        address_en: "Gran Caffè Garibaldi",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Scopri il menù in esclusiva per SHU2024 seguendo il",
+        description_en: "Discover the menu created for SHU2024 following the",
+        markerType: "food",
+        site: "./assets/img/menus/GRan_Caffé_garibaldi_menu-imp.pdf",
+        img: "./assets/img/restaurant_logos/02-Logo_Gran Caffe' Garibaldi.png",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.60843524473502, 42.933141683739876],
+      }, 
+      properties: {
+        address_it: "Enoteca La Trifola",
+        address_en: "Enoteca La Trifola",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Enoteca",
+        description_en: "Winery",
+        markerType: "food",
+        site: "#",
+        img: "./assets/img/restaurant_logos/03-La trifola_Tavola disegno 1.png",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609792807937257, 42.93412448599204],
+      }, 
+      properties: {
+        address_it: "La Dispensa",
+        address_en: "La Dispensa",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Alimentari",
+        description_en: "Grocery store",
+        markerType: "food",
+        site: "#",
+        img: "./assets/img/restaurant_logos/06-la dispensa.png",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607678828809288, 42.93423892567264],
+      }, 
+      properties: {
+        address_it: "La Briciola",
+        address_en: "La Briciola",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Osteria con cucina",
+        description_en: "Tavern with kitchen",
+        markerType: "food",
+        site: "https://www.labriciolabevagna.it/",
+        img: "./assets/img/restaurant_logos/LA BRICIOLA-def_Tavola disegno 1.png",
       },
     },
     // FINE AREA FOOD
@@ -598,24 +710,6 @@ var stores = {
         img: "./assets/img/card_background/San_Silvestro.jpg"
       },
     },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.610415787761626, 42.93458778655827],
-    //   }, 
-    //   properties: {
-    //     address_it: "Chiesa di Santa Maria Filiorum Comitis",
-    //     address_en: "Church of Santa Maria Filiorum Comitis",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "Edificata da Rainaldo I conte di Antignano, la chiesetta, oggi sconsacrata, è la più antica tra quelle conservate: se ne hanno notizie fin dal 1198.",
-    //     description_en: "Built by Rainaldo I count of Antignano, the little church, now deconsecrated, is the oldest among those preserved: there are news of it since 1198.",
-    //     markerType: "tourism",
-    //     img: "./assets/img/card_background/santa_maria_filiorum.jpeg"
-    //   },
-    // },
     {
       type: "Feature",
       geometry: {
@@ -692,6 +786,24 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
+        coordinates: [12.609305845474651, 42.93377505471904],
+      }, 
+      properties: {
+        address_it: "Auditorium Santa Maria Laurentia",
+        address_en: "Auditorium Santa Maria Laurentia",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "La parrocchia fu fondata da un gruppo di 34 famiglie rifugiatesi a Bevagna in seguito alla distruzione, ordinata dal pontefice, dei castelli di Antignano, fedele a Federico II di Svevia.\n\n La chiesa, oggi sconsacrata e usata come Auditorium, conserva un bel portale con un rilievo che raffigura la Madonna che allatta il Bambino.",
+        description_en: "The parish was founded by a group of 34 families who took refuge in Bevagna following the destruction, ordered by the Pope, of the castles of Antignano, which were loyal to Frederick II of Swabia.\n\n The church, now deconsecrated and used as an auditorium, retains a beautiful portal with a relief depicting the Madonna nursing the Child.",
+        markerType: "tourism",
+        img: "./assets/img/card_background/Auditorium.jpg",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
         coordinates: [12.608973164004386, 42.93164149051439],
       }, 
       properties: {
@@ -706,40 +818,6 @@ var stores = {
         img: "./assets/img/card_background/Lavatoio.jpg"
       },
     },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.611099481619236, 42.934797069800894],
-    //   }, 
-    //   properties: {
-    //     address_it: "Domus Romana",
-    //     address_en: "Domus Romana",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "Nel cortile dietro casa Silvestri esiste, alcuni metri più in basso del piano attuale della strada (ex via Flaminia) una domus, unico complesso romano di forma rettangolare rimasto integro abbastanza da suscitare meraviglia per la raffinatezza e ricchezza dell’ambiente, che dovrebbe entrare nei circuiti turistici per divulgare e far apprezzare la storia di questi luoghi. Sono visibili i resti di tre locali antichi intercomunicanti.\n\n Anche se non si può stabilire con certezza se pubblico o privato, l’edificio è del I secolo d. C. ed impressiona per le strutture di reticolato a pietre bianche, rosa e grigie con semicolonne di mattoni e per il pavimento di mosaico a piccole tessere bianche e nere adorno di meandro e con fascia ad onde intorno, che è l’elemento di maggior spicco. Scendendo per una scaletta tre metri sotto, si arriva in un altro ambiente, forse più antico, con pavimento a mosaico bianco a grandi tessere e opus spicatum.",
-    //     description_en: "In the courtyard behind the Silvestri house, a few meters lower than the current level of the street (ex Via Flaminia) there is a domus, the only Roman complex of rectangular shape intact enough to arouse wonder for its refinement and richness in its refinement and richness in its refinement of the refinement and richness in the fineness of the fineness of the finery of the finery of the fineness of the fineness of the fineness of the fineness of the fineness of the fineness of the road (ex Via Flaminia) tourist ciorcadi to spread agus i bhfad appreciate the history of these places. The remains of three ancient intercommunicating rooms are visible.\n\nEven if it cannot be established with certainty whether public or private, the building dates back to the 1st century AD. C. and impresses with the lattice structures of white stones, gray agus pinks with brick semi-columns and the agus mosaic floor with small white and black tiles adorned with wave-like meándro agus éadain around, which is the most striking element. An going down a ladder three meters below, má tá tú ag teacht go dtí an comhthimpeallach another, perhaps older, with agus white mosaic floor agus large tiles agus opus spicatum.",
-    //     markerType: "tourism",
-    //   },
-    // },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.609317153740498, 42.93473963085082],
-    //   }, 
-    //   properties: {
-    //     address_it: "Teatro romano",
-    //     address_en: "Roman Theatre",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "Le abitazioni, costruite sopra i resti romani, seguono le curvature di un teatro di grandi dimensioni che si appoggiava sul pendio dell’altura e si affacciava sulla via Flaminia.",
-    //     description_en: "The houses, built above the Roman remains, follow the curvatures of a large theater that leaned on the slope of the hill and overlooked the Via Flaminia.",
-    //     markerType: "tourism",
-    //   },
-    // },
     {
       type: "Feature",
       geometry: {
@@ -1068,6 +1146,7 @@ function handleFilterChange(event) {
     document.getElementById('filter-dropdown').value = selectedType;
     document.getElementById('marker-dropdown').value = selectedType;
     applyFilters(selectedType);
+    return (selectedType);
 }
 
 /**
@@ -1080,28 +1159,25 @@ function flyToStore(currentFeature) {
     zoom: 20,
   });
   sidebar.setAttribute("hidden", "hidden");
-
-  applyFilters(selectedType);
-
 }
 
 function makeHighlight(currentFeature) {
   var marker = document.getElementById(
     "marker-" + currentFeature.properties.id
   );
-
 }
 
 //FILTERS
 
 function applyFilters(selectedType) {
-
+    
   const filteredListings = stores.features.filter(store => 
-    (selectedType === 'all' || store.properties.markerType === selectedType)
+      (selectedType === 'all' || store.properties.markerType === selectedType)
   );
-
+  
   updateListings(filteredListings);
   updateMarkers(filteredListings);
+
 }
 
 function updateListings(filteredListings) {
@@ -1113,15 +1189,18 @@ function updateListings(filteredListings) {
 function updateMarkers(filteredListings) {
   stores.features.forEach(feature => {
       const markerElement = document.getElementById(`marker-${feature.properties.id}`);
+      
       if (filteredListings.includes(feature)) {
-          if (markerElement) {
-              markerElement.style.display = 'block';
+        if (markerElement) {
+            console.log( markerElement);
+              markerElement.style.display = 'inline';
           }
       } else {
-          if (markerElement) {
+          if (markerElement) {;
               markerElement.style.display = 'none';
           }
       }
+      document.getElementById('marker-dropdown').style.display = 'none';
   });
 }
 

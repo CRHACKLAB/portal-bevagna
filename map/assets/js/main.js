@@ -31,16 +31,16 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
     if (portal_img) {
         var img = document.createElement("img");
         img.src = portal_img;
-        img.alt = "collegamento al portale";
+        img.alt = "immagine";
         img.classList = "img-background";
-        
         cardTitle.append(img);
     }
     
-    // shows the link for the portal
-    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food") {
+    // shows the link for the portal, restaurants and events
+    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food" || markerType == "events") {
         var link = document.createElement("a");
         link.href = site;
+        link.target = "_blank";
         link.innerText = "\n\nLink";
         cardDescription.appendChild(link);
     }

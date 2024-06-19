@@ -245,12 +245,11 @@ body {
 /* --------------------------- */
 
 #card-container {
-  
   position: absolute;
   border: 6px double ;
   border-radius: 25px;
   left: calc(50vw - 9em);
-  top: 5%;
+  top: 6%;
   width: 18em;
 }
 
@@ -267,6 +266,14 @@ body {
   line-height: 150%;
   margin: 0 4px 15px;
   text-align: justify;
+}
+
+#card-description a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: larger;
+  color: #32679A;
 }
 
 .img-background {
