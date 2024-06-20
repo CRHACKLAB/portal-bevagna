@@ -257,7 +257,8 @@ body {
   font-size: calc(var(--font-size) * 2);
   font-weight: 600;
   font-family: var(--font-family);
-  
+  color: #56a446;
+
 }
 
 #card-description {
@@ -265,7 +266,8 @@ body {
   font-family: var(--font-family);
   line-height: 150%;
   margin: 0 4px 15px;
-  text-align: justify;
+  text-align: center;
+  padding: 0 4px;
 }
 
 #card-description a {
@@ -273,7 +275,7 @@ body {
   justify-content: center;
   text-decoration: none;
   font-size: larger;
-  color: #32679A;
+  color: #56a446;
 }
 
 .img-background {
@@ -511,6 +513,21 @@ body {
   justify-content: center;
 }
 
+.listings .item-privateEvents .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #ef7876;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 400px) {
 
   #filter-dropdown {
@@ -708,6 +725,15 @@ body {
   height: 41px;
   width: 35px;
   background-image: url("../img/markers/SantaMaria1.png");
+  background-size: cover;
+}
+
+.marker-privateEvents {
+  border: none;
+  cursor: pointer;
+  height: 49px;
+  width: 35px;
+  background-image: url("../img/markers/Eventi\ privati.svg");
   background-size: cover;
 }
 

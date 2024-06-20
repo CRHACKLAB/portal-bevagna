@@ -99,13 +99,22 @@ var stores = {
       }, 
       properties: {
         address_it: "Villaggio benessere",
-        address_en: "Wellness Village",
+        address_en: "Wellbeing Village",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Scopri le tante attività del Villaggio Benessere",
-        description_en: "Discover all the activities of the Wellness Village",
+        description_it: `\n05 Luglio 9.30-11.00\n Pratiche in movimento\n"Sperimenta personalmente pratiche di movimento di natura esplorativa"
+        \n\n05 Luglio 11.00-12.30\nWorkshop di insalate creative\n"Workshop bilingue per esplorare e condividere le tradizioni culinarie dal mondo!"
+        \n\n05 Luglio 16.30-18.00\nDegustare il benessere\n"In collaborazione con Ass. Italiana Conoscere l’Olio di Oliva e La Strada del Sagrantino"
+        \n\n05 Luglio 18.00-19.30\nLet's play Spoons\n"Migliora le tue capacità motorie, il ritmo, la creatività, la collaborazione e la fiducia in te stesso"
+        \n\n\n06 Luglio 9.30-11.00\nBenessere del cane\n"Esplora il linguaggio del mondo animale e vieni a conoscere gli amici a 4 zampe di Nicole"
+        \n\n06 Luglio 11.00-12.30\nAvatart - Digital art experience\n"“Immergerti” concretamente all’interno di immagini, fumetti e disegni da te realizzati"
+        \n\n06 Luglio 16.30-18.00\nProgettare benessere urbano\n"Apprendi le tecniche del Tactical Urbanism per la co-progettazione di uno spazio pubblico di qualità"
+        \n\n06 Luglio 18.00-19.30\nHealty energy drinks\n"Impara come preparare degli ottimi energy drinks rinfrescanti e salutari anche a casa tua"
+        \n\n\nPer iscriverti segui il`,
+        description_en: `Discover all the activities of the Wellness Village`,
         markerType: "wellness",
+        site: "https://www.socialhackathonumbria.info/",
       },
     },
     // END WELLNESS VILLAGE
@@ -122,7 +131,7 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Qua verrete lasciati e ripresi dalle navette",
+        description_it: "Qui verrete lasciati e ripresi dalle navette",
         description_en: "Here you arrive and go back to the hotels with shuttle",
         markerType: "bus",
       },
@@ -265,8 +274,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Arena combattimento robot",
-        description_en: "Robot combat Arena",
+        description_it: "Scegli il tuo robot, impara a programmarlo e sfida i tuoi amici in fantastici percorsi ad ostacoli... INGRESSO LIBERO!!!",
+        description_en: "",
         markerType: "events",
       },
     },
@@ -274,59 +283,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608837897235594, 42.931322588694094],
-      }, 
-      properties: {
-        address_it: "Sala conferenze",
-        address_en: "Conference Room",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Sala conferenze all'ex mulino",
-        description_en: "Conference room at former mill",
-        markerType: "events",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608320282219381, 42.93266661870295],
-      }, 
-      properties: {
-        address_it: "Teatro Torti",
-        address_en: "Torti Theatre",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Sede di evento di apertura e chiusura(?)",
-        description_en: "Sede di evento di apertura e chiusura(?)",
-        markerType: "events",
-        img: "./assets/img/card_background/Teatro_Torti.jpg"
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608778352733976, 42.93285330938033],
-      }, 
-      properties: {
-        address_it: "Sala capitolare",
-        address_en: "Sala capitolare",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Sala capitolare sede di vari eventi",
-        description_en: "Sala capitolare sede di vari eventi",
-        markerType: "events",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.609281263701092, 42.9337578681626],
+        coordinates: [12.609414788264116, 42.93368454898098],
       }, 
       properties: {
         address_it: "Auditorium Santa Maria Laurentia",
@@ -334,27 +291,30 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Auditorium",
-        description_en: "Auditorium",
+        description_it: `\n05 Luglio 17.00-20.00\n Videogiochi per la salute @ scuola\n"Workshop per docenti di scuola primaria e secondaria di primo e secondo grado"\n\n\n06 Luglio 10.00-16.00\n Benessere e patrimonio\n"Giornata di lavori con esperti e professionisti della cultura su pratiche inclusive e sostenibili"
+        \n\n\nPer iscriverti segui il`,
+        description_en: ``,
         markerType: "events",
-        img: "./assets/img/card_background/Auditorium.jpg",
+        site: "https://www.socialhackathonumbria.info/"
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.60936152376661, 42.93370034347897],
+        coordinates: [12.608843959853997, 42.93301572760449],
       }, 
       properties: {
-        address_it: "Laboratorio Stop Motion",
-        address_en: "Stop Motion Lab",
+        address_it: "Stop-Motion Creative Lab",
+        address_en: "Stop-Motion Creative Lab",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Laboratorio Stop Motion",
-        description_en: "Stop Motion Lab",
+        description_it: `Workshop condotto in lingua inglese dagli animatori di Primanima Animation (HU)
+        \n\n\nPer iscriverti segui il`,
+        description_en: "",
         markerType: "events",
+        site: "https://www.socialhackathonumbria.info"
       },
     },
     {
@@ -374,7 +334,83 @@ var stores = {
         markerType: "events",
       },
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607179327353062, 42.931244034005736],
+      }, 
+      properties: {
+        address_it: "Campus Junior Hakers SHU-Kids",
+        address_en: "Pilotaggio Droni",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: 
+        `Campus per bambini e bambine dai 6 agli 11 anni\n\n 9.00 - 17.00 (Da Giovedì 4 a Sabato 6)\n 9.00 - 13.00 (Domenica 7)\n\nPranzo al sacco... la merenda la offriamo noi!
+        \n\n\nPer iscriverti segui il`,
+        description_en: "",
+        markerType: "events",
+        site: "https://www.socialhackathonumbria.info"
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607193885183786, 42.93254600915297],
+      }, 
+      properties: {
+        address_it: "Social Jury @ #SHU2024",
+        address_en: "Social Jury @ #SHU2024",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: 
+        `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
+        \n\n\nPer iscriverti segui il`,
+        description_en: "",
+        markerType: "events",
+        site: "https://www.socialhackathonumbria.info"
+      },
+    },
     //END COLLATERAL EVENTS
+    //PRIVATE EVENTS 
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608320282219381, 42.93266661870295],
+      }, 
+      properties: {
+        address_it: "Teatro Torti",
+        address_en: "Torti Theatre",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Sede di evento di apertura e chiusura(?)",
+        description_en: "Sede di evento di apertura e chiusura(?)",
+        markerType: "privateEvents",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608837897235594, 42.931322588694094],
+      }, 
+      properties: {
+        address_it: "Sala conferenze",
+        address_en: "Conference Room",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Sala conferenze all'ex mulino",
+        description_en: "Conference room at former mill",
+        markerType: "privateEvents",
+      },
+    },
+    //END PRIVATE EVENTS
     // AREA FOOD
     {
       type: "Feature",
@@ -410,7 +446,7 @@ var stores = {
         description_it: "Piatti tipici umbri, Specialità di Pesce",
         description_en: "Typical umbrian dishes",
         markerType: "food",
-        site: "",
+        site: "#",
         img: "./assets/img/restaurant_logos/04-Osteria del Podestà-01.png",
       },
     },
@@ -585,6 +621,25 @@ var stores = {
         img: "./assets/img/restaurant_logos/LA BRICIOLA-def_Tavola disegno 1.png",
       },
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609277414493665, 42.93613602233924],
+      }, 
+      properties: {
+        address_it: "La Mangeria",
+        address_en: "La Mangeria ",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Guarda il menù",
+        description_en: "Here is the menu",
+        markerType: "food",
+        site: "./assets/img/menus/mangeriaMenu.pdf",
+        img: "./assets/img/restaurant_logos/la Mangeria-01.png",
+      },
+    },
     // FINE AREA FOOD
     // PORTALS GAITE
     {
@@ -605,73 +660,73 @@ var stores = {
         site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608045948399779, 42.9328888254322],
-      }, 
-      properties: {
-        address_it: "Portale Gaita San Giovanni",
-        address_en: "Gaita San Giovanni Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        markerType: "portals",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608180148251774, 42.932735250662574],
-      }, 
-      properties: {
-        address_it: "Portale Gaita San Giorgio",
-        address_en: "Gaita San Giorgio Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "portals",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.607844084756854, 42.93267580226183],
-      }, 
-      properties: {
-        address_it: "Portale Gaita San Pietro",
-        address_en: "Gaita San Pietro Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "portals",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.60797151822976, 42.932599840332955],
-      }, 
-      properties: {
-        address_it: "Portale Gaita Santa Maria",
-        address_en: "Gaita Santa Maria Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "portals",
-      },
-    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.608045948399779, 42.9328888254322],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Giovanni",
+    //     address_en: "Gaita San Giovanni Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.608180148251774, 42.932735250662574],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Giorgio",
+    //     address_en: "Gaita San Giorgio Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.607844084756854, 42.93267580226183],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Pietro",
+    //     address_en: "Gaita San Pietro Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.60797151822976, 42.932599840332955],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita Santa Maria",
+    //     address_en: "Gaita Santa Maria Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
     // END PORTALS GAITE
     // POINT OF INTEREST
     {
@@ -777,7 +832,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Il Teatro Francesco Torti di Bevagna è un gioiello architettonico situato nel cuore del centro storico della città. Costruito nel XVIII secolo, il teatro conserva intatta la sua struttura originale, con un elegante proscenio adornato da decorazioni in stile neoclassico e una ricca decorazione interna. La sala, che può ospitare fino a 150 persone, è ideale per spettacoli teatrali, concerti e eventi culturali di vario genere.\n\n Ogni anno, il Teatro Torti ospita una variegata programmazione artistica, che spazia dalla prosa al balletto, dalla musica classica al teatro contemporaneo, offrendo al pubblico esperienze culturali di alta qualità e coinvolgenti.",
-        description_en: "The Francesco Torti Theater in Bevagna is an architectural gem located in the heart of the city's historic center. Built in the 18th century, the theater retains its original structure, with an elegant proscenium adorned with neoclassical decorations and rich interior decor. The hall, which can accommodate up to 150 people, is ideal for theatrical performances, concerts, and various cultural events. Every year, the Torti Theater hosts a diverse artistic program, ranging from drama to ballet, from classical music to contemporary theater, offering the audience high-quality and engaging cultural experiences.",
+        description_en: "The Francesco Torti Theater in Bevagna is an architectural gem located in the heart of the city's historic center. Built in the 18th century, the theater retains its original structure, with an elegant proscenium adorned with neoclassical decorations and rich interior decor. The hall, which can accommodate up to 150 people, is ideal for theatrical performances, concerts, and various cultural events.\n\n Every year, the Torti Theater hosts a diverse artistic program, ranging from drama to ballet, from classical music to contemporary theater, offering the audience high-quality and engaging cultural experiences.",
         markerType: "tourism",
         img: "./assets/img/card_background/Teatro_Torti.jpg"
       },
@@ -813,7 +868,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "L'accolta di Bevagna è un antico lavatoio pubblico situato nel centro storico della città. Risalente al XV secolo, quest'edificio è un esempio notevole di architettura medievale e rappresenta un importante punto di incontro per la comunità locale.L'accolta è caratterizzata da una struttura a pianta rettangolare con un portico a colonne che siaffaccia su un grande bacino d'acqua. Questo lavatoio veniva utilizzato dalle donne del paese per lavare i panni e raccogliere acqua pulita per le attività domestiche.\n\n Oggi, l'accolta di Bevagna è diventata un luogo di interesse storico e culturale, visitato da turisti e curiosi che desiderano immergersi nell'atmosfera autentica di questo antico lavatoio. Inoltre, durante il periodo estivo, l'accolta di Bevagna ospita eventi culturali e ricreativi, tra cui concerti, mostre d'arte e spettacoli teatrali, che contribuiscono a valorizzare e promuovere il patrimonio storico e artistico della città.",
-        description_en: `The 'accolta' of Bevagna is an ancient public washhouse located in the historic center of the city. Dating back to the 15th century, this building is a remarkable example of medieval architecture and represents an important gathering place for the local community. The washhouse features a rectangular structure with a columned portico overlooking a large water basin. This washhouse was used by the women of the town to wash clothes and collect clean water for domestic activities. Today, the 'accolta' of Bevagna has become a site of historical and cultural interest, visited by tourists and curious onlookers who wish to immerse themselves in the authentic atmosphere of this ancient washhouse. Moreover, during the summer, the "accolta" hosts cultural and recreational events, including concerts, art exhibitions, and theatrical performances, contributing to the enhancement and promotion of the city's historical and artistic heritage.`,
+        description_en: `The 'accolta' of Bevagna is an ancient public washhouse located in the historic center of the city. Dating back to the 15th century, this building is a remarkable example of medieval architecture and represents an important gathering place for the local community. The washhouse features a rectangular structure with a columned portico overlooking a large water basin. This washhouse was used by the women of the town to wash clothes and collect clean water for domestic activities.\n\n Today, the 'accolta' of Bevagna has become a site of historical and cultural interest, visited by tourists and curious onlookers who wish to immerse themselves in the authentic atmosphere of this ancient washhouse. Moreover, during the summer, the "accolta" hosts cultural and recreational events, including concerts, art exhibitions, and theatrical performances, contributing to the enhancement and promotion of the city's historical and artistic heritage.`,
         markerType: "tourism",
         img: "./assets/img/card_background/Lavatoio.jpg"
       },
@@ -1204,10 +1259,10 @@ function updateMarkers(filteredListings) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  const initialType = document.getElementById('filter-dropdown').value;
-  applyFilters(initialType);
-});
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   const initialType = document.getElementById('filter-dropdown').value;
+//   applyFilters(initialType);
+// });
 
 function showFilter() {
   document.getElementById('marker-dropdown').style.display = 'inline';

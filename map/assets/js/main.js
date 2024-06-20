@@ -26,6 +26,10 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
         cardTitle.innerText = title_en;
         cardDescription.innerText = description_en;
     }
+
+    if (markerType == 'food') {
+        cardTitle.innerText = '';
+    }
     
     // shows the image for the portal
     if (portal_img) {
@@ -72,12 +76,12 @@ const back2Index = () => {
 const translations = {
     it: {
         filterOptions: [
-            "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria"
+            "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati"
         ]
     },
     en: {
         filterOptions: [
-            "All Categories", "SHU2024 Events", "Info Point", "Events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria"
+            "All Categories", "SHU2024 Events", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events"
         ]
     }
 };
@@ -98,6 +102,7 @@ function translate(language) {
     document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[13];
     document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[14];
     document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[15];
+    document.getElementById('privateEvents').innerHTML = translations[language].filterOptions[16];
     
     document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
     document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
@@ -114,6 +119,7 @@ function translate(language) {
     document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[13];
     document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[14];
     document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[15];
+    document.getElementById('marker-privateEvents').innerHTML = translations[language].filterOptions[16];
     
     const listingsContainer = document.getElementById('listings');
     listingsContainer.innerHTML = '';
@@ -130,18 +136,9 @@ function translate(language) {
         }
         
         var link = listing.appendChild(document.createElement("a"));
-        if (prop.id === "crafts"){
-            link.href = prop.site
-        } else {
-            link.href = "#";
-        }
+        link.href = prop.site;
         link.className = "title";
         link.id = "link-" + prop.id;
-        if (language === 'it') {
-            link.innerText = prop.address_it;
-        } else {
-            link.innerText = prop.address_en;
-        }
         
         link.addEventListener("click", function (e) {
             for (var i = 0; i < stores.features.length; i++) {
