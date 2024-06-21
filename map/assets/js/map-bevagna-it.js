@@ -103,18 +103,27 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: `\n05 Luglio 9.30-11.00\n Pratiche in movimento\n"Sperimenta personalmente pratiche di movimento di natura esplorativa"
-        \n\n05 Luglio 11.00-12.30\nWorkshop di insalate creative\n"Workshop bilingue per esplorare e condividere le tradizioni culinarie dal mondo!"
-        \n\n05 Luglio 16.30-18.00\nDegustare il benessere\n"In collaborazione con Ass. Italiana Conoscere l’Olio di Oliva e La Strada del Sagrantino"
-        \n\n05 Luglio 18.00-19.30\nLet's play Spoons\n"Migliora le tue capacità motorie, il ritmo, la creatività, la collaborazione e la fiducia in te stesso"
-        \n\n\n06 Luglio 9.30-11.00\nBenessere del cane\n"Esplora il linguaggio del mondo animale e vieni a conoscere gli amici a 4 zampe di Nicole"
-        \n\n06 Luglio 11.00-12.30\nAvatart - Digital art experience\n"“Immergerti” concretamente all’interno di immagini, fumetti e disegni da te realizzati"
-        \n\n06 Luglio 16.30-18.00\nProgettare benessere urbano\n"Apprendi le tecniche del Tactical Urbanism per la co-progettazione di uno spazio pubblico di qualità"
-        \n\n06 Luglio 18.00-19.30\nHealty energy drinks\n"Impara come preparare degli ottimi energy drinks rinfrescanti e salutari anche a casa tua"
+        description_it: `\n05 Luglio 9.30-11.00\nPRATICHE IN MOVIMENTO\n"Sperimenta personalmente pratiche di movimento di natura esplorativa"
+        \n\n05 Luglio 11.00-12.30\nWORKSHOP DI INSALATE CREATIVE\n"Workshop bilingue per esplorare e condividere le tradizioni culinarie dal mondo!"
+        \n\n05 Luglio 16.30-18.00\nDEGUSTARE IL BENESSERE\n"In collaborazione con Ass. Italiana Conoscere l’Olio di Oliva e La Strada del Sagrantino"
+        \n\n05 Luglio 18.00-19.30\nLET'S PLAY SPOON\n"Migliora le tue capacità motorie, il ritmo, la creatività, la collaborazione e la fiducia in te stesso"
+        \n\n\n06 Luglio 9.30-11.00\nBENESSERE DEL CANE\n"Esplora il linguaggio del mondo animale e vieni a conoscere gli amici a 4 zampe di Nicole"
+        \n\n06 Luglio 11.00-12.30\nAVATART - DIGITAL ART EXPERIENCE\n"“Immergerti” concretamente all’interno di immagini, fumetti e disegni da te realizzati"
+        \n\n06 Luglio 16.30-18.00\nPROGETTARE BENESSERE URBANO\n"Apprendi le tecniche del Tactical Urbanism per la co-progettazione di uno spazio pubblico di qualità"
+        \n\n06 Luglio 18.00-19.30\nHEALTY ENERGY DRINKS\n"Impara come preparare degli ottimi energy drinks rinfrescanti e salutari anche a casa tua"
         \n\n\nPer iscriverti segui il`,
-        description_en: `Discover all the activities of the Wellness Village`,
+        description_en: `\n05 July from 9.30 am to 11.00 am\nPRACTICES ON THE MOVE\n"Personally experience movement practices of an exploratory nature"
+        \n\n05 July from 11.00 am to 12.30 pm\nCREATIVE SALADS WORKSHOP\n"Bilingual workshop to explore and share culinary traditions from around the world!"
+        \n\n05 July from 4.30 pm to 6.00 pm\nTASTE WELL-BEING\n"In collaboration with the Italian Association for Olive Oil Knowledge and La Strada del Sagrantino"
+        \n\n05 July from 6.00 pm to 7.30 pm\nLET'S PLAY SPOON\n"Enhance your fine motor skills, rhythm, creativity, collaboration, and self-confidence"
+        \n\n\n06 July from 9.30 am to 11.00 am\nDOG WELLBEING AND OWNER TRAINING\n"Explore the language of the animal world and meet Nicole's four-legged friends"
+        \n\n06 July from 11.00 am to 12.30 pm\nAVATART - DIGITAL ART EXPERIENCE\n"“Immerse” yourself in the images, comics, and drawings you have created"
+        \n\n06 July from 4.30 pm to 6.00 pm\nPLANNING URBAN WELLBEING\n"Learn Tactical Urbanism techniques for the co-design of a quality public space"
+        \n\n06 July from 6.00 pm to 7.30 pm\nHEALTY ENERGY DRINKS\n"Learn how to prepare excellent, refreshing and healthy energy drinks at home"
+        \n\n\nTo register, follow the`,
         markerType: "wellness",
         site: "https://www.socialhackathonumbria.info/",
+        img: "./assets/img/card_background/SHU-benessere.svg"
       },
     },
     // END WELLNESS VILLAGE
@@ -269,13 +278,15 @@ var stores = {
         coordinates: [12.608862693550554, 42.932282840220076],
       }, 
       properties: {
-        address_it: "Robot Arena",
-        address_en: "Robot Arena",
+        address_it: "#RobotArena",
+        address_en: "#RobotArena",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Scegli il tuo robot, impara a programmarlo e sfida i tuoi amici in fantastici percorsi ad ostacoli... INGRESSO LIBERO!!!",
-        description_en: "",
+        description_it: `Scegli il tuo robot, impara a programmarlo e sfida i tuoi amici in fantastici percorsi ad ostacoli... INGRESSO LIBERO!!!
+        \n\nVenerdì 5 e Sabato 6 Luglio\n 10.00-18.00`,
+        description_en: `Choose your robot, learn how to program it and challenge your friends in the fantastic obstacle courses... FREE ADMISSION!!!
+        \n\nFriday 7th and Saturday 8th July from\n from 10:00 am to 6:00 pm`,
         markerType: "events",
       },
     },
@@ -293,7 +304,8 @@ var stores = {
         postalCode: "06031",
         description_it: `\n05 Luglio 17.00-20.00\n Videogiochi per la salute @ scuola\n"Workshop per docenti di scuola primaria e secondaria di primo e secondo grado"\n\n\n06 Luglio 10.00-16.00\n Benessere e patrimonio\n"Giornata di lavori con esperti e professionisti della cultura su pratiche inclusive e sostenibili"
         \n\n\nPer iscriverti segui il`,
-        description_en: ``,
+        description_en: `\n05th July from 5.00 pm to 8.00 pm\n Videogames for health @ school\n"Workshop for primary and secondary school teachers"\n\n\n06tj July from 10.00 am to 4.00 pm\n Wellbeing and heritage\n"A day of work with culture experts and professionals on inclusive and sustainable practices"
+        \n\n\nTo register, follow the`,
         markerType: "events",
         site: "https://www.socialhackathonumbria.info/"
       },
@@ -312,7 +324,8 @@ var stores = {
         postalCode: "06031",
         description_it: `Workshop condotto in lingua inglese dagli animatori di Primanima Animation (HU)
         \n\n\nPer iscriverti segui il`,
-        description_en: "",
+        description_en: `Workshop conducted in English by animators from Primanima Animation (HU)
+        \n\n\nTo register, follow the`,
         markerType: "events",
         site: "https://www.socialhackathonumbria.info"
       },
@@ -342,14 +355,14 @@ var stores = {
       }, 
       properties: {
         address_it: "Campus Junior Hakers SHU-Kids",
-        address_en: "Pilotaggio Droni",
+        address_en: "Junior Hakers SHU-Kids Camp",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: 
-        `Campus per bambini e bambine dai 6 agli 11 anni\n\n 9.00 - 17.00 (Da Giovedì 4 a Sabato 6)\n 9.00 - 13.00 (Domenica 7)\n\nPranzo al sacco... la merenda la offriamo noi!
+        description_it: `Campus per bambini e bambine dai 6 agli 11 anni\n\n 9.00 - 17.00 (Da Giovedì 4 a Sabato 6)\n 9.00 - 13.00 (Domenica 7)\n\nPranzo al sacco... la merenda la offriamo noi!
         \n\n\nPer iscriverti segui il`,
-        description_en: "",
+        description_en: `Camp for boys and girls aged 6 to 11\n\n from 9.00 am to 5.00 pm (Thursday 4th to Saturday 6th)\n from 9.00 am to 1.00 pm (Sunday 7th)\n\nBring your own lunch... we provide the snacks!
+        \n\n\nTo register, follow the`,
         markerType: "events",
         site: "https://www.socialhackathonumbria.info"
       },
@@ -366,10 +379,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: 
-        `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
+        description_it: `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
         \n\n\nPer iscriverti segui il`,
-        description_en: "",
+        description_en: `Come and find out what a Social Hackathon is all about\n\n 06th July from 3.00 pm to 5.00 pm\n\nAn adult HoverBoard and two Smart Gardens raffled among all participants
+        \n\n\nTo register, follow the`,
         markerType: "events",
         site: "https://www.socialhackathonumbria.info"
       },
@@ -481,8 +494,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Wine bar",
-        description_en: "Wine bar",
+        description_it: "Consulta il sito internet per scoprire il menù",
+        description_en: "Look at the website and discover the menu",
         markerType: "food",
         site: "https://www.lebarbatellewinebar.com/",
         img: "./assets/img/restaurant_logos/05-LE BARBATELLE.png",
@@ -500,8 +513,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "",
-        description_en: "",
+        description_it: "Consulta il sito internet per scoprire il menù",
+        description_en: "Look at the website and discover the menu",
         markerType: "food",
         site: "https://www.deliziedelborgobevagna.it/",
         img: "./assets/img/restaurant_logos/08-Le Delizie del Borgo-color.png",
@@ -595,10 +608,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Alimentari",
-        description_en: "Grocery store",
+        description_it: "Guarda il menù",
+        description_en: "Here is the menu",
         markerType: "food",
-        site: "#",
+        site: "./assets/img/menus/menuDispensa.pdf",
         img: "./assets/img/restaurant_logos/06-la dispensa.png",
       },
     },
@@ -641,93 +654,6 @@ var stores = {
       },
     },
     // FINE AREA FOOD
-    // PORTALS GAITE
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608231387105889, 42.932829261692824],
-      }, 
-      properties: {
-        address_it: "Portale Mercato delle Gaite",
-        address_en: "Mercato delle Gaite Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
-        description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
-        markerType: "portals",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
-      },
-    },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.608045948399779, 42.9328888254322],
-    //   }, 
-    //   properties: {
-    //     address_it: "Portale Gaita San Giovanni",
-    //     address_en: "Gaita San Giovanni Portal",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "",
-    //     markerType: "portals",
-    //   },
-    // },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.608180148251774, 42.932735250662574],
-    //   }, 
-    //   properties: {
-    //     address_it: "Portale Gaita San Giorgio",
-    //     address_en: "Gaita San Giorgio Portal",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "",
-    //     description_en: "",
-    //     markerType: "portals",
-    //   },
-    // },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.607844084756854, 42.93267580226183],
-    //   }, 
-    //   properties: {
-    //     address_it: "Portale Gaita San Pietro",
-    //     address_en: "Gaita San Pietro Portal",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "",
-    //     description_en: "",
-    //     markerType: "portals",
-    //   },
-    // },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.60797151822976, 42.932599840332955],
-    //   }, 
-    //   properties: {
-    //     address_it: "Portale Gaita Santa Maria",
-    //     address_en: "Gaita Santa Maria Portal",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "",
-    //     description_en: "",
-    //     markerType: "portals",
-    //   },
-    // },
-    // END PORTALS GAITE
     // POINT OF INTEREST
     {
       type: "Feature",
@@ -928,6 +854,93 @@ var stores = {
       },
     },
     // END POINT OF INTEREST
+    // PORTALS GAITE
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608231387105889, 42.932829261692824],
+      }, 
+      properties: {
+        address_it: "Portale Mercato delle Gaite",
+        address_en: "Mercato delle Gaite Portal",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
+        description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
+        markerType: "portals",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
+      },
+    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.608045948399779, 42.9328888254322],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Giovanni",
+    //     address_en: "Gaita San Giovanni Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.608180148251774, 42.932735250662574],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Giorgio",
+    //     address_en: "Gaita San Giorgio Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.607844084756854, 42.93267580226183],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Pietro",
+    //     address_en: "Gaita San Pietro Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.60797151822976, 42.932599840332955],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita Santa Maria",
+    //     address_en: "Gaita Santa Maria Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // END PORTALS GAITE
     // MESTIERI GAITE
     {
       type: "Feature",

@@ -309,7 +309,10 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  background-color: #1f3c1e;
+  /* background-color: #1f3c1e; */
+  background: url(../img/fondinoSHU.svg) no-repeat;
+  background-position: center center;
+  background-size: cover;
   padding: 10px; 
   min-height: 120px;
   border-radius: 25px;
@@ -603,10 +606,11 @@ body {
 .marker-default {
   border: none;
   cursor: pointer;
-  height: 49px;
-  width: 35px;
-  background-image: url("../img/markers/pc\ da\ inviare.png");
-  background-size: cover;
+  height: 65px;
+  width: 43px;
+  background-image: url("../img/markers/icone\ SHU.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .marker-infopoint {
