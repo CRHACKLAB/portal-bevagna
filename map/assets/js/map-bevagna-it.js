@@ -519,10 +519,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "",
-        description_en: "",
+        description_it: "Guarda il menù",
+        description_en: "Here is the menu",
         markerType: "food",
-        site: "#",
+        site: "./assets/img/menus/Menu Grottino.pdf",
         img: "./assets/img/restaurant_logos/07-il_grottino-01.png",
       },
     },
@@ -1132,10 +1132,18 @@ function updateAddresses(data) {
   });
 }
 
+
+let currentFilter = 'all';
 /**
  * Add a listing for each store to the sidebar.
- **/
+**/
 function buildLocationList(data) {
+  if (!data || !data.features || !Array.isArray(data.features)) {
+    console.error('Invalid data format for buildLocationList');
+    return;
+  }
+  const listingsContainer = document.getElementById('listings');
+  listingsContainer.innerHTML = '';
   data.features.forEach(function (store, i) {
     /**
      * Create a shortcut for `store.properties`,
@@ -1198,6 +1206,7 @@ document.getElementById('marker-dropdown').addEventListener('change', handleFilt
 
 function handleFilterChange(event) {
     const selectedType = event.target.value;
+    currentFilter = selectedType;
     document.getElementById('filter-dropdown').value = selectedType;
     document.getElementById('marker-dropdown').value = selectedType;
     applyFilters(selectedType);
@@ -1235,9 +1244,10 @@ function applyFilters(selectedType) {
 
 }
 
+
 function updateListings(filteredListings) {
-  var listings = document.getElementById("listings");
-  listings.innerHTML = '';
+  // var listings = document.getElementById("listings");
+  // listings.innerHTML = '';
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
 }
 
@@ -1247,7 +1257,6 @@ function updateMarkers(filteredListings) {
       
       if (filteredListings.includes(feature)) {
         if (markerElement) {
-            console.log( markerElement);
               markerElement.style.display = 'inline';
           }
       } else {
@@ -1267,3 +1276,76 @@ function updateMarkers(filteredListings) {
 function showFilter() {
   document.getElementById('marker-dropdown').style.display = 'inline';
 }
+
+// TRANSLATION FUNCTION
+const translations = {
+  it: {
+      filterOptions: [
+          "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati"
+      ]
+  },
+  en: {
+      filterOptions: [
+          "All Categories", "SHU2024 Events", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events"
+      ]
+  }
+};
+function translate(language) {
+  
+  document.getElementById('all').innerHTML = translations[language].filterOptions[0];
+  document.getElementById('default').innerHTML = translations[language].filterOptions[1];
+  document.getElementById('infopoint').innerHTML = translations[language].filterOptions[2];
+  document.getElementById('events').innerHTML = translations[language].filterOptions[3];
+  document.getElementById('entrance').innerHTML = translations[language].filterOptions[4];
+  document.getElementById('food').innerHTML = translations[language].filterOptions[5];
+  document.getElementById('tourism').innerHTML = translations[language].filterOptions[6];
+  document.getElementById('bus').innerHTML = translations[language].filterOptions[7];
+  document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
+  document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
+  document.getElementById('wellness').innerHTML = translations[language].filterOptions[11];
+  document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[12];
+  document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[13];
+  document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[14];
+  document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[15];
+  document.getElementById('privateEvents').innerHTML = translations[language].filterOptions[16];
+  
+  document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
+  document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
+  document.getElementById('marker-infopoint').innerHTML = translations[language].filterOptions[2];
+  document.getElementById('marker-events').innerHTML = translations[language].filterOptions[3];
+  document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[4];
+  document.getElementById('marker-food').innerHTML = translations[language].filterOptions[5];
+  document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[6];
+  document.getElementById('marker-bus').innerHTML = translations[language].filterOptions[7];
+  document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[8];
+  document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[9];
+  document.getElementById('marker-wellness').innerHTML = translations[language].filterOptions[11];
+  document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[12];
+  document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[13];
+  document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[14];
+  document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[15];
+  document.getElementById('marker-privateEvents').innerHTML = translations[language].filterOptions[16];
+  
+  // Reload listings in the correct language
+  language = language;
+  applyFilters(currentFilter);
+}
+
+function english() {
+  language = 'en';
+  translate('en');
+}
+
+function italian() {
+  language = 'it';
+  translate('it');
+}
+
+// Automatically set the language based on the browser language setting
+if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
+  language = "it";
+  translate('it');
+} else {
+  language = "en";
+  translate('en');
+};
