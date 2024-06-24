@@ -9,6 +9,8 @@ const backButton = document.getElementById('back-to-index');
 const portal = document.getElementById('portals');
 
 
+let userCoordinates = null;
+
 const hideInfoCard = () => {
     console.log("Hide info card");
     infoCard.setAttribute("hidden", "hidden");
@@ -69,85 +71,58 @@ const showSidebar = () => {
 const back2Index = () => {
     infoCard.setAttribute("hidden", "hidden");
     mapContainer.removeAttribute("hidden");
+    console.log(userCoordinates);
+    if (userCoordinates) {
+        map.flyTo({
+            center: userCoordinates,
+            zoom: 15.9
+        });
+    } else {
+        map.zoomTo(15.9);
+    }
 };
 
+// Function to initialize the map
+function initializeMap(latitude, longitude) {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283dWg2c3hqIn0.7JK3k4zD9eU0OM9iurp0Xg';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn',
+        center: [longitude, latitude],
+        zoom: 15.9,
+        scrollZoom: true,
+    });
+    const nav = new mapboxgl.NavigationControl({
+        showCompass: true,
+    });
+    map.addControl(nav, 'bottom-right');
 
-// // TRANSLATION FUNCTION
-// const translations = {
-//     it: {
-//         filterOptions: [
-//             "Tutte le categorie", "Eventi SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portali Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati"
-//         ]
-//     },
-//     en: {
-//         filterOptions: [
-//             "All Categories", "SHU2024 Events", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portals", "Medieval Crafts", "Wellness Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events"
-//         ]
-//     }
-// };
-// function translate(language) {
-    
-//     document.getElementById('all').innerHTML = translations[language].filterOptions[0];
-//     document.getElementById('default').innerHTML = translations[language].filterOptions[1];
-//     document.getElementById('infopoint').innerHTML = translations[language].filterOptions[2];
-//     document.getElementById('events').innerHTML = translations[language].filterOptions[3];
-//     document.getElementById('entrance').innerHTML = translations[language].filterOptions[4];
-//     document.getElementById('food').innerHTML = translations[language].filterOptions[5];
-//     document.getElementById('tourism').innerHTML = translations[language].filterOptions[6];
-//     document.getElementById('bus').innerHTML = translations[language].filterOptions[7];
-//     document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
-//     document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
-//     document.getElementById('wellness').innerHTML = translations[language].filterOptions[11];
-//     document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[12];
-//     document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[13];
-//     document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[14];
-//     document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[15];
-//     document.getElementById('privateEvents').innerHTML = translations[language].filterOptions[16];
-    
-//     document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
-//     document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
-//     document.getElementById('marker-infopoint').innerHTML = translations[language].filterOptions[2];
-//     document.getElementById('marker-events').innerHTML = translations[language].filterOptions[3];
-//     document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[4];
-//     document.getElementById('marker-food').innerHTML = translations[language].filterOptions[5];
-//     document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[6];
-//     document.getElementById('marker-bus').innerHTML = translations[language].filterOptions[7];
-//     document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[8];
-//     document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[9];
-//     document.getElementById('marker-wellness').innerHTML = translations[language].filterOptions[11];
-//     document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[12];
-//     document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[13];
-//     document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[14];
-//     document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[15];
-//     document.getElementById('marker-privateEvents').innerHTML = translations[language].filterOptions[16];
-    
-//     const listingsContainer = document.getElementById('listings');
-//     listingsContainer.innerHTML = '';
-    
+    userCoordinates = [longitude, latitude]; //store the user's coordinates
+}
 
-//     buildLocationList();
-    
-//     // document.getElementById('filter-dropdown').value = selectedType;
-//     // filter();
-    
-// }
+// Function to handle successful geolocation
+function successCallback(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+    initializeMap(latitude, longitude);
+}
 
-// function english() {
-//     translate('en');
-//     language = 'en';
-// }
+// Function to handle geolocation errors
+function errorCallback(error) {
+    console.error(`Geolocation error: ${error.message}`);
+    alert('Unable to retrieve your location. Please ensure that location services are enabled.');
+}
 
-// function italian() {
-//     translate('it');
-//     language = 'it';
-// }
-
-// // Automatically set the language based on the browser language setting
-// if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
-//     language = "it";
-//     translate('it');
-// } else {
-//     language = "en";
-//     translate('en');
-// };
-
+// Add event listener to the button
+document.getElementById('enable-gps').addEventListener('click', () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        });
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+});
