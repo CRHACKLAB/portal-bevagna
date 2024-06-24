@@ -42,8 +42,8 @@ var stores = {
         coordinates: [12.607299828666415, 42.932544953101086],
       }, 
       properties: {
-        address_it: "Sede Social Hackademy Umbria",
-        address_en: "Social Hackademy Umbria Main Event",
+        address_it: "Sede Social Hackademy Umbria 2024",
+        address_en: "Social Hackademy Umbria 2024 Main Event",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -57,7 +57,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609109781873885, 42.93308063784067],
+        coordinates: [12.609287520922866, 42.933033954187735],
       }, 
       properties: {
         address_it: "SHU YoungMakers",
@@ -76,7 +76,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608634941494632, 42.933316743102765],
+        coordinates: [12.608639140444703, 42.933365079779506],
       }, 
       properties: {
         address_it: "Infopoint SHU 2024",
@@ -95,7 +95,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608661861897907, 42.93293444630248],
+        coordinates: [12.608473536273573, 42.93295581877788],
       }, 
       properties: {
         address_it: "Villaggio benessere",
@@ -314,7 +314,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608843959853997, 42.93301572760449],
+        coordinates: [12.609038116942735, 42.93305200601258],
       }, 
       properties: {
         address_it: "Stop-Motion Creative Lab",
@@ -401,8 +401,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Sede di evento di apertura e chiusura(?)",
-        description_en: "Sede di evento di apertura e chiusura(?)",
+        description_it: "Sede di evento di apertura",
+        description_en: "SHU 2024 Opening Event",
         markerType: "privateEvents",
       },
     },
@@ -423,13 +423,30 @@ var stores = {
         markerType: "privateEvents",
       },
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.60872161836284, 42.933465722887014],
+      }, 
+      properties: {
+        address_it: "Museo Bevagna",
+        address_en: "Bevagna Museum",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Sala conferenze all'ex mulino",
+        description_en: "Conference room at former mill",
+        markerType: "privateEvents",
+      },
+    },
     //END PRIVATE EVENTS
     // AREA FOOD
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608473536273573, 42.93295581877788],
+        coordinates: [12.608661861897907, 42.93293444630248],
       }, 
       properties: {
         address_it: "Mensa SHU Young + Staff",
@@ -456,10 +473,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Piatti tipici umbri, Specialità di Pesce",
-        description_en: "Typical umbrian dishes",
+        description_it: "Guarda il menù",
+        description_en: "Here is the menu",
         markerType: "food",
-        site: "#",
+        site: "./assets/img/menus/OsteriaDelPodesta.pdf",
         img: "./assets/img/restaurant_logos/04-Osteria del Podestà-01.png",
       },
     },
@@ -494,10 +511,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Consulta il sito internet per scoprire il menù",
-        description_en: "Look at the website and discover the menu",
+        description_it: "Guarda il menù",
+        description_en: "Here is the menu",
         markerType: "food",
-        site: "https://www.lebarbatellewinebar.com/",
+        site: "./assets/img/menus/menu estate Le Barbatelle conv [1-2].pdf",
         img: "./assets/img/restaurant_logos/05-LE BARBATELLE.png",
       },
     },
@@ -551,10 +568,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Pizzeria",
-        description_en: "Pizzeria",
+        description_it: "Guarda il menù",
+        description_en: "Here is the menu",
         markerType: "food",
-        site: "#",
+        site: "./assets/img/menus/oltrelapizzamenu (1).pdf",
         img: "./assets/img/restaurant_logos/01-oltre la pizza-rifili-01.png",
       },
     },
@@ -562,7 +579,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609101761918721, 42.93370152155276],
+        coordinates: [12.60877266088538, 42.93363180296813],
       }, 
       properties: {
         address_it: "Gran Caffè Garibaldi",
