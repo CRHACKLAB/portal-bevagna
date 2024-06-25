@@ -106,20 +106,24 @@ var stores = {
         \n\n05 Luglio 11.00-12.30\nWORKSHOP DI INSALATE CREATIVE\n"Workshop bilingue per esplorare e condividere le tradizioni culinarie dal mondo!"
         \n\n05 Luglio 16.30-18.00\nDEGUSTARE IL BENESSERE\n"In collaborazione con Ass. Italiana Conoscere l’Olio di Oliva e La Strada del Sagrantino"
         \n\n05 Luglio 18.00-19.30\nLET'S PLAY SPOON\n"Migliora le tue capacità motorie, il ritmo, la creatività, la collaborazione e la fiducia in te stesso"
-        \n\n\n06 Luglio 9.30-11.00\nBENESSERE DEL CANE\n"Esplora il linguaggio del mondo animale e vieni a conoscere gli amici a 4 zampe di Nicole"
+        ____________________________
+        \n06 Luglio 9.30-11.00\nBENESSERE DEL CANE\n"Esplora il linguaggio del mondo animale e vieni a conoscere gli amici a 4 zampe di Nicole"
         \n\n06 Luglio 11.00-12.30\nAVATART - DIGITAL ART EXPERIENCE\n"“Immergerti” concretamente all’interno di immagini, fumetti e disegni da te realizzati"
         \n\n06 Luglio 16.30-18.00\nPROGETTARE BENESSERE URBANO\n"Apprendi le tecniche del Tactical Urbanism per la co-progettazione di uno spazio pubblico di qualità"
         \n\n06 Luglio 18.00-19.30\nHEALTY ENERGY DRINKS\n"Impara come preparare degli ottimi energy drinks rinfrescanti e salutari anche a casa tua"
-        \n\n\nPer iscriverti segui il`,
+        ____________________________
+        \nPer iscriverti segui il`,
         description_en: `\n05 July from 9.30 am to 11.00 am\nPRACTICES ON THE MOVE\n"Personally experience movement practices of an exploratory nature"
         \n\n05 July from 11.00 am to 12.30 pm\nCREATIVE SALADS WORKSHOP\n"Bilingual workshop to explore and share culinary traditions from around the world!"
         \n\n05 July from 4.30 pm to 6.00 pm\nTASTE WELL-BEING\n"In collaboration with the Italian Association for Olive Oil Knowledge and La Strada del Sagrantino"
         \n\n05 July from 6.00 pm to 7.30 pm\nLET'S PLAY SPOON\n"Enhance your fine motor skills, rhythm, creativity, collaboration, and self-confidence"
-        \n\n\n06 July from 9.30 am to 11.00 am\nDOG WELLBEING AND OWNER TRAINING\n"Explore the language of the animal world and meet Nicole's four-legged friends"
+        ____________________________
+        \n06 July from 9.30 am to 11.00 am\nDOG WELLBEING AND OWNER TRAINING\n"Explore the language of the animal world and meet Nicole's four-legged friends"
         \n\n06 July from 11.00 am to 12.30 pm\nAVATART - DIGITAL ART EXPERIENCE\n"“Immerse” yourself in the images, comics, and drawings you have created"
         \n\n06 July from 4.30 pm to 6.00 pm\nPLANNING URBAN WELLBEING\n"Learn Tactical Urbanism techniques for the co-design of a quality public space"
         \n\n06 July from 6.00 pm to 7.30 pm\nHEALTY ENERGY DRINKS\n"Learn how to prepare excellent, refreshing and healthy energy drinks at home"
-        \n\n\nTo register, follow the`,
+        ____________________________
+        \nTo register, follow the`,
         markerType: "wellness",
         site: "https://www.socialhackathonumbria.info/",
         img: "./assets/img/card_background/SHU-benessere.svg"
