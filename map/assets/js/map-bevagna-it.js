@@ -288,6 +288,7 @@ var stores = {
     },
     // END ENTRANCE POINT
     // COLLATERAL EVENTS
+    // ROBOT ARENA
     {
       type: "Feature",
       geometry: {
@@ -304,9 +305,10 @@ var stores = {
         \n\nVenerdì 5 e Sabato 6 Luglio\n 10.00-18.00`,
         description_en: `Choose your robot, learn how to program it and challenge your friends in the fantastic obstacle courses... FREE ADMISSION!!!
         \n\nFriday 7th and Saturday 8th July from\n from 10:00 am to 6:00 pm`,
-        markerType: "events",
+        markerType: "robotArena",
       },
     },
+    // END ROBOT ARENA
     {
       type: "Feature",
       geometry: {
@@ -323,7 +325,7 @@ var stores = {
         \n\n\nPer iscriverti segui il`,
         description_en: `\n05th July from 5.00 pm to 8.00 pm\n Videogames for health @ school\n"Workshop for primary and secondary school teachers"\n\n\n06tj July from 10.00 am to 4.00 pm\n Wellbeing and heritage\n"A day of work with culture experts and professionals on inclusive and sustainable practices"
         \n\n\nTo register, follow the`,
-        markerType: "events",
+        markerType: "auditorium",
         site: "https://www.socialhackathonumbria.info/"
       },
     },
@@ -343,7 +345,7 @@ var stores = {
         \n\n\nPer iscriverti segui il`,
         description_en: `Workshop conducted in English by animators from Primanima Animation (HU)
         \n\n\nTo register, follow the`,
-        markerType: "events",
+        markerType: "stopMotion",
         site: "https://www.socialhackathonumbria.info"
       },
     },
@@ -361,7 +363,7 @@ var stores = {
         postalCode: "06031",
         description_it: "Prova a far volare un drone",
         description_en: "",
-        markerType: "events",
+        markerType: "drones",
       },
     },
     {
@@ -452,8 +454,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Sala conferenze all'ex mulino",
-        description_en: "Conference room at former mill",
+        description_it: "Museo di Bevagna",
+        description_en: "Museum in Bevagna",
         markerType: "privateEvents",
       },
     },
@@ -491,31 +493,31 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Guarda il menù",
-        description_en: "Here is the menu",
+        description_en: "Download the menu",
         markerType: "food",
         site: "./assets/img/menus/OsteriaDelPodesta.pdf",
         img: "./assets/img/restaurant_logos/04-Osteria del Podestà-01.png",
       },
     },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.60930649464892, 42.934100605624714],
-      }, 
-      properties: {
-        address_it: "La Casareccia",
-        address_en: "La Casareccia",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Scopri il menù in esclusiva per SHU2024 seguendo il",
-        description_en: "Discover the menu created for SHU2024 following the",
-        markerType: "food",
-        site: "./assets/img/menus/menuCasareccia-imp.pdf",
-        img: "./assets/img/restaurant_logos/09-la casareccia.png",
-      },
-    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.60930649464892, 42.934100605624714],
+    //   }, 
+    //   properties: {
+    //     address_it: "La Casareccia",
+    //     address_en: "La Casareccia",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "Scopri il menù in esclusiva per SHU2024 seguendo il",
+    //     description_en: "Discover the menu created for SHU2024 following the",
+    //     markerType: "food",
+    //     site: "./assets/img/menus/menuCasareccia-imp.pdf",
+    //     img: "./assets/img/restaurant_logos/09-la casareccia.png",
+    //   },
+    // },
     {
       type: "Feature",
       geometry: {
@@ -529,7 +531,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Guarda il menù",
-        description_en: "Here is the menu",
+        description_en: "Download the menu",
         markerType: "food",
         site: "./assets/img/menus/menu estate Le Barbatelle conv [1-2].pdf",
         img: "./assets/img/restaurant_logos/05-LE BARBATELLE.png",
@@ -567,7 +569,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Guarda il menù",
-        description_en: "Here is the menu",
+        description_en: "Download the menu",
         markerType: "food",
         site: "./assets/img/menus/Menu Grottino.pdf",
         img: "./assets/img/restaurant_logos/07-il_grottino-01.png",
@@ -580,13 +582,13 @@ var stores = {
         coordinates: [12.608126798862632, 42.93231904223721],
       }, 
       properties: {
-        address_it: "Oltre la pizza",
-        address_en: "Oltre la pizza",
+        address_it: "Oltre la Pizza",
+        address_en: "Oltre la Pizza",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Guarda il menù",
-        description_en: "Here is the menu",
+        description_en: "Download the menu",
         markerType: "food",
         site: "./assets/img/menus/oltrelapizzamenu (1).pdf",
         img: "./assets/img/restaurant_logos/01-oltre la pizza-rifili-01.png",
@@ -643,7 +645,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Guarda il menù",
-        description_en: "Here is the menu",
+        description_en: "Download the menu",
         markerType: "food",
         site: "./assets/img/menus/menuDispensa.pdf",
         img: "./assets/img/restaurant_logos/06-la dispensa.png",
@@ -681,7 +683,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Guarda il menù",
-        description_en: "Here is the menu",
+        description_en: "Download the menu",
         markerType: "food",
         site: "./assets/img/menus/mangeriaMenu.pdf",
         img: "./assets/img/restaurant_logos/la Mangeria-01.png",
@@ -1329,12 +1331,12 @@ function showFilter() {
 const translations = {
   it: {
       filterOptions: [
-          "Tutte le categorie", "SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati", "SHU Young Makers"
+          "Tutte le categorie", "SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati", "SHU Young Makers", "Area Droni", "Laboratorio Stop Motion", "Auditorium Santa Maria Laurentia", "Robot Arena"
       ]
   },
   en: {
       filterOptions: [
-          "All Categories", "SHU2024", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events", "SHU Young Makers"
+          "All Categories", "SHU2024", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events", "SHU Young Makers", "Drone area", "Stop Motion Lab", "Auditorium Santa Maria Laurentia", "Robot Arena"
       ]
   }
 };
@@ -1346,7 +1348,7 @@ function translate(language) {
   document.getElementById('events').innerHTML = translations[language].filterOptions[3];
   document.getElementById('entrance').innerHTML = translations[language].filterOptions[4];
   document.getElementById('food').innerHTML = translations[language].filterOptions[5];
-  document.getElementById('tourism').innerHTML = translations[language].filterOptions[6];
+  // document.getElementById('tourism').innerHTML = translations[language].filterOptions[6];
   document.getElementById('bus').innerHTML = translations[language].filterOptions[7];
   document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
   document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
@@ -1357,6 +1359,10 @@ function translate(language) {
   document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[15];
   document.getElementById('privateEvents').innerHTML = translations[language].filterOptions[16];
   document.getElementById('youngMakers').innerHTML = translations[language].filterOptions[17];
+  document.getElementById('drones').innerHTML = translations[language].filterOptions[18];
+  document.getElementById('stopMotion').innerHTML = translations[language].filterOptions[19];
+  document.getElementById('auditorium').innerHTML = translations[language].filterOptions[20];
+  document.getElementById('robotArena').innerHTML = translations[language].filterOptions[21];
   
   document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
   document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
@@ -1364,7 +1370,7 @@ function translate(language) {
   document.getElementById('marker-events').innerHTML = translations[language].filterOptions[3];
   document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[4];
   document.getElementById('marker-food').innerHTML = translations[language].filterOptions[5];
-  document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[6];
+  // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[6];
   document.getElementById('marker-bus').innerHTML = translations[language].filterOptions[7];
   document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[8];
   document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[9];
@@ -1375,6 +1381,10 @@ function translate(language) {
   document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[15];
   document.getElementById('marker-privateEvents').innerHTML = translations[language].filterOptions[16];
   document.getElementById('marker-youngMakers').innerHTML = translations[language].filterOptions[17];
+  document.getElementById('marker-drones').innerHTML = translations[language].filterOptions[18];
+  document.getElementById('marker-stopMotion').innerHTML = translations[language].filterOptions[19];
+  document.getElementById('marker-auditorium').innerHTML = translations[language].filterOptions[20];
+  document.getElementById('marker-robotArena').innerHTML = translations[language].filterOptions[21];
   
   // Reload listings in the correct language
   language = language;

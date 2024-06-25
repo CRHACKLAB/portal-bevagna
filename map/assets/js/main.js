@@ -75,10 +75,10 @@ const back2Index = () => {
     if (userCoordinates) {
         map.flyTo({
             center: userCoordinates,
-            zoom: 15.9
+            zoom: 12.9
         });
     } else {
-        map.zoomTo(15.9);
+        map.zoomTo(17.9);
     }
 };
 
