@@ -47,7 +47,7 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
         var link = document.createElement("a");
         link.href = site;
         link.target = "_blank";
-        link.innerText = "\n\nLink";
+        link.innerText = "\nLink";
         cardDescription.appendChild(link);
     }
     //MODIFY WITH DATA FROM MAPBOX
