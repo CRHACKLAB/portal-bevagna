@@ -324,10 +324,16 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: `\n05 Luglio 17.00-20.00\n Videogiochi per la salute @ scuola\n"Workshop per docenti di scuola primaria e secondaria di primo e secondo grado"\n\n\n06 Luglio 10.00-16.00\n Benessere e patrimonio\n"Giornata di lavori con esperti e professionisti della cultura su pratiche inclusive e sostenibili"
-        \n\n\nPer iscriverti segui il`,
-        description_en: `\n05th July from 5.00 pm to 8.00 pm\n Videogames for health @ school\n"Workshop for primary and secondary school teachers"\n\n\n06tj July from 10.00 am to 4.00 pm\n Wellbeing and heritage\n"A day of work with culture experts and professionals on inclusive and sustainable practices"
-        \n\n\nTo register, follow the`,
+        description_it: `\n05 Luglio 17.00-20.00\n Videogiochi per la salute @ scuola\n"Workshop per docenti di scuola primaria e secondaria di primo e secondo grado"
+        ____________________________
+        \n06 Luglio 10.00-16.00\n Benessere e patrimonio\n"Giornata di lavori con esperti e professionisti della cultura su pratiche inclusive e sostenibili"
+        ____________________________
+        \nPer iscriverti segui il`,
+        description_en: `\n05th July from 5.00 pm to 8.00 pm\n Videogames for health @ school\n"Workshop for primary and secondary school teachers"
+        ____________________________
+        \n06tj July from 10.00 am to 4.00 pm\n Wellbeing and heritage\n"A day of work with culture experts and professionals on inclusive and sustainable practices"
+        ____________________________
+        \nTo register, follow the`,
         markerType: "auditorium",
         site: "https://www.socialhackathonumbria.info/"
       },
@@ -345,9 +351,9 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: `Workshop condotto in lingua inglese dagli animatori di Primanima Animation (HU)
-        \n\n\nPer iscriverti segui il`,
+        \n\nPer iscriverti segui il`,
         description_en: `Workshop conducted in English by animators from Primanima Animation (HU)
-        \n\n\nTo register, follow the`,
+        \n\nTo register, follow the`,
         markerType: "stopMotion",
         site: "https://www.socialhackathonumbria.info"
       },

@@ -612,63 +612,6 @@ body {
   justify-content: center;
 }
 
-@media only screen and (max-width: 400px) {
-
-  #filter-dropdown {
-    font-size: calc(var(--font-size) * 1);
-  }
-
-  .item {
-    font-size: calc(var(--font-size) * 1);
-  }
-
-  .listings {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .listings .item-default .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-food .title {
-    font-size: calc(var(--font-size));
-    justify-content: center;
-  }
-  
-  .listings .item-infopoint .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-tourism .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-entrance .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-events .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-bus .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-parking .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-portals .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-crafts .title {
-    font-size: calc(var(--font-size));
-  }
-
-}
-
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
@@ -881,7 +824,6 @@ body {
 }
 
 #marker-dropdown {
-  display: none;
   font-size: large;
   background-color: transparent;
   color: white;
@@ -889,7 +831,6 @@ body {
 
 #marker-dropdown option{
   background-color: #32679A;
-
 }
 
 
@@ -906,4 +847,73 @@ body {
   padding: 0.5rem;
   z-index: 12;
   display: none;
+}
+
+@media only screen and (max-width: 430px) {
+
+  #filter-dropdown {
+    font-size: calc(var(--font-size));
+  }
+
+  .item {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .listings .item-default .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-food .title {
+    font-size: calc(var(--font-size));
+    justify-content: center;
+  }
+  
+  .listings .item-infopoint .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-tourism .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-entrance .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-events .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-bus .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-parking .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-portals .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-crafts .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .show-button.sidebarbtn {
+    font-size: xx-large;
+  }
+
+  .filter-button.sidebarbtn {
+    font-size: xx-large;
+    margin-left: 50px;
+  }
+
+  #marker-dropdown {
+    font-size: calc(var(--font-size)*0.6);
+  }
 }
