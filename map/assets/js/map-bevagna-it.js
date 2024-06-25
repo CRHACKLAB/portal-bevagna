@@ -1,6 +1,4 @@
 
-
-
 if (!("remove" in Element.prototype)) {
   Element.prototype.remove = function () {
     if (this.parentNode) {
@@ -57,7 +55,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609287520922866, 42.933033954187735],
+        coordinates: [12.60928733026879, 42.9329813737062],
       }, 
       properties: {
         address_it: "SHU YoungMakers",
@@ -386,26 +384,26 @@ var stores = {
         site: "https://www.socialhackathonumbria.info"
       },
     },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.607193885183786, 42.93254600915297],
-      }, 
-      properties: {
-        address_it: "Social Jury @ #SHU2024",
-        address_en: "Social Jury @ #SHU2024",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
-        \n\n\nPer iscriverti segui il`,
-        description_en: `Come and find out what a Social Hackathon is all about\n\n 06th July from 3.00 pm to 5.00 pm\n\nAn adult HoverBoard and two Smart Gardens raffled among all participants
-        \n\n\nTo register, follow the`,
-        markerType: "events",
-        site: "https://www.socialhackathonumbria.info"
-      },
-    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.607193885183786, 42.93254600915297],
+    //   }, 
+    //   properties: {
+    //     address_it: "Social Jury @ #SHU2024",
+    //     address_en: "Social Jury @ #SHU2024",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
+    //     \n\n\nPer iscriverti segui il`,
+    //     description_en: `Come and find out what a Social Hackathon is all about\n\n 06th July from 3.00 pm to 5.00 pm\n\nAn adult HoverBoard and two Smart Gardens raffled among all participants
+    //     \n\n\nTo register, follow the`,
+    //     markerType: "events",
+    //     site: "https://www.socialhackathonumbria.info"
+    //   },
+    // },
     //END COLLATERAL EVENTS
     //PRIVATE EVENTS 
     {
@@ -1317,11 +1315,6 @@ function updateMarkers(filteredListings) {
       document.getElementById('marker-dropdown').style.display = 'none';
   });
 }
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//   const initialType = document.getElementById('filter-dropdown').value;
-//   applyFilters(initialType);
-// });
 
 function showFilter() {
   document.getElementById('marker-dropdown').style.display = 'inline';
