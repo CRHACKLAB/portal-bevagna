@@ -17,7 +17,8 @@ var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
-  center: [12.608438888126923, 42.933064240993126],
+  // center: [12.608438888126923, 42.933064240993126],
+  center:[12.608639140444703, 42.933365079779506],
   zoom: 15.9,
   scrollZoom: true,
 });
@@ -125,7 +126,7 @@ var stores = {
         ____________________________
         \nTo register, follow the`,
         markerType: "wellness",
-        site: "https://www.socialhackathonumbria.info/",
+        site: "https://www.socialhackathonumbria.info/#pricingtable",
         img: "./assets/img/card_background/SHU-benessere.svg"
       },
     },
@@ -335,7 +336,7 @@ var stores = {
         ____________________________
         \nTo register, follow the`,
         markerType: "auditorium",
-        site: "https://www.socialhackathonumbria.info/"
+        site: "https://www.socialhackathonumbria.info/#pricingtable"
       },
     },
     {
@@ -355,7 +356,7 @@ var stores = {
         description_en: `Workshop conducted in English by animators from Primanima Animation (HU)
         \n\nTo register, follow the`,
         markerType: "stopMotion",
-        site: "https://www.socialhackathonumbria.info"
+        site: "https://www.socialhackathonumbria.info/#pricingtable"
       },
     },
     {
@@ -365,8 +366,8 @@ var stores = {
         coordinates: [12.609703896780115, 42.93478548924887],
       }, 
       properties: {
-        address_it: "Stazione Pilotaggio Droni",
-        address_en: "Pilotaggio Droni",
+        address_it: "Area Droni",
+        address_en: "Drones' Playground",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -392,29 +393,29 @@ var stores = {
         description_en: `Camp for boys and girls aged 6 to 11\n\n from 9.00 am to 5.00 pm (Thursday 4th to Saturday 6th)\n from 9.00 am to 1.00 pm (Sunday 7th)\n\nBring your own lunch... we provide the snacks!
         \n\n\nTo register, follow the`,
         markerType: "events",
-        site: "https://www.socialhackathonumbria.info"
+        site: "https://www.socialhackathonumbria.info/#pricingtable"
       },
     },
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.607193885183786, 42.93254600915297],
-    //   }, 
-    //   properties: {
-    //     address_it: "Social Jury @ #SHU2024",
-    //     address_en: "Social Jury @ #SHU2024",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
-    //     \n\n\nPer iscriverti segui il`,
-    //     description_en: `Come and find out what a Social Hackathon is all about\n\n 06th July from 3.00 pm to 5.00 pm\n\nAn adult HoverBoard and two Smart Gardens raffled among all participants
-    //     \n\n\nTo register, follow the`,
-    //     markerType: "events",
-    //     site: "https://www.socialhackathonumbria.info"
-    //   },
-    // },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607193885183786, 42.93254600915297],
+      }, 
+      properties: {
+        address_it: "Social Jury @ #SHU2024",
+        address_en: "Social Jury @ #SHU2024",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
+        \n\n\nPer iscriverti segui il`,
+        description_en: `Come and find out what a Social Hackathon is all about\n\n 06th July from 3.00 pm to 5.00 pm\n\nAn adult HoverBoard and two Smart Gardens raffled among all participants
+        \n\n\nTo register, follow the`,
+        markerType: "events",
+        site: "https://www.socialhackathonumbria.info/#pricingtable"
+      },
+    },
     //END COLLATERAL EVENTS
     //PRIVATE EVENTS 
     {
@@ -553,8 +554,8 @@ var stores = {
         coordinates: [12.610451556603063, 42.93569713476225],
       }, 
       properties: {
-        address_it: "Le Delizie del Borgo - Bevagna",
-        address_en: "Le Delizie del Borgo - Bevagna",
+        address_it: "Le Delizie del Borgo",
+        address_en: "Le Delizie del Borgo",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -1057,6 +1058,25 @@ var stores = {
       },
     },
     // END MESTIERI GAITE
+    // TOILET
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608545097301263, 42.93266494869125],
+      }, 
+      properties: {
+        address_it: "Bagni pubblici",
+        address_en: "Public toilet",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "toilet",
+      },
+    },
+    // END TOILET
   ],
 };
 
@@ -1335,12 +1355,12 @@ function showFilter() {
 const translations = {
   it: {
       filterOptions: [
-          "Tutte le categorie", "SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati", "SHU Young Makers", "Area Droni", "Laboratorio Stop Motion", "Auditorium Santa Maria Laurentia", "Robot Arena"
+          "Tutte le categorie", "SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati", "SHU Young Makers", "Area Droni", "Laboratorio Stop Motion", "Auditorium Santa Maria Laurentia", "Robot Arena", "Bagni Pubblici"
       ]
   },
   en: {
       filterOptions: [
-          "All Categories", "SHU2024", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events", "SHU Young Makers", "Drone area", "Stop Motion Lab", "Auditorium Santa Maria Laurentia", "Robot Arena"
+          "All Categories", "SHU2024", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events", "SHU Young Makers", "Drone's Playground", "Stop Motion Lab", "Auditorium Santa Maria Laurentia", "Robot Arena", "Public Toilet"
       ]
   }
 };
@@ -1367,6 +1387,7 @@ function translate(language) {
   document.getElementById('stopMotion').innerHTML = translations[language].filterOptions[19];
   document.getElementById('auditorium').innerHTML = translations[language].filterOptions[20];
   document.getElementById('robotArena').innerHTML = translations[language].filterOptions[21];
+  document.getElementById('toilet').innerHTML = translations[language].filterOptions[22];
   
   document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
   document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
@@ -1389,6 +1410,7 @@ function translate(language) {
   document.getElementById('marker-stopMotion').innerHTML = translations[language].filterOptions[19];
   document.getElementById('marker-auditorium').innerHTML = translations[language].filterOptions[20];
   document.getElementById('marker-robotArena').innerHTML = translations[language].filterOptions[21];
+  document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[22];
   
   // Reload listings in the correct language
   language = language;
@@ -1398,18 +1420,26 @@ function translate(language) {
 function english() {
   language = 'en';
   translate('en');
+  document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('privacy-policy-en').style.display = 'none';
 }
 
 function italian() {
   language = 'it';
   translate('it');
+  document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('privacy-policy-it').style.display = 'none';
 }
 
 // Automatically set the language based on the browser language setting
 if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
   language = "it";
   translate('it');
+  document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('privacy-policy-it').style.display = 'none';
 } else {
   language = "en";
   translate('en');
+  document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('privacy-policy-en').style.display = 'none';
 };

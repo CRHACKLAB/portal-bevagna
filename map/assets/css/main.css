@@ -295,7 +295,6 @@ body {
 .listings {
   margin: 2px;
   height: 100%;
-  bottom: 30%;
   overflow: auto;
   padding-bottom: 60px;
   text-align: center;  
@@ -612,6 +611,37 @@ body {
   justify-content: center;
 }
 
+.listings .item-toilet .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #d8d208;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-link {
+  font-size: calc(var(--font-size)*0.8);
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%); 
+  margin-bottom: 4px;
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar-link a {
+  color: black;
+  margin: 0 10px 0 0;
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
@@ -813,6 +843,15 @@ body {
   height: 48px;
   width: 41px;
   background-image: url("../img/markers/eventiPrivati.png");
+  background-size: cover;
+}
+
+.marker-toilet {
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  width: 41px;
+  background-image: url("../img/markers/toilet.png");
   background-size: cover;
 }
 
