@@ -57,7 +57,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.60928733026879, 42.9329813737062],
+        coordinates: [12.60928733026879, 42.9329813737062], //! Spostare più vicino al villaggio benessere
       }, 
       properties: {
         address_it: "SHU YoungMakers",
@@ -65,9 +65,28 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Sede evento giovani",
-        description_en: "Young makers event place",
+        description_it: "Sede OpenLabs\n(Ingresso tramite Chiostro di San Domenico, Corso G.Matteotti, 107",
+        description_en: "",
         markerType: "youngMakers",
+        img: "./assets/img/card_background/Chiostro.jpg",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609544879956829, 42.933698053226856],
+      }, 
+      properties: {
+        address_it: "SHU YoungMakers",
+        address_en: "SHU YoungMakers",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Sede incontri in plenaria",
+        description_en: "",
+        markerType: "youngMakers",
+        img: "./assets/img/card_background/Auditorium.jpg",
       },
     },
     // END SHU MAIN EVENTS
@@ -79,13 +98,13 @@ var stores = {
         coordinates: [12.608639140444703, 42.933365079779506],
       }, 
       properties: {
-        address_it: "Infopoint SHU 2024",
-        address_en: "SHU 2024 Info Point",
+        address_it: "Infopoint #SHU2024",
+        address_en: "#SHU2024 Info Point",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Trova le informazioni che stai cercando su SHU2024",
-        description_en: "Find what you are searching for about SHU2024",
+        description_it: "L'infopoint è aperto da mercoledì 03 a domenica 07 Luglio dalle ore 09.00 alle ore 20.00\nVieni a visitarci per accreditamenti, informazioni e suggerimenti",
+        description_en: "",
         markerType: "infopoint",
       },
     },
@@ -139,13 +158,13 @@ var stores = {
         coordinates: [12.609515445796614, 42.935782011194114],
       }, 
       properties: {
-        address_it: "Punto raccolta navetta",
-        address_en: "Shuttle stop",
+        address_it: "Arrivi/Partenze Shuttle Bus",
+        address_en: "Arrivals/Departures Shuttle Bus",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Qui verrete lasciati e ripresi dalle navette",
-        description_en: "Here you arrive and go back to the hotels with shuttle",
+        description_it: "",
+        description_en: "",
         markerType: "bus",
       },
     },
@@ -336,14 +355,15 @@ var stores = {
         ____________________________
         \nTo register, follow the`,
         markerType: "auditorium",
-        site: "https://www.socialhackathonumbria.info/#pricingtable"
+        site: "https://www.socialhackathonumbria.info/#pricingtable",
+        img: "./assets/img/card_background/Auditorium.jpg",
       },
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609038116942735, 42.93305200601258],
+        coordinates: [12.609038116942735, 42.93305200601258], //! Spostare più vicino al villaggio benessere
       }, 
       properties: {
         address_it: "Stop-Motion Creative Lab",
@@ -351,12 +371,13 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: `Workshop condotto in lingua inglese dagli animatori di Primanima Animation (HU)
+        description_it: `Ingresso attraverso Chiostro di San Domenico\n Corso G. Matteotti, 107\n Sala Mevania\n\nWorkshop condotto in lingua inglese dagli animatori di Primanima Animation (HU)
         \n\nPer iscriverti segui il`,
         description_en: `Workshop conducted in English by animators from Primanima Animation (HU)
         \n\nTo register, follow the`,
         markerType: "stopMotion",
-        site: "https://www.socialhackathonumbria.info/#pricingtable"
+        site: "https://www.socialhackathonumbria.info/#pricingtable",
+        img: "./assets/img/card_background/Chiostro.jpg"
       },
     },
     {
@@ -366,13 +387,15 @@ var stores = {
         coordinates: [12.609703896780115, 42.93478548924887],
       }, 
       properties: {
-        address_it: "Area Droni",
-        address_en: "Drones' Playground",
+        address_it: "#DronesPlayground", //! esce fuori
+        address_en: "#DronesPlayground",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Prova a far volare un drone",
-        description_en: "",
+        description_it: `Vieni a volare sopra ai cieli di Bevagna con i Droni dell'associazione Lares.
+        \nVenerdì 05 e Sabato 06 Luglio dalle ore 10.00 alle ore 18.00.
+        \n\nACCESSO LIBERO`,
+        description_en: ``,
         markerType: "drones",
       },
     },
@@ -383,34 +406,14 @@ var stores = {
         coordinates: [12.607179327353062, 42.931244034005736],
       }, 
       properties: {
-        address_it: "Campus Junior Hakers SHU-Kids",
-        address_en: "Junior Hakers SHU-Kids Camp",
+        address_it: "Campus #SHU-KIDS benESSERE",
+        address_en: "#SHU-KIDS wellBEING Camp",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: `Campus per bambini e bambine dai 6 agli 11 anni\n\n 9.00 - 17.00 (Da Giovedì 4 a Sabato 6)\n 9.00 - 13.00 (Domenica 7)\n\nPranzo al sacco... la merenda la offriamo noi!
+        description_it: `Campus per bambini e bambine dai 6 agli 11 anni\n\n 9.00 - 17.00 (Da Giovedì 4 a Sabato 6)\n 10.00 - 14.00 (Domenica 7)\n\nPranzo al sacco... la merenda la offriamo noi!
         \n\n\nPer iscriverti segui il`,
-        description_en: `Camp for boys and girls aged 6 to 11\n\n from 9.00 am to 5.00 pm (Thursday 4th to Saturday 6th)\n from 9.00 am to 1.00 pm (Sunday 7th)\n\nBring your own lunch... we provide the snacks!
-        \n\n\nTo register, follow the`,
-        markerType: "events",
-        site: "https://www.socialhackathonumbria.info/#pricingtable"
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.607193885183786, 42.93254600915297],
-      }, 
-      properties: {
-        address_it: "Social Jury @ #SHU2024",
-        address_en: "Social Jury @ #SHU2024",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: `Vieni a scoprire in cosa consiste un Hackathon Sociale\n\n 06 Luglio 15.00 - 17.00\n\nIn palio un HoverBoard per adulti e due Smart Gardens estratti a sorte tra i partecipanti
-        \n\n\nPer iscriverti segui il`,
-        description_en: `Come and find out what a Social Hackathon is all about\n\n 06th July from 3.00 pm to 5.00 pm\n\nAn adult HoverBoard and two Smart Gardens raffled among all participants
+        description_en: `Camp for boys and girls aged 6 to 11\n\n from 9.00 am to 5.00 pm (Thursday 4th to Saturday 6th)\n from 10.00 am to 2.00 pm (Sunday 7th)\n\nBring your own lunch... we provide the snacks!
         \n\n\nTo register, follow the`,
         markerType: "events",
         site: "https://www.socialhackathonumbria.info/#pricingtable"
@@ -430,66 +433,12 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Sede di evento di apertura",
-        description_en: "SHU 2024 Opening Event",
-        markerType: "privateEvents",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608837897235594, 42.931322588694094],
-      }, 
-      properties: {
-        address_it: "Sala conferenze",
-        address_en: "Conference Room",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Sala conferenze all'ex mulino",
-        description_en: "Conference room at former mill",
-        markerType: "privateEvents",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.60872161836284, 42.933465722887014],
-      }, 
-      properties: {
-        address_it: "Museo Bevagna",
-        address_en: "Bevagna Museum",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Museo di Bevagna",
-        description_en: "Museum in Bevagna",
+        description_it: "Sede di evento di apertura #SHU2024\n Giovedì 04 Luglio\n18.30-20.00",
+        description_en: "#SHU2024 Opening Event",
         markerType: "privateEvents",
       },
     },
     //END PRIVATE EVENTS
-    // AREA FOOD
-    // {
-    //   type: "Feature",
-    //   geometry: {
-    //     type: "Point",
-    //     coordinates: [12.608661861897907, 42.93293444630248],
-    //   }, 
-    //   properties: {
-    //     address_it: "Mensa SHU Young + Staff",
-    //     address_en: "SHU Young + Staff Mensa",
-    //     city: "Bevagna",
-    //     country: "Italy",
-    //     postalCode: "06031",
-    //     description_it: "I partecipanti a SHU Young e lo Staff Egina sono invitati a mangiare in questo luogo",
-    //     description_en: "I partecipanti a SHU Young e lo Staff Egina sono invitati a mangiare in questo luogo",
-    //     markerType: "food",
-    //     site: "#",
-    //     img: "./assets/img/card_background/Chiostro.jpg",
-    //   },
-    // },
     {
       type: "Feature",
       geometry: {
