@@ -43,7 +43,7 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
     }
     
     // shows the link for the portal, restaurants and events
-    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food" || markerType == "events" || markerType == "auditorium" || markerType == "stopMotion" || markerType == "shuKids") {
+    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food" || markerType == "events" || markerType == "auditorium" || markerType == "stopMotion" || markerType == "shuKids" || markerType == "bus") {
         var link = document.createElement("a");
         link.href = site;
         link.target = "_blank";

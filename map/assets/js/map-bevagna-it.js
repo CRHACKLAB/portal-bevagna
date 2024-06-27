@@ -128,7 +128,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "L'infopoint è aperto da mercoledì 03 a domenica 07 Luglio dalle ore 09.00 alle ore 20.00\nVieni a visitarci per accreditamenti, informazioni e suggerimenti",
-        description_en: "The infopoint is open from Wednesday 03 to Sunday 07 July from 09.00 am to 08.00 pm\nCome and visit us for accreditations, information and suggestions",
+        description_en: "The infopoint is open from Wednesday 03rd to Sunday 07th July from 09.00 am to 08.00 pm\nCome and visit us for accreditations, information and suggestions",
         markerType: "infopoint",
       },
     },
@@ -158,15 +158,15 @@ var stores = {
         \n\n06 Luglio 18.00-19.30\nHEALTY ENERGY DRINKS\n"Impara come preparare degli ottimi energy drinks rinfrescanti e salutari anche a casa tua"
         ____________________________
         \nPer iscriverti segui il`,
-        description_en: `\n05 July from 9.30 am to 11.00 am\nPRACTICES ON THE MOVE\n"Personally experience movement practices of an exploratory nature"
-        \n\n05 July from 11.00 am to 12.30 pm\nCREATIVE SALADS WORKSHOP\n"Bilingual workshop to explore and share culinary traditions from around the world!"
-        \n\n05 July from 4.30 pm to 6.00 pm\nTASTE WELL-BEING\n"In collaboration with the Italian Association for Olive Oil Knowledge and La Strada del Sagrantino"
-        \n\n05 July from 6.00 pm to 7.30 pm\nLET'S PLAY SPOON\n"Enhance your fine motor skills, rhythm, creativity, collaboration, and self-confidence"
+        description_en: `\n05th July from 9.30 am to 11.00 am\nPRACTICES ON THE MOVE\n"Personally experience movement practices of an exploratory nature"
+        \n\n05th July from 11.00 am to 12.30 pm\nCREATIVE SALADS WORKSHOP\n"Bilingual workshop to explore and share culinary traditions from around the world!"
+        \n\n05th July from 4.30 pm to 6.00 pm\nTASTE WELL-BEING\n"In collaboration with the Italian Association for Olive Oil Knowledge and La Strada del Sagrantino"
+        \n\n05th July from 6.00 pm to 7.30 pm\nLET'S PLAY SPOON\n"Enhance your fine motor skills, rhythm, creativity, collaboration, and self-confidence"
         ____________________________
-        \n06 July from 9.30 am to 11.00 am\nDOG WELLBEING AND OWNER TRAINING\n"Explore the language of the animal world and meet Nicole's four-legged friends"
-        \n\n06 July from 11.00 am to 12.30 pm\nAVATART - DIGITAL ART EXPERIENCE\n"“Immerse” yourself in the images, comics, and drawings you have created"
-        \n\n06 July from 4.30 pm to 6.00 pm\nPLANNING URBAN WELLBEING\n"Learn Tactical Urbanism techniques for the co-design of a quality public space"
-        \n\n06 July from 6.00 pm to 7.30 pm\nHEALTY ENERGY DRINKS\n"Learn how to prepare excellent, refreshing and healthy energy drinks at home"
+        \n06th July from 9.30 am to 11.00 am\nDOG WELLBEING AND OWNER TRAINING\n"Explore the language of the animal world and meet Nicole's four-legged friends"
+        \n\n06th July from 11.00 am to 12.30 pm\nAVATART - DIGITAL ART EXPERIENCE\n"“Immerse” yourself in the images, comics, and drawings you have created"
+        \n\n06th July from 4.30 pm to 6.00 pm\nPLANNING URBAN WELLBEING\n"Learn Tactical Urbanism techniques for the co-design of a quality public space"
+        \n\n06th July from 6.00 pm to 7.30 pm\nHEALTY ENERGY DRINKS\n"Learn how to prepare excellent, refreshing and healthy energy drinks at home"
         ____________________________
         \nTo register, follow the`,
         markerType: "wellness",
@@ -189,9 +189,13 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Il bus navetta servirà i partecipanti con badge + sticker trasporti su base oraria dalle 9:00 alle 23:00 e sarà operativo da giovedì 04 alle 17:00 a domenica 07 luglio alle 12:00",
-        description_en: "The shuttle bus will serve the participants with badge + transport sticker on an hourly basis from 9:00 am to 11.00 pm and it will operate from Thursday 04 at 05.00 pm to Sunday 07 July at 12:00 pm",
+        description_it: `Il bus navetta servirà i partecipanti con badge + sticker trasporti su base oraria dalle 9:00 alle 23:00 e sarà operativo da giovedì 04 alle 17:00 a domenica 07 luglio alle 12:00
+        \n\nScopri il percorso della navetta al`,
+        description_en: 
+        `The shuttle bus will serve the participants with badge + transport sticker on an hourly basis from 9:00 am to 11.00 pm and it will operate from Thursday 04th at 05.00 pm to Sunday 07th July at 12:00 pm
+        \n\nDiscover the shuttle route following the`,
         markerType: "bus",
+        site: "./assets/img/card_background/bustour.png"
       },
     },
     // END BUS

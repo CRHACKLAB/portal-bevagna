@@ -696,7 +696,7 @@ body {
 .marker-infopoint {
   border: none;
   cursor: pointer;
-  height: 52px;
+  height: 48px;
   width: 43px;
   background-image: url("../img/markers/infopoint.png");
   background-size: cover;
