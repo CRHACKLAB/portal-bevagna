@@ -43,7 +43,7 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
     }
     
     // shows the link for the portal, restaurants and events
-    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food" || markerType == "events" || markerType == "auditorium" || markerType == "stopMotion") {
+    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria" || markerType == "wellness" || markerType == "food" || markerType == "events" || markerType == "auditorium" || markerType == "stopMotion" || markerType == "shuKids") {
         var link = document.createElement("a");
         link.href = site;
         link.target = "_blank";
@@ -115,14 +115,14 @@ function errorCallback(error) {
 }
 
 // Add event listener to the button
-document.getElementById('enable-gps').addEventListener('click', () => {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 0
-        });
-    } else {
-        console.log("Geolocation is not supported by this browser.");
-    }
-});
+// document.getElementById('enable-gps').addEventListener('click', () => {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+//             enableHighAccuracy: true,
+//             timeout: 5000,
+//             maximumAge: 0
+//         });
+//     } else {
+//         console.log("Geolocation is not supported by this browser.");
+//     }
+// });

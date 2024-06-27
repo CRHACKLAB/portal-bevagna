@@ -309,7 +309,6 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  /* background-color: #1f3c1e; */
   background: url(../img/fondinoSHU.svg) no-repeat;
   background-position: center center;
   background-size: cover;
@@ -327,7 +326,6 @@ body {
   font-weight: 700;
   text-decoration: none; 
   color: white; 
-  /* background-color: #1f3c1e; */
   background: url(../img/fondinoSHU.svg) no-repeat;
   background-position: center center;
   background-size: cover;
@@ -355,6 +353,23 @@ body {
 }
 
 .listings .item-infopoint .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5); 
+  font-weight: 700;
+  text-decoration: none; 
+  color: white; 
+  background: url(../img/fondinoSHU.svg)no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 10px; 
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .item-shuKids .title {
   display: block;
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
@@ -661,7 +676,7 @@ body {
 .marker-default {
   border: none;
   cursor: pointer;
-  height: 65px;
+  height: 52px;
   width: 43px;
   background-image: url("../img/markers/icone\ SHU.svg");
   background-size: contain;
@@ -671,7 +686,7 @@ body {
 .marker-youngMakers {
   border: none;
   cursor: pointer;
-  height: 65px;
+  height: 48px;
   width: 43px;
   background-image: url("../img/markers/icone\ SHU\ young.svg");
   background-size: contain;
@@ -684,6 +699,15 @@ body {
   height: 52px;
   width: 43px;
   background-image: url("../img/markers/infopoint.png");
+  background-size: cover;
+}
+
+.marker-shuKids {
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  width: 43px;
+  background-image: url("../img/markers/SHUkids.png");
   background-size: cover;
 }
 
@@ -783,7 +807,6 @@ body {
 }
 
 .marker-parking {
-  /*filter: hue-rotate(-150deg);*/ /* DEV only */
   border: none;
   cursor: pointer;
   height: 47px;
@@ -862,6 +885,13 @@ body {
   padding: 4px;
 }
 
+#show-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4px 6px;
+}
+
 #marker-dropdown {
   font-size: large;
   background-color: transparent;
@@ -891,7 +921,7 @@ body {
 @media only screen and (max-width: 430px) {
 
   #filter-dropdown {
-    font-size: calc(var(--font-size));
+    font-size: calc(var(--font-size)*0.8);
   }
 
   .item {
@@ -900,31 +930,19 @@ body {
 
   .listings {
     grid-template-columns: 1fr 1fr;
-  }
+  } 
   
   .listings .item-default .title {
     font-size: calc(var(--font-size));
   }
   
-  .listings .item-food .title {
-    font-size: calc(var(--font-size));
-    justify-content: center;
-  }
-  
   .listings .item-infopoint .title {
     font-size: calc(var(--font-size));
   }
-  
-  .listings .item-tourism .title {
+
+  .listings .item-food .title {
     font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-entrance .title {
-    font-size: calc(var(--font-size));
-  }
-  
-  .listings .item-events .title {
-    font-size: calc(var(--font-size));
+    justify-content: center;
   }
   
   .listings .item-bus .title {
@@ -932,6 +950,50 @@ body {
   }
   
   .listings .item-parking .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-wellness .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-privateEvents .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-youngMakers .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-drones .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-stopMotion .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-auditorium .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-robotArena .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-toilet .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-shuKids .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-tourism .title {
+    font-size: calc(var(--font-size));
+  }
+  
+  .listings .item-entrance .title {
     font-size: calc(var(--font-size));
   }
   

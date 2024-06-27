@@ -42,8 +42,8 @@ var stores = {
         coordinates: [12.60737556320675, 42.93249821488307],
       }, 
       properties: {
-        address_it: "Sede Social Hackademy Umbria 2024",
-        address_en: "Social Hackademy Umbria 2024 Main Event",
+        address_it: "#SHU2024",
+        address_en: "#SHU2024",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
@@ -57,16 +57,16 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.60928733026879, 42.9329813737062], //! Spostare più vicino al villaggio benessere
+        coordinates: [12.609041950922078, 42.93294673702365],
       }, 
       properties: {
-        address_it: "SHU YoungMakers",
-        address_en: "SHU YoungMakers",
+        address_it: "#SHU YoungMakers",
+        address_en: "#SHU YoungMakers",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Sede OpenLabs\n(Ingresso tramite Chiostro di San Domenico, Corso G.Matteotti, 107",
-        description_en: "",
+        description_en: "OpenLabs Venue\n(Entrance via Chiostro di San Domenico, Corso G. Matteotti, 107)",
         markerType: "youngMakers",
         img: "./assets/img/card_background/Chiostro.jpg",
       },
@@ -75,21 +75,45 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609544879956829, 42.933698053226856],
+        coordinates: [12.609634719118803, 42.9336065645548],
       }, 
       properties: {
-        address_it: "SHU YoungMakers",
-        address_en: "SHU YoungMakers",
+        address_it: "#SHU YoungMakers",
+        address_en: "#SHU YoungMakers",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
         description_it: "Sede incontri in plenaria",
-        description_en: "",
+        description_en: "Place for plenary meetings",
         markerType: "youngMakers",
         img: "./assets/img/card_background/Auditorium.jpg",
       },
     },
     // END SHU MAIN EVENTS
+    
+    //SHU KIDS CAMP
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607179327353062, 42.931244034005736],
+      }, 
+      properties: {
+        address_it: "Campus #SHUKIDS benESSERE",
+        address_en: "#SHUKIDS wellBEING Camp",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: `Campus per bambini e bambine dai 6 agli 11 anni\n\n 9.00 - 17.00 (Da Giovedì 4 a Sabato 6)\n 10.00 - 14.00 (Domenica 7)\n\nPranzo al sacco... la merenda la offriamo noi!
+        \n\nPer iscriverti segui il`,
+        description_en: `Camp for boys and girls aged 6 to 11\n\n from 9.00 am to 5.00 pm (Thursday 4th to Saturday 6th)\n from 10.00 am to 2.00 pm (Sunday 7th)\n\nBring your own lunch... we provide the snacks!
+        \n\nTo register, follow the`,
+        markerType: "shuKids",
+        site: "https://www.socialhackathonumbria.info/#pricingtable"
+      },
+    },
+    // END SHU KIDS CAMP
+
     // INFOPOINT
     {
       type: "Feature",
@@ -104,12 +128,13 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "L'infopoint è aperto da mercoledì 03 a domenica 07 Luglio dalle ore 09.00 alle ore 20.00\nVieni a visitarci per accreditamenti, informazioni e suggerimenti",
-        description_en: "",
+        description_en: "The infopoint is open from Wednesday 03 to Sunday 07 July from 09.00 am to 08.00 pm\nCome and visit us for accreditations, information and suggestions",
         markerType: "infopoint",
       },
     },
     // END INFOPOINT
-    // WELLNESS VILLAGE
+
+    // WELLBEING VILLAGE
     {
       type: "Feature",
       geometry: {
@@ -149,7 +174,8 @@ var stores = {
         img: "./assets/img/card_background/SHU-benessere.svg"
       },
     },
-    // END WELLNESS VILLAGE
+    // END WELLBEING VILLAGE
+    
     // BUS
     {
       type: "Feature",
@@ -163,12 +189,13 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "",
-        description_en: "",
+        description_it: "Il bus navetta servirà i partecipanti con badge + sticker trasporti su base oraria dalle 9:00 alle 23:00 e sarà operativo da giovedì 04 alle 17:00 a domenica 07 luglio alle 12:00",
+        description_en: "The shuttle bus will serve the participants with badge + transport sticker on an hourly basis from 9:00 am to 11.00 pm and it will operate from Thursday 04 at 05.00 pm to Sunday 07 July at 12:00 pm",
         markerType: "bus",
       },
     },
     // END BUS
+    
     // PARCHEGGI
     {
       type: "Feature",
@@ -239,6 +266,7 @@ var stores = {
       },
     },
     // FINE PARCHEGGI
+    
     // ENTRANCE POINT
     {
       type: "Feature",
@@ -310,7 +338,8 @@ var stores = {
       },
     },
     // END ENTRANCE POINT
-    // COLLATERAL EVENTS
+    
+    //? COLLATERAL EVENTS
     // ROBOT ARENA
     {
       type: "Feature",
@@ -325,13 +354,15 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: `Scegli il tuo robot, impara a programmarlo e sfida i tuoi amici in fantastici percorsi ad ostacoli... INGRESSO LIBERO!!!
-        \n\nVenerdì 5 e Sabato 6 Luglio\n 10.00-18.00`,
+        \n\nVenerdì 05 e Sabato 06 Luglio\n 10.00-18.00`,
         description_en: `Choose your robot, learn how to program it and challenge your friends in the fantastic obstacle courses... FREE ADMISSION!!!
         \n\nFriday 7th and Saturday 8th July from\n from 10:00 am to 6:00 pm`,
         markerType: "robotArena",
       },
     },
     // END ROBOT ARENA
+
+    // AUDITORIUM
     {
       type: "Feature",
       geometry: {
@@ -351,7 +382,7 @@ var stores = {
         \nPer iscriverti segui il`,
         description_en: `\n05th July from 5.00 pm to 8.00 pm\n Videogames for health @ school\n"Workshop for primary and secondary school teachers"
         ____________________________
-        \n06tj July from 10.00 am to 4.00 pm\n Wellbeing and heritage\n"A day of work with culture experts and professionals on inclusive and sustainable practices"
+        \n06th July from 10.00 am to 4.00 pm\n Wellbeing and heritage\n"A day of work with culture experts and professionals on inclusive and sustainable practices"
         ____________________________
         \nTo register, follow the`,
         markerType: "auditorium",
@@ -359,11 +390,14 @@ var stores = {
         img: "./assets/img/card_background/Auditorium.jpg",
       },
     },
+    // END AUDITORIUM
+
+    // STOPMOTION LAB
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.609038116942735, 42.93305200601258], //! Spostare più vicino al villaggio benessere
+        coordinates: [12.60886224293785, 42.933011541825124],
       }, 
       properties: {
         address_it: "Stop-Motion Creative Lab",
@@ -373,13 +407,16 @@ var stores = {
         postalCode: "06031",
         description_it: `Ingresso attraverso Chiostro di San Domenico\n Corso G. Matteotti, 107\n Sala Mevania\n\nWorkshop condotto in lingua inglese dagli animatori di Primanima Animation (HU)
         \n\nPer iscriverti segui il`,
-        description_en: `Workshop conducted in English by animators from Primanima Animation (HU)
+        description_en: `Entrance via Chiostro di San Domenico\n Corso G. Matteotti, 107\n Sala Mevania\n\nWorkshop conducted in English by animators from Primanima Animation (HU)
         \n\nTo register, follow the`,
         markerType: "stopMotion",
         site: "https://www.socialhackathonumbria.info/#pricingtable",
         img: "./assets/img/card_background/Chiostro.jpg"
       },
     },
+    // END STOPMOTION LAB
+
+    // DRONES PLAYGROUND
     {
       type: "Feature",
       geometry: {
@@ -387,39 +424,21 @@ var stores = {
         coordinates: [12.609703896780115, 42.93478548924887],
       }, 
       properties: {
-        address_it: "#DronesPlayground", //! esce fuori
-        address_en: "#DronesPlayground",
+        address_it: "#Drones Playground",
+        address_en: "#Drones Playground",
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: `Vieni a volare sopra ai cieli di Bevagna con i Droni dell'associazione Lares.
-        \nVenerdì 05 e Sabato 06 Luglio dalle ore 10.00 alle ore 18.00.
+        description_it: `Vieni a volare sopra ai cieli di Bevagna con i droni dell'associazione Lares.
+        \nVenerdì 05 e Sabato 06 Luglio\n10.00-18.00.
         \n\nACCESSO LIBERO`,
-        description_en: ``,
+        description_en: `Come and fly above the skies of Bevagna with the drones of the Lares association.\nFriday 05th and Saturday 06th July from 10.00 am to 06.00 pm`,
         markerType: "drones",
       },
     },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.607179327353062, 42.931244034005736],
-      }, 
-      properties: {
-        address_it: "Campus #SHU-KIDS benESSERE",
-        address_en: "#SHU-KIDS wellBEING Camp",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: `Campus per bambini e bambine dai 6 agli 11 anni\n\n 9.00 - 17.00 (Da Giovedì 4 a Sabato 6)\n 10.00 - 14.00 (Domenica 7)\n\nPranzo al sacco... la merenda la offriamo noi!
-        \n\n\nPer iscriverti segui il`,
-        description_en: `Camp for boys and girls aged 6 to 11\n\n from 9.00 am to 5.00 pm (Thursday 4th to Saturday 6th)\n from 10.00 am to 2.00 pm (Sunday 7th)\n\nBring your own lunch... we provide the snacks!
-        \n\n\nTo register, follow the`,
-        markerType: "events",
-        site: "https://www.socialhackathonumbria.info/#pricingtable"
-      },
-    },
-    //END COLLATERAL EVENTS
+    // END DRONES PLAYGROUND
+    //? END COLLATERAL EVENTS
+    
     //PRIVATE EVENTS 
     {
       type: "Feature",
@@ -434,11 +453,15 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: "Sede di evento di apertura #SHU2024\n Giovedì 04 Luglio\n18.30-20.00",
-        description_en: "#SHU2024 Opening Event",
+        description_en: "#SHU2024 Opening Event\n Thursday 04th July\n From 06.30 pm to 08.00 pm",
         markerType: "privateEvents",
+        img: "./assets/img/card_background/Teatro_Torti.jpg"
       },
     },
+    
     //END PRIVATE EVENTS
+
+    // FOOD
     {
       type: "Feature",
       geometry: {
@@ -451,8 +474,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Guarda il menù",
-        description_en: "Download the menu",
+        description_it: "Prenotazione obbligatoria\n\nGuarda il menù",
+        description_en: "Reservation required\n\nDownload the menu",
         markerType: "food",
         site: "./assets/img/menus/OsteriaDelPodesta.pdf",
         img: "./assets/img/restaurant_logos/04-Osteria del Podestà-01.png",
@@ -489,8 +512,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Guarda il menù",
-        description_en: "Download the menu",
+        description_it: "Prenotazione Consigliata\n\nGuarda il menù",
+        description_en: "Reservation recommended\n\nDownload the menu",
         markerType: "food",
         site: "./assets/img/menus/menu estate Le Barbatelle conv [1-2].pdf",
         img: "./assets/img/restaurant_logos/05-LE BARBATELLE.png",
@@ -527,8 +550,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Guarda il menù",
-        description_en: "Download the menu",
+        description_it: "Prenotazione Consigliata\n\nGuarda il menù",
+        description_en: "Reservation recommended\n\nDownload the menu",
         markerType: "food",
         site: "./assets/img/menus/Menu Grottino.pdf",
         img: "./assets/img/restaurant_logos/07-il_grottino-01.png",
@@ -584,8 +607,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Guarda il menù",
-        description_en: "Download the menu",
+        description_it: "Prenotazione Consigliata\n\nGuarda il menù",
+        description_en: "Reservation recommended\n\nDownload the menu",
         markerType: "food",
         site: "#",
         img: "./assets/img/restaurant_logos/03-La trifola_Tavola disegno 1.png",
@@ -603,8 +626,8 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Guarda il menù",
-        description_en: "Download the menu",
+        description_it: "Prenotazione Consigliata\n\nGuarda il menù",
+        description_en: "Reservation recommended\n\nDownload the menu",
         markerType: "food",
         site: "./assets/img/menus/menuDispensa.pdf",
         img: "./assets/img/restaurant_logos/06-la dispensa.png",
@@ -622,10 +645,10 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Guarda il menù",
-        description_en: "Download the menu",
+        description_it: "Prenotazione obbligatoria\n\nGuarda il menù",
+        description_en: "Reservation required\n\nDownload the menu",
         markerType: "food",
-        site: "https://www.labriciolabevagna.it/",
+        site: "./assets/img/menus/labriciola.pdf",
         img: "./assets/img/restaurant_logos/LA BRICIOLA-def_Tavola disegno 1.png",
       },
     },
@@ -641,14 +664,15 @@ var stores = {
         city: "Bevagna",
         country: "Italy",
         postalCode: "06031",
-        description_it: "Guarda il menù",
-        description_en: "Download the menu",
+        description_it: "Prenotazione Consigliata\n\nGuarda il menù",
+        description_en: "Reservation recommended\n\nDownload the menu",
         markerType: "food",
         site: "./assets/img/menus/mangeriaMenu.pdf",
         img: "./assets/img/restaurant_logos/la Mangeria-01.png",
       },
     },
     // FINE AREA FOOD
+    
     //TODO to use during shu2024
     // POINT OF INTEREST 
     // {
@@ -850,25 +874,26 @@ var stores = {
     //   },
     // },
     // END POINT OF INTEREST
+    
     // PORTALS GAITE
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608231387105889, 42.932829261692824],
-      }, 
-      properties: {
-        address_it: "Portale Mercato delle Gaite",
-        address_en: "Mercato delle Gaite Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
-        description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
-        markerType: "portals",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
-      },
-    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.608231387105889, 42.932829261692824],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Mercato delle Gaite",
+    //     address_en: "Mercato delle Gaite Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
+    //     description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
+    //     markerType: "portals",
+    //     site: "https://webxr.run/Vb5Adgw582d6Z",
+    //   },
+    // },
     // {
     //   type: "Feature",
     //   geometry: {
@@ -937,76 +962,78 @@ var stores = {
     //   },
     // },
     // END PORTALS GAITE
+    
     // MESTIERI GAITE
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.610776563411152, 42.934996177151284],
-      }, 
-      properties: {
-        address_it: "Mestiere Gaita San Giovanni",
-        address_en: "Gaita San Giovanni Craft",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "sanGiovanni",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.607107126589524, 42.93244475232125],
-      }, 
-      properties: {
-        address_it: "Mestiere Gaita San Pietro",
-        address_en: "Gaita San Pietro Craft",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "sanPietro",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.609526419514012, 42.93342634588887],
-      }, 
-      properties: {
-        address_it: "Mestiere Gaita San Giorgio",
-        address_en: "Gaita San Giorgio Craft",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "sanGiorgio",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.60748257632491, 42.93164125523298],
-      }, 
-      properties: {
-        address_it: "Mestiere Gaita Santa Maria",
-        address_en: "Gaita Santa Maria Craft",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "santaMaria",
-      },
-    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.610776563411152, 42.934996177151284],
+    //   }, 
+    //   properties: {
+    //     address_it: "Mestiere Gaita San Giovanni",
+    //     address_en: "Gaita San Giovanni Craft",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "sanGiovanni",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.607107126589524, 42.93244475232125],
+    //   }, 
+    //   properties: {
+    //     address_it: "Mestiere Gaita San Pietro",
+    //     address_en: "Gaita San Pietro Craft",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "sanPietro",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.609526419514012, 42.93342634588887],
+    //   }, 
+    //   properties: {
+    //     address_it: "Mestiere Gaita San Giorgio",
+    //     address_en: "Gaita San Giorgio Craft",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "sanGiorgio",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.60748257632491, 42.93164125523298],
+    //   }, 
+    //   properties: {
+    //     address_it: "Mestiere Gaita Santa Maria",
+    //     address_en: "Gaita Santa Maria Craft",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "santaMaria",
+    //   },
+    // },
     // END MESTIERI GAITE
+    
     // TOILET
     {
       type: "Feature",
@@ -1304,12 +1331,12 @@ function showFilter() {
 const translations = {
   it: {
       filterOptions: [
-          "Tutte le categorie", "SHU2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Eventi riservati", "SHU Young Makers", "Area Droni", "Laboratorio Stop Motion", "Auditorium Santa Maria Laurentia", "Robot Arena", "Bagni Pubblici"
+          "Tutte le categorie", "#SHU 2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Evento di lancio", "#SHU YoungMakers", "#DronesPlayground", "Laboratorio Stop Motion", "Auditorium Santa Maria Laurentia", "#RobotArena", "Bagni Pubblici", '#SHU-KIDS benESSERE'
       ]
   },
   en: {
       filterOptions: [
-          "All Categories", "SHU2024", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Reserved events", "SHU Young Makers", "Drone's Playground", "Stop Motion Lab", "Auditorium Santa Maria Laurentia", "Robot Arena", "Public Toilet"
+          "All Categories", "#SHU 2024", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Launch event", "#SHU YoungMakers", "#DronesPlayground", "Stop Motion Lab", "Auditorium Santa Maria Laurentia", "#RobotArena", "Public Toilet", "#SHU-KIDS wellBEING"
       ]
   }
 };
@@ -1318,18 +1345,17 @@ function translate(language) {
   document.getElementById('all').innerHTML = translations[language].filterOptions[0];
   document.getElementById('default').innerHTML = translations[language].filterOptions[1];
   document.getElementById('infopoint').innerHTML = translations[language].filterOptions[2];
-  document.getElementById('events').innerHTML = translations[language].filterOptions[3];
   document.getElementById('entrance').innerHTML = translations[language].filterOptions[4];
   document.getElementById('food').innerHTML = translations[language].filterOptions[5];
   // document.getElementById('tourism').innerHTML = translations[language].filterOptions[6];
   document.getElementById('bus').innerHTML = translations[language].filterOptions[7];
   document.getElementById('parking').innerHTML = translations[language].filterOptions[8];
-  document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
+  // document.getElementById('portals').innerHTML = translations[language].filterOptions[9];
   document.getElementById('wellness').innerHTML = translations[language].filterOptions[11];
-  document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[12];
-  document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[13];
-  document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[14];
-  document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[15];
+  // document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[12];
+  // document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[13];
+  // document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[14];
+  // document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[15];
   document.getElementById('privateEvents').innerHTML = translations[language].filterOptions[16];
   document.getElementById('youngMakers').innerHTML = translations[language].filterOptions[17];
   document.getElementById('drones').innerHTML = translations[language].filterOptions[18];
@@ -1337,22 +1363,22 @@ function translate(language) {
   document.getElementById('auditorium').innerHTML = translations[language].filterOptions[20];
   document.getElementById('robotArena').innerHTML = translations[language].filterOptions[21];
   document.getElementById('toilet').innerHTML = translations[language].filterOptions[22];
+  document.getElementById('shuKids').innerHTML = translations[language].filterOptions[23];
   
   document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
   document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
   document.getElementById('marker-infopoint').innerHTML = translations[language].filterOptions[2];
-  document.getElementById('marker-events').innerHTML = translations[language].filterOptions[3];
   document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[4];
   document.getElementById('marker-food').innerHTML = translations[language].filterOptions[5];
   // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[6];
   document.getElementById('marker-bus').innerHTML = translations[language].filterOptions[7];
   document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[8];
-  document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[9];
+  // document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[9];
   document.getElementById('marker-wellness').innerHTML = translations[language].filterOptions[11];
-  document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[12];
-  document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[13];
-  document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[14];
-  document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[15];
+  // document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[12];
+  // document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[13];
+  // document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[14];
+  // document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[15];
   document.getElementById('marker-privateEvents').innerHTML = translations[language].filterOptions[16];
   document.getElementById('marker-youngMakers').innerHTML = translations[language].filterOptions[17];
   document.getElementById('marker-drones').innerHTML = translations[language].filterOptions[18];
@@ -1360,6 +1386,7 @@ function translate(language) {
   document.getElementById('marker-auditorium').innerHTML = translations[language].filterOptions[20];
   document.getElementById('marker-robotArena').innerHTML = translations[language].filterOptions[21];
   document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[22];
+  document.getElementById('marker-shuKids').innerHTML = translations[language].filterOptions[23];
   
   // Reload listings in the correct language
   language = language;
@@ -1369,26 +1396,26 @@ function translate(language) {
 function english() {
   language = 'en';
   translate('en');
-  document.getElementById('privacy-policy-it').style.display = 'block';
-  document.getElementById('privacy-policy-en').style.display = 'none';
+  document.getElementById('privacy-policy-it').style.display = 'none';
+  document.getElementById('privacy-policy-en').style.display = 'block';
 }
 
 function italian() {
   language = 'it';
   translate('it');
-  document.getElementById('privacy-policy-en').style.display = 'block';
-  document.getElementById('privacy-policy-it').style.display = 'none';
+  document.getElementById('privacy-policy-en').style.display = 'none';
+  document.getElementById('privacy-policy-it').style.display = 'block';
 }
 
 // Automatically set the language based on the browser language setting
 if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
   language = "it";
   translate('it');
-  document.getElementById('privacy-policy-en').style.display = 'block';
-  document.getElementById('privacy-policy-it').style.display = 'none';
+  document.getElementById('privacy-policy-en').style.display = 'none';
+  document.getElementById('privacy-policy-it').style.display = 'block';
 } else {
   language = "en";
   translate('en');
-  document.getElementById('privacy-policy-it').style.display = 'block';
-  document.getElementById('privacy-policy-en').style.display = 'none';
+  document.getElementById('privacy-policy-it').style.display = 'none';
+  document.getElementById('privacy-policy-en').style.display = 'block';
 };
