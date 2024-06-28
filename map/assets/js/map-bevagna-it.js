@@ -555,7 +555,7 @@ var stores = {
         country: "Italy",
         postalCode: "06031",
         description_it: `Orario di apertura\n12.00-14.30\n19.30-22.00\n\nPrenotazione Obbligatoria\nTel. 3398472337\nTel. 0742 361375\n\nGuarda il menù`,
-        description_en: `Opening Time\nFrom 12.00 pm to 02.30 pm\nFrom 07.30 to 10.00 pm\n\nReservation Recommended\nTel. 3398472337\nTel. 0742 361375\n\nDownload the menu`,
+        description_en: `Opening Time\nFrom 12.00 pm to 02.30 pm\nFrom 07.30 to 10.00 pm\n\nReservation Recommended\nTel. 3398472337\nTel. 0742 361375Download the menu`,
         markerType: "food",
         site: "./assets/img/menus/Menu Grottino.pdf",
         img: "./assets/img/restaurant_logos/07-il_grottino-01.png",
@@ -1057,6 +1057,26 @@ var stores = {
       },
     },
     // END TOILET
+
+    // WATER POINT
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608108088084045, 42.932672363152506],
+      }, 
+      properties: {
+        address_it: "Fontana con Acqua Potabile",
+        address_en: "Drinking Water Fountain",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "water",
+      },
+    },
+    // END WATER POINT
   ],
 };
 
@@ -1335,12 +1355,36 @@ function showFilter() {
 const translations = {
   it: {
       filterOptions: [
-          "Tutte le categorie", "#SHU 2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Evento di lancio", "#SHU YoungMakers", "#DronesPlayground", "Laboratorio Stop Motion", "Auditorium Santa Maria Laurentia", "#RobotArena", "Bagni Pubblici", '#SHU-KIDS benESSERE'
+          "Tutte le categorie", "#SHU 2024", "Infopoint", "Eventi aperti al pubblico", "Le Porte", "Dove mangiare", "Punti d'interesse", "Punto navetta", "Parcheggi", "Portale Gaite", "Mestieri medievali", "Villaggio Benessere", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Evento di lancio", "#SHU YoungMakers", "#DronesPlayground", "Laboratorio Stop Motion", "Auditorium Santa Maria Laurentia", "#RobotArena", "Bagni Pubblici", '#SHU-KIDS benESSERE', "Fontana di Acqua Potabile"
       ]
   },
   en: {
       filterOptions: [
-          "All Categories", "#SHU 2024", "Info Point", "Public events", "The Doors", "Where to Eat", "Points of Interest", "Shuttle Stop", "Parking lots", "Gaite Portal", "Medieval Crafts", "Wellbeing Village", "Gaita San Giovanni", "Gaita San Giorgio", "Gaita San Pietro", "Gaita Santa Maria", "Launch event", "#SHU YoungMakers", "#DronesPlayground", "Stop Motion Lab", "Auditorium Santa Maria Laurentia", "#RobotArena", "Public Toilet", "#SHU-KIDS wellBEING"
+          "All Categories", 
+          "#SHU 2024", 
+          "Info Point", 
+          "Public events", 
+          "The Doors", 
+          "Where to Eat", 
+          "Points of Interest", 
+          "Shuttle Stop", 
+          "Parking lots", 
+          "Gaite Portal", 
+          "Medieval Crafts", 
+          "Wellbeing Village", 
+          "Gaita San Giovanni", 
+          "Gaita San Giorgio", 
+          "Gaita San Pietro", 
+          "Gaita Santa Maria", 
+          "Launch event", 
+          "#SHU YoungMakers", 
+          "#DronesPlayground", 
+          "Stop Motion Lab", 
+          "Auditorium Santa Maria Laurentia", 
+          "#RobotArena", 
+          "Public Toilet", 
+          "#SHU-KIDS wellBEING", 
+          "Drinking Water Fountain"
       ]
   }
 };
@@ -1368,6 +1412,8 @@ function translate(language) {
   document.getElementById('robotArena').innerHTML = translations[language].filterOptions[21];
   document.getElementById('toilet').innerHTML = translations[language].filterOptions[22];
   document.getElementById('shuKids').innerHTML = translations[language].filterOptions[23];
+  document.getElementById('water').innerHTML = translations[language].filterOptions[24];
+
   
   document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
   document.getElementById('marker-default').innerHTML = translations[language].filterOptions[1];
@@ -1391,6 +1437,7 @@ function translate(language) {
   document.getElementById('marker-robotArena').innerHTML = translations[language].filterOptions[21];
   document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[22];
   document.getElementById('marker-shuKids').innerHTML = translations[language].filterOptions[23];
+  document.getElementById('marker-water').innerHTML = translations[language].filterOptions[24];
   
   // Reload listings in the correct language
   language = language;
@@ -1402,6 +1449,8 @@ function english() {
   translate('en');
   document.getElementById('privacy-policy-it').style.display = 'none';
   document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('credits-en').style.display = 'none';
+  document.getElementById('credits-it').style.display = 'block';
 }
 
 function italian() {
@@ -1409,6 +1458,8 @@ function italian() {
   translate('it');
   document.getElementById('privacy-policy-en').style.display = 'none';
   document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('credits-en').style.display = 'none';
+  document.getElementById('credits-it').style.display = 'block';
 }
 
 // Automatically set the language based on the browser language setting
@@ -1417,9 +1468,13 @@ if (navigator.language === "it" || navigator.language == "it-IT" || navigator.la
   translate('it');
   document.getElementById('privacy-policy-en').style.display = 'none';
   document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('credits-en').style.display = 'none';
+  document.getElementById('credits-it').style.display = 'block';
 } else {
   language = "en";
   translate('en');
   document.getElementById('privacy-policy-it').style.display = 'none';
   document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('credits-it').style.display = 'none';
+  document.getElementById('credits-en').style.display = 'block';
 };

@@ -641,6 +641,22 @@ body {
   justify-content: center;
 }
 
+.listings .item-water .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #69ddff;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .sidebar-link {
   font-size: calc(var(--font-size)*0.8);
   display: flex;
@@ -878,6 +894,15 @@ body {
   background-size: cover;
 }
 
+.marker-water {
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  width: 41px;
+  background-image: url("../img/markers/water.png");
+  background-size: cover;
+}
+
 #filter-marker {
   display: flex;
   align-items: center;
@@ -900,22 +925,6 @@ body {
 
 #marker-dropdown option{
   background-color: #32679A;
-}
-
-
-
-
-/* ---------------- */
-/*       error      */
-/* ---------------- */
-#error {
-  position: fixed;
-  bottom: 2vh;
-  background-color: red;
-  color: white;
-  padding: 0.5rem;
-  z-index: 12;
-  display: none;
 }
 
 @media only screen and (max-width: 430px) {
@@ -982,6 +991,10 @@ body {
   }
 
   .listings .item-toilet .title {
+    font-size: calc(var(--font-size));
+  }
+
+  .listings .item-water .title {
     font-size: calc(var(--font-size));
   }
 
