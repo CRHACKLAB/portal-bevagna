@@ -1449,8 +1449,8 @@ function english() {
   translate('en');
   document.getElementById('privacy-policy-it').style.display = 'none';
   document.getElementById('privacy-policy-en').style.display = 'block';
-  document.getElementById('credits-en').style.display = 'none';
-  document.getElementById('credits-it').style.display = 'block';
+  document.getElementById('credits-it').style.display = 'none';
+  document.getElementById('credits-en').style.display = 'block';
 }
 
 function italian() {
