@@ -1402,6 +1402,8 @@ function english() {
   translate('en');
   document.getElementById('privacy-policy-it').style.display = 'none';
   document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('credits-it').style.display = 'none';
+  document.getElementById('credits-en').style.display = 'block';
 }
 
 function italian() {
@@ -1409,6 +1411,8 @@ function italian() {
   translate('it');
   document.getElementById('privacy-policy-en').style.display = 'none';
   document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('credits-en').style.display = 'none';
+  document.getElementById('credits-it').style.display = 'block';
 }
 
 // Automatically set the language based on the browser language setting
@@ -1417,9 +1421,13 @@ if (navigator.language === "it" || navigator.language == "it-IT" || navigator.la
   translate('it');
   document.getElementById('privacy-policy-en').style.display = 'none';
   document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('credits-en').style.display = 'none';
+  document.getElementById('credits-it').style.display = 'block';
 } else {
   language = "en";
   translate('en');
   document.getElementById('privacy-policy-it').style.display = 'none';
   document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('credits-it').style.display = 'none';
+  document.getElementById('credits-en').style.display = 'block';
 };
