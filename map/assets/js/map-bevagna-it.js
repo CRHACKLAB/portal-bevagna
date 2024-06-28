@@ -985,24 +985,24 @@ var stores = {
     //     markerType: "sanGiovanni",
     //   },
     // },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.607107126589524, 42.93244475232125],
-      }, 
-      properties: {
-        address_it: "Mestiere Gaita San Pietro",
-        address_en: "Gaita San Pietro Craft",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "sanPietro",
-        site: "https://www.socialhackademy.it/shu03/assets/renpy/Cereria/index.html",
-      },
-    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.607107126589524, 42.93244475232125],
+    //   }, 
+    //   properties: {
+    //     address_it: "Mestiere Gaita San Pietro",
+    //     address_en: "Gaita San Pietro Craft",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "sanPietro",
+    //     site: "https://www.socialhackademy.it/shu03/assets/renpy/Cereria/index.html",
+    //   },
+    // },
     // {
     //   type: "Feature",
     //   geometry: {
